@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.SimpleSpdxParser", "Tethys.SPDX.SimpleSpdxParser\Tethys.SPDX.SimpleSpdxParser.csproj", "{338415E5-782B-497A-BC88-F31AD05B34B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.Support", "Tethys.SPDX.Support\Tethys.SPDX.Support.csproj", "{3CED1A4E-E0F5-4971-BD25-E0EC552FB79F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.Model", "Tethys.SPDX.Model\Tethys.SPDX.Model.csproj", "{88D190D0-7A87-4ED1-9FD9-8A37DA08C46D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7EF489A-CCDB-4E51-8EE0-169C77C66473}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Dotnet.ruleset = Dotnet.ruleset
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.KnownLicenses", "Tethys.SPDX.KnownLicenses\Tethys.SPDX.KnownLicenses.csproj", "{934BC930-4DF3-4AAE-9561-9AF50B92A630}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.KnownLicenses.Test", "Tethys.SPDX.KnownLicenses.Test\Tethys.SPDX.KnownLicenses.Test.csproj", "{19102268-C43A-4025-A6B5-E13742CAF43E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.Interfaces", "Tethys.SPDX.Interfaces\Tethys.SPDX.Interfaces.csproj", "{FB9B5AAB-B059-4038-BCE8-85837EB0B847}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.SimpleSpdxParser.Test", "Tethys.SPDX.SimpleSpdxParser.Test\Tethys.SPDX.SimpleSpdxParser.Test.csproj", "{2286AEF5-0D75-40F7-B815-BD33DF38B476}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{ADA6AA64-109B-474A-876E-5989E4F421E8}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		build.ps1 = build.ps1
+		clean.ps1 = clean.ps1
+		CodeCoverageReport.ps1 = CodeCoverageReport.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{B92CB183-8B1F-4B87-8FB5-7CF68A5E0528}"
+	ProjectSection(SolutionItems) = preProject
+		ChangeLog.md = ChangeLog.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{338415E5-782B-497A-BC88-F31AD05B34B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338415E5-782B-497A-BC88-F31AD05B34B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338415E5-782B-497A-BC88-F31AD05B34B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338415E5-782B-497A-BC88-F31AD05B34B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CED1A4E-E0F5-4971-BD25-E0EC552FB79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CED1A4E-E0F5-4971-BD25-E0EC552FB79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CED1A4E-E0F5-4971-BD25-E0EC552FB79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CED1A4E-E0F5-4971-BD25-E0EC552FB79F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D190D0-7A87-4ED1-9FD9-8A37DA08C46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D190D0-7A87-4ED1-9FD9-8A37DA08C46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D190D0-7A87-4ED1-9FD9-8A37DA08C46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D190D0-7A87-4ED1-9FD9-8A37DA08C46D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{934BC930-4DF3-4AAE-9561-9AF50B92A630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934BC930-4DF3-4AAE-9561-9AF50B92A630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934BC930-4DF3-4AAE-9561-9AF50B92A630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934BC930-4DF3-4AAE-9561-9AF50B92A630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19102268-C43A-4025-A6B5-E13742CAF43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19102268-C43A-4025-A6B5-E13742CAF43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19102268-C43A-4025-A6B5-E13742CAF43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19102268-C43A-4025-A6B5-E13742CAF43E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9B5AAB-B059-4038-BCE8-85837EB0B847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9B5AAB-B059-4038-BCE8-85837EB0B847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9B5AAB-B059-4038-BCE8-85837EB0B847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9B5AAB-B059-4038-BCE8-85837EB0B847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2286AEF5-0D75-40F7-B815-BD33DF38B476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2286AEF5-0D75-40F7-B815-BD33DF38B476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2286AEF5-0D75-40F7-B815-BD33DF38B476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2286AEF5-0D75-40F7-B815-BD33DF38B476}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C52B3EF5-DBB0-4D03-AD1D-6C56C7E6309B}
+	EndGlobalSection
+EndGlobal

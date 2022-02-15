@@ -1,0 +1,15 @@
+<Project>
+	<PropertyGroup>
+		<Version>1.0</Version>
+		<FileVersion>1.0.0</FileVersion>
+		<Company>Tethys</Company>
+		<Copyright>Copyright © 2019-2022 T. Graf</Copyright>
+		<Authors>T. Graf</Authors>
+		<Description>Basic SPDX support for .Net applications</Description>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/tngraf/Tethys.SPDX</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/tngraf/Tethys.SPDX</RepositoryUrl>
+		<PackageTags>Tethys SPDX</PackageTags>
+	</PropertyGroup>
+</Project>
