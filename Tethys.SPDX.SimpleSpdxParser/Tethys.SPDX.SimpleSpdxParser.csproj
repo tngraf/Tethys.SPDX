@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <CodeAnalysisRuleSet>..\Dotnet.ruleset</CodeAnalysisRuleSet>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -23,6 +24,7 @@
     <ProjectReference Include="..\Tethys.SPDX.KnownLicenses\Tethys.SPDX.KnownLicenses.csproj" />
     <ProjectReference Include="..\Tethys.Spdx.Model\Tethys.Spdx.Model.csproj" />
     <ProjectReference Include="..\Tethys.Spdx.Support\Tethys.Spdx.Support.csproj" />
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>

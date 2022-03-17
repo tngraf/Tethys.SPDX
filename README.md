@@ -37,6 +37,13 @@ The following packages are available on NuGet:
 
 TBD
 
+The Software Package Data Exchange® (SPDX®) Specification
+https://spdx.github.io/spdx-spec/
+
+
+https://spdx.org/licenses/
+
+https://github.com/spdx/license-list-XML
 
 ### Very simple demo
 
