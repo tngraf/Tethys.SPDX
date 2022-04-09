@@ -20,7 +20,7 @@ free to enhance them.
 
 ## Project Build Status
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
-[![Build status](https://ci.appveyor.com/api/projects/status/yqtxri7l6td84nxm?svg=true)](https://ci.appveyor.com/project/tngraf/tethys-spdx)
+[![Build status](https://ci.appveyor.com/api/projects/status/beu5qpnvi2urf0i0?svg=true)](https://ci.appveyor.com/project/tngraf/tethys-spdx)
 [![Nuget](https://img.shields.io/badge/nuget-1.0.0-brightgreen.svg)](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses/1.0.0)
 
 ## Get Package
