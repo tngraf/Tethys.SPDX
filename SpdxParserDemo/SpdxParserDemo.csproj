@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tethys.SPDX.KnownLicenses\Tethys.SPDX.KnownLicenses.csproj" />
+    <ProjectReference Include="..\Tethys.SPDX.Model\Tethys.SPDX.Model.csproj" />
+    <ProjectReference Include="..\Tethys.SPDX.SimpleSpdxParser\Tethys.SPDX.SimpleSpdxParser.csproj" />
+  </ItemGroup>
+
+</Project>

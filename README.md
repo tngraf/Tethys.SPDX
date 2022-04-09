@@ -14,7 +14,7 @@ The libraries in this project support two tasks:
 * parse SPDX files and provide the contained data in a .Net way
 
 Please note that due to the complexity of the SPDX standard not all
-possible SPDX can be parsed. But the libraries are open source, so feel
+possible SPDX files can be parsed. But the libraries are open source, so feel
 free to enhance them.
 
 
@@ -32,30 +32,60 @@ The following packages are available on NuGet:
 * [Tethys.SPDX.SimpleSpdxParser](https://www.nuget.org/packages/Tethys.SPDX.SimpleSpdxParser)
 * [Tethys.SPDX.Support](https://www.nuget.org/packages/Tethys.SPDX.Support)
 
+This library has been influenced by the following GitHub projects:
+* https://github.com/jslicense/spdx-expression-parse.js
+* https://github.com/microsoft/spdx-simplify
 
-## How to use Tethys.SPDX
+## SPDX
 
-TBD
+See https://spdx.org/licenses/ for more details on SPDX, the software
+package data exchange format, the SPDX license identifiers
+and matching guidelines.
 
 The Software Package Data Exchange® (SPDX®) Specification
 https://spdx.github.io/spdx-spec/
 
-
-https://spdx.org/licenses/
-
+XML data of all SPDX licenses:  
 https://github.com/spdx/license-list-XML
+
+## How to use Tethys.SPDX
+
+The SPDX license information is not part of the libraries, you have to
+download it from [SPDX License List](https://github.com/spdx/license-list-XML) 
+and place it in a local folder.
 
 ### Very simple demo
 
-TBD
+A minimal code snippet looks like this
+
+```code
+var knownLicenseManager = new KnownLicenseManager();
+knownLicenseManager.LoadSpdxSourceFiles(...SPDX license files...);
+knownLicenseManager.LoadSpdxSourceFiles(...SPDX license exception files...);
+
+var reader = new RdfParser(knownLicenseManager);
+var spdxDoc = reader.ReadFromFile(...SPDX file...);
+...
+```
 
 
+Just run the demo application
+
+```code
+dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj <SpdxFile>
+```
 
 ## Build
 
 ### Requisites
 
 * Visual Studio 2019
+* NuGet access
+
+### Required NuGet Packages ###
+
+* Tethys.Logging, version 1.6.0
+* Newtonsoft.Json, version 12.0.3
 
 ### Build Solution
 
@@ -68,6 +98,8 @@ Run the demo application:
 ```
 dotnet run --project .\Tethys.Dgml.Demo\Tethys.Dgml.Demo.csproj
 ```
+
+
 
 ## License
 
