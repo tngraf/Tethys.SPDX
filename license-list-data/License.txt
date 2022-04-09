@@ -1,0 +1,2 @@
+The information in this folder has been taken from https://github.com/spdx/license-list-XML.
+Please see the respective repository for licensing information.
