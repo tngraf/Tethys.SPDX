@@ -12,12 +12,11 @@
 // either express or implied.
 // ---------------------------------------------------------------------------
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Tethys.SimpleSpdxParser.Test
+namespace Tethys.SPDX.SimpleSpdxParser.Test
 {
     using System.IO;
-
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Tethys.SimpleSpdxParser;
     using Tethys.SPDX.KnownLicenses;
 
     [TestClass]
@@ -39,7 +38,7 @@ namespace Tethys.SimpleSpdxParser.Test
         private const string SpdxFile2 = @"..\..\..\..\Testdata\SPDXRdfExample-v2.2.spdx.rdf.xml";
 
         /// <summary>
-        /// Gets an initilaized instance of a known license manager.
+        /// Gets an initialized instance of a known license manager.
         /// </summary>
         /// <returns>A <see cref="KnownLicenseManager"/>.</returns>
         private static KnownLicenseManager GetKnownLicenseManager()
