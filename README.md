@@ -9,6 +9,7 @@ SPDX-License-Identifier: Apache-2.0
 [![Build status](https://ci.appveyor.com/api/projects/status/beu5qpnvi2urf0i0?svg=true)](https://ci.appveyor.com/project/tngraf/tethys-spdx)
 [![Nuget](https://img.shields.io/badge/nuget-1.0.0-brightgreen.svg)](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses/1.0.0)
 [![REUSE status](https://api.reuse.software/badge/git.fsfe.org/reuse/api)](https://api.reuse.software/info/git.fsfe.org/reuse/api)
+[![SBOM](https://img.shields.io/badge/SBOM-CycloneDX-brightgreen)](https://github.com/tngraf/Tethys.Dgml/blob/master/SBOM/sbom.cyclonedx.xml)
 
 The [Software Package Data Exchange (SPDX)](https://spdx.dev/) is an open standard for describing a software bill of material.
 SPDX focuses especially on licensing and copyright imformation.

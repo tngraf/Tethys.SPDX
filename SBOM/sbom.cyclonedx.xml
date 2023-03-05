@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" serialNumber="urn:uuid:84e67316-22b7-4032-90bf-44e30c711a7f" version="1" xmlns="http://cyclonedx.org/schema/bom/1.4">
+  <metadata>
+    <tools>
+      <tool>
+        <vendor>CycloneDX</vendor>
+        <name>CycloneDX module for .NET</name>
+        <version>2.7.0.0</version>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="Tethys.SPDX@1.0.0">
+      <name>Tethys.SPDX</name>
+      <version>1.0.0</version>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:nuget/Newtonsoft.Json@12.0.3">
+      <publisher>James Newton-King</publisher>
+      <name>Newtonsoft.Json</name>
+      <version>12.0.3</version>
+      <description>Json.NET is a popular high-performance JSON framework for .NET</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">6934665F0479C58BBE996C44F2BF16D435A72F4D92795F0BC1D40CB0BC1358FF0E660AC20B24EABCE01EE6145BD553506178E59FBAABD0F2A94B23BFA5C735F5</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>Copyright © James Newton-King 2008</copyright>
+      <purl>pkg:nuget/Newtonsoft.Json@12.0.3</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.newtonsoft.com/json</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/JamesNK/Newtonsoft.Json</url>
+        </reference>
+      </externalReferences>
+    </component>
+	<component type="library" bom-ref="pkg:nuget/Tethys.Logging@1.6.0">
+      <publisher>Thomas Graf</publisher>
+      <name>Tethys.Logging</name>
+      <version>1.6.0</version>
+      <description>Simple logging and enhancements for existing logging frameworks.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">95EFB8D43FCAC73E201F059A32F960130316657B611B87EDB76D0E022AB53B7AC57A86A9371FF2728B18BCDD03A2308CD33C4AA3C86563156757A00C43CC12D5</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <copyright>Copyright (C) 2009-2020 T. Graf</copyright>
+      <purl>pkg:nuget/Tethys.Logging@1.6.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/tngraf/Tethys.Logging/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Tethys.Xml@1.1.0">
+      <publisher>T. Graf</publisher>
+      <name>Tethys.Xml</name>
+      <version>1.1.0</version>
+      <description>XML support methods for C# projects</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">E02E508E55F76A19934576F260FE2D00D03F8086EACFC80AD126955A7AC9E2E933CCB4F493730C5D4EDDCAA5DC807CF22A07A3FC35831D3727C76FD36454DEA9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <copyright>Copyright © 2017-2020 T. Graf</copyright>
+      <purl>pkg:nuget/Tethys.Xml@1.1.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/tngraf/Tethys.Xml</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/tngraf/Tethys.Xml</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:nuget/Newtonsoft.Json@12.0.3" />
+    <dependency ref="pkg:nuget/Tethys.Logging@1.6.0" />
+    <dependency ref="pkg:nuget/Tethys.Xml@1.1.0" />
+    <dependency ref="Tethys.SPDX@1.0.0">
+      <dependency ref="pkg:nuget/Newtonsoft.Json@12.0.3" />
+      <dependency ref="pkg:nuget/Tethys.Logging@1.6.0" />
+      <dependency ref="pkg:nuget/Tethys.Xml@1.1.0" />
+    </dependency>
+  </dependencies>
+</bom>
