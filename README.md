@@ -1,4 +1,14 @@
+<!-- 
+SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Tethys.SPDX
+
+![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
+[![Build status](https://ci.appveyor.com/api/projects/status/beu5qpnvi2urf0i0?svg=true)](https://ci.appveyor.com/project/tngraf/tethys-spdx)
+[![Nuget](https://img.shields.io/badge/nuget-1.0.0-brightgreen.svg)](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses/1.0.0)
+[![REUSE status](https://api.reuse.software/badge/git.fsfe.org/reuse/api)](https://api.reuse.software/info/git.fsfe.org/reuse/api)
 
 The [Software Package Data Exchange (SPDX)](https://spdx.dev/) is an open standard for describing a software bill of material.
 SPDX focuses especially on licensing and copyright imformation.
@@ -10,6 +20,7 @@ Having a format to describe all the different scenarios of license findings, lic
 and copyright findings is not trivial, so SPDX can get quite complex.
 
 The libraries in this project support two tasks:
+
 * load the SPDX license list and provide it to .Net applications
 * parse SPDX files and provide the contained data in a .Net way
 
@@ -17,15 +28,10 @@ Please note that due to the complexity of the SPDX standard not all
 possible SPDX files can be parsed. But the libraries are open source, so feel
 free to enhance them.
 
-
-## Project Build Status
-![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
-[![Build status](https://ci.appveyor.com/api/projects/status/beu5qpnvi2urf0i0?svg=true)](https://ci.appveyor.com/project/tngraf/tethys-spdx)
-[![Nuget](https://img.shields.io/badge/nuget-1.0.0-brightgreen.svg)](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses/1.0.0)
-
 ## Get Package
 
 The following packages are available on NuGet:
+
 * [Tethys.SPDX.Interfaces](https://www.nuget.org/packages/Tethys.SPDX.Interfaces)
 * [Tethys.SPDX.KnownLicenses](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses)
 * [Tethys.SPDX.Model](https://www.nuget.org/packages/Tethys.SPDX.Model)
@@ -33,6 +39,7 @@ The following packages are available on NuGet:
 * [Tethys.SPDX.Support](https://www.nuget.org/packages/Tethys.SPDX.Support)
 
 This library has been influenced by the following GitHub projects:
+
 * https://github.com/jslicense/spdx-expression-parse.js
 * https://github.com/microsoft/spdx-simplify
 
@@ -42,7 +49,7 @@ See https://spdx.org/licenses/ for more details on SPDX, the software
 package data exchange format, the SPDX license identifiers
 and matching guidelines.
 
-The Software Package Data Exchange® (SPDX®) Specification
+The Software Package Data Exchange (SPDX) Specification
 https://spdx.github.io/spdx-spec/
 
 XML data of all SPDX licenses:  
@@ -68,7 +75,6 @@ var spdxDoc = reader.ReadFromFile(...SPDX file...);
 ...
 ```
 
-
 Just run the demo application
 
 ```code
@@ -82,7 +88,7 @@ dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj <SpdxFile>
 * Visual Studio 2019
 * NuGet access
 
-### Required NuGet Packages ###
+### Required NuGet Packages
 
 * Tethys.Logging, version 1.6.0
 * Newtonsoft.Json, version 12.0.3
@@ -90,16 +96,16 @@ dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj <SpdxFile>
 ### Build Solution
 
 Just use the basic `dotnet` command:
-```
+
+```shell
 dotnet build
 ```
 
 Run the demo application:
-```
+
+```shell
 dotnet run --project .\Tethys.Dgml.Demo\Tethys.Dgml.Demo.csproj
 ```
-
-
 
 ## License
 

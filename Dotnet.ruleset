@@ -1,4 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
+SPDX-License-Identifier: Apache-2.0
+-->
 <RuleSet Name="Rules for Fossology.Rest.Dotnet" Description="Code analysis rules for Fossology.Rest.Dotnet.csproj." ToolsVersion="16.0">
   <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
     <Rule Id="CA1001" Action="Warning" />

@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Tethys.SPDX
+Upstream-Contact: T. Graf
+Source: https://github.com/tngraf/Tethys.SPDX
+
+Files: .gitignore README.md
+Copyright: 2019-2023 T. Graf
+License: Apache-2.0
+
+Files: license-list-data/*
+Copyright: SPDX license list owners
+License: Apache-2.0
+
+Files: license-list-data/exceptions/*
+Copyright: SPDX license list owners
+License: Apache-2.0
