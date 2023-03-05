@@ -1,12 +1,10 @@
-<!-- 
-SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
-SPDX-License-Identifier: Apache-2.0
--->
+# SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
+# SPDX-License-Identifier: Apache-2.0
 
 version: 1.0.0.{build}
-image: Visual Studio 2019
+image: Visual Studio 2022
 install:
-  - call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"
+  - call "C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 configuration:
   - Debug
   - Release
