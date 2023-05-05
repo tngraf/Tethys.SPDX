@@ -86,7 +86,7 @@ dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj <SpdxFile>
 
 ### Requisites
 
-* Visual Studio 2019
+* Visual Studio 2022
 * NuGet access
 
 ### Required NuGet Packages
