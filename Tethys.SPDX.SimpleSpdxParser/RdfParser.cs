@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="RdfParser.cs" company="Tethys">
-//   Copyright (C) 2018-2022 T. Graf
+//   Copyright (C) 2018-2023 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -165,6 +165,11 @@ namespace Tethys.SimpleSpdxParser
         /// The list of known licenses of this SPDX document.
         /// </summary>
         private readonly Dictionary<string, AnyLicenseInfo> knownDocumentLicenses;
+
+        /// <summary>
+        /// The list of lsited licenses of this SPDX document.
+        /// </summary>
+        private readonly Dictionary<string, AnyLicenseInfo> listedLicenses;
         #endregion // PRIVATE PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -214,6 +219,11 @@ namespace Tethys.SimpleSpdxParser
         /// Gets the known document licenses.
         /// </summary>
         public IReadOnlyDictionary<string, AnyLicenseInfo> KnownDocumentLicenses => this.knownDocumentLicenses;
+
+        /// <summary>
+        /// Gets the known document licenses.
+        /// </summary>
+        public IReadOnlyDictionary<string, AnyLicenseInfo> ListedLicenses => this.listedLicenses;
         #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -265,6 +275,7 @@ namespace Tethys.SimpleSpdxParser
         {
             this.knownLicenseManager = licenseManager;
             this.knownDocumentLicenses = new Dictionary<string, AnyLicenseInfo>();
+            this.listedLicenses = new Dictionary<string, AnyLicenseInfo>();
         } // RdfParser()
         #endregion // CONSTRUCTION
 
@@ -359,6 +370,7 @@ namespace Tethys.SimpleSpdxParser
             Log.Debug("Reading SPDXDocument from XElement...");
 
             this.knownDocumentLicenses.Clear();
+            this.listedLicenses.Clear();
             KnownSpdxElements.Clear();
             SpdxDocument spdxDoc = null;
             SpdxSnippet snippet = null;
@@ -416,10 +428,37 @@ namespace Tethys.SimpleSpdxParser
                 return this.knownDocumentLicenses[identifier];
             } // if
 
-            Log.Warn($"License reference not found: {identifier}");
+            Log.Warn($"Known license reference not found: {identifier}");
 
             return null;
         } // FindKnownDocumentLicense()
+
+        /// <summary>
+        /// Adds a listed license.
+        /// </summary>
+        /// <param name="identifier">The identifier.</param>
+        /// <param name="license">The license.</param>
+        internal void AddListedLicense(string identifier, AnyLicenseInfo license)
+        {
+            this.listedLicenses.Add(identifier, license);
+        } // AddListedLicense()
+
+        /// <summary>
+        /// Finds a listed license.
+        /// </summary>
+        /// <param name="identifier">The identifier.</param>
+        /// <returns>An <see cref="AnyLicenseInfo"/> object or null.</returns>
+        internal AnyLicenseInfo FindListedLicense(string identifier)
+        {
+            if (this.listedLicenses.ContainsKey(identifier))
+            {
+                return this.listedLicenses[identifier];
+            } // if
+
+            Log.Warn($"Listed license reference not found: {identifier}");
+
+            return null;
+        } // FindListedLicense()
 
         /// <summary>
         /// Finds a known RDF node.
@@ -481,6 +520,7 @@ namespace Tethys.SimpleSpdxParser
             snippet.SpdxIdentifier = GetSpdxIdentifierFromUri(text);
             snippet.Name = XmlSupport.GetFirstSubNodeValue(parent, "name");
             snippet.LicenseComments = XmlSupport.GetFirstSubNodeValue(parent, "licenseComments");
+            snippet.AttributionText = XmlSupport.GetFirstSubNodeValue(parent, "attributionText");
 
             var xRange = XmlSupport.GetFirstSubNode(parent, "range");
             var xStartEndPointer = XmlSupport.GetFirstSubNode(xRange, "StartEndPointer");
@@ -519,7 +559,10 @@ namespace Tethys.SimpleSpdxParser
             } // foreach
 
             var xLicenseConcluded = XmlSupport.GetFirstSubNode(parent, "licenseConcluded");
-            snippet.LicenseConcluded = this.ReadLicense(xLicenseConcluded);
+            if (xLicenseConcluded != null)
+            {
+                snippet.LicenseConcluded = this.ReadLicense(xLicenseConcluded);
+            } // if
 
             snippet.Comment = XmlSupport.GetFirstSubNodeValue(parent, "comment", false);
             snippet.CopyrightText = XmlSupport.GetFirstSubNodeValue(parent, "copyrightText");
@@ -779,8 +822,15 @@ namespace Tethys.SimpleSpdxParser
                 package.AddChecksum(ReadChecksum(xChecksum));
             } // foreach
 
-            package.LicenseConcluded = this.ReadLicense(XmlSupport.GetFirstSubNode(parent, "licenseConcluded"));
+            // does not need to exist in SPDX 2.3
+            var xLicenseConcluded = XmlSupport.GetFirstSubNode(parent, "licenseConcluded", false);
+            if (xLicenseConcluded != null)
+            {
+                package.LicenseConcluded = this.ReadLicense(xLicenseConcluded);
+            } // if
+
             package.LicenseComments = GetCDataValue(XmlSupport.GetFirstSubNode(parent, "licenseComments", false));
+            package.AttributionText = GetCDataValue(XmlSupport.GetFirstSubNode(parent, "attributionText", false));
             package.LicenseDeclared = this.ReadLicense(XmlSupport.GetFirstSubNode(parent, "licenseDeclared"));
 
             var xLicenseInfoFromFiles = XmlSupport.GetFirstSubNode(parent, "licenseInfoFromFiles");
@@ -888,6 +938,7 @@ namespace Tethys.SimpleSpdxParser
 
             var xct = XmlSupport.GetFirstSubNode(parent, "copyrightText", false);
             file.CopyrightText = GetResourceAttributeOrValue(xct);
+            file.AttributionText = GetCDataValue(XmlSupport.GetFirstSubNode(parent, "attributionText", false));
 
             var xFileType = XmlSupport.GetFirstSubNode(parent, "fileType", false);
 

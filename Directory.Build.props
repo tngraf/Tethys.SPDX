@@ -5,10 +5,10 @@ SPDX-License-Identifier: Apache-2.0
 
 <Project>
 	<PropertyGroup>
-		<Version>1.0</Version>
-		<FileVersion>1.0.0</FileVersion>
+		<Version>1.1.0</Version>
+		<FileVersion>1.1.0</FileVersion>
 		<Company>Tethys</Company>
-		<Copyright>Copyright © 2019-2022 T. Graf</Copyright>
+		<Copyright>Copyright © 2019-2023 T. Graf</Copyright>
 		<Authors>T. Graf</Authors>
 		<Description>Basic SPDX support for .Net applications</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

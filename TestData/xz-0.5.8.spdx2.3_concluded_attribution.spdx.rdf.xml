@@ -1,0 +1,3408 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:spdx="http://spdx.org/rdf/terms#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://fossology.siemens.com/repo/SPDX2_xz-0.5.8.zip_1681743380.spdx.rdf">
+<spdx:SpdxDocument rdf:about="http://fossology.siemens.com/repo/SPDX2_xz-0.5.8.zip_1681743380.spdx.rdf#SPDXRef-DOCUMENT">
+  <spdx:specVersion>SPDX-2.3</spdx:specVersion>
+  <spdx:dataLicense>
+    <spdx:ListedLicense rdf:about="http://spdx.org/licenses/CC0-1.0">
+      <spdx:name>Creative Commons Zero v1.0 Universal</spdx:name>
+      <spdx:licenseId>CC0-1.0</spdx:licenseId>
+      <spdx:licenseText><![CDATA[
+Creative Commons Legal Code
+
+CC0 1.0 Universal
+
+    CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
+    LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+    ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
+    INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
+    REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+    PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
+    THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
+    HEREUNDER.
+
+Statement of Purpose
+
+The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator
+and subsequent owner(s) (each and all, an "owner") of an original work of
+authorship and/or a database (each, a "Work").
+
+Certain owners wish to permanently relinquish those rights to a Work for
+the purpose of contributing to a commons of creative, cultural and
+scientific works ("Commons") that the public can reliably and without fear
+of later claims of infringement build upon, modify, incorporate in other
+works, reuse and redistribute as freely as possible in any form whatsoever
+and for any purposes, including without limitation commercial purposes.
+These owners may contribute to the Commons to promote the ideal of a free
+culture and the further production of creative, cultural and scientific
+works, or to gain reputation or greater distribution for their Work in
+part through the use and efforts of others.
+
+For these and/or other purposes and motivations, and without any
+expectation of additional consideration or compensation, the person
+associating CC0 with a Work (the "Affirmer"), to the extent that he or she
+is an owner of Copyright and Related Rights in the Work, voluntarily
+elects to apply CC0 to the Work and publicly distribute the Work under its
+terms, with knowledge of his or her Copyright and Related Rights in the
+Work and the meaning and intended legal effect of CC0 on those rights.
+
+1. Copyright and Related Rights. A Work made available under CC0 may be
+protected by copyright and related or neighboring rights ("Copyright and
+Related Rights"). Copyright and Related Rights include, but are not
+limited to, the following:
+
+  i. the right to reproduce, adapt, distribute, perform, display,
+     communicate, and translate a Work;
+ ii. moral rights retained by the original author(s) and/or performer(s);
+iii. publicity and privacy rights pertaining to a person's image or
+     likeness depicted in a Work;
+ iv. rights protecting against unfair competition in regards to a Work,
+     subject to the limitations in paragraph 4(a), below;
+  v. rights protecting the extraction, dissemination, use and reuse of data
+     in a Work;
+ vi. database rights (such as those arising under Directive 96/9/EC of the
+     European Parliament and of the Council of 11 March 1996 on the legal
+     protection of databases, and under any national implementation
+     thereof, including any amended or successor version of such
+     directive); and
+vii. other similar, equivalent or corresponding rights throughout the
+     world based on applicable law or treaty, and any national
+     implementations thereof.
+
+2. Waiver. To the greatest extent permitted by, but not in contravention
+of, applicable law, Affirmer hereby overtly, fully, permanently,
+irrevocably and unconditionally waives, abandons, and surrenders all of
+Affirmer's Copyright and Related Rights and associated claims and causes
+of action, whether now known or unknown (including existing as well as
+future claims and causes of action), in the Work (i) in all territories
+worldwide, (ii) for the maximum duration provided by applicable law or
+treaty (including future time extensions), (iii) in any current or future
+medium and for any number of copies, and (iv) for any purpose whatsoever,
+including without limitation commercial, advertising or promotional
+purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each
+member of the public at large and to the detriment of Affirmer's heirs and
+successors, fully intending that such Waiver shall not be subject to
+revocation, rescission, cancellation, termination, or any other legal or
+equitable action to disrupt the quiet enjoyment of the Work by the public
+as contemplated by Affirmer's express Statement of Purpose.
+
+3. Public License Fallback. Should any part of the Waiver for any reason
+be judged legally invalid or ineffective under applicable law, then the
+Waiver shall be preserved to the maximum extent permitted taking into
+account Affirmer's express Statement of Purpose. In addition, to the
+extent the Waiver is so judged Affirmer hereby grants to each affected
+person a royalty-free, non transferable, non sublicensable, non exclusive,
+irrevocable and unconditional license to exercise Affirmer's Copyright and
+Related Rights in the Work (i) in all territories worldwide, (ii) for the
+maximum duration provided by applicable law or treaty (including future
+time extensions), (iii) in any current or future medium and for any number
+of copies, and (iv) for any purpose whatsoever, including without
+limitation commercial, advertising or promotional purposes (the
+"License"). The License shall be deemed effective as of the date CC0 was
+applied by Affirmer to the Work. Should any part of the License for any
+reason be judged legally invalid or ineffective under applicable law, such
+partial invalidity or ineffectiveness shall not invalidate the remainder
+of the License, and in such case Affirmer hereby affirms that he or she
+will not (i) exercise any of his or her remaining Copyright and Related
+Rights in the Work or (ii) assert any associated claims and causes of
+action with respect to the Work, in either case contrary to Affirmer's
+express Statement of Purpose.
+
+4. Limitations and Disclaimers.
+
+ a. No trademark or patent rights held by Affirmer are waived, abandoned,
+    surrendered, licensed or otherwise affected by this document.
+ b. Affirmer offers the Work as-is and makes no representations or
+    warranties of any kind concerning the Work, express, implied,
+    statutory or otherwise, including without limitation warranties of
+    title, merchantability, fitness for a particular purpose, non
+    infringement, or the absence of latent or other defects, accuracy, or
+    the present or absence of errors, whether or not discoverable, all to
+    the greatest extent permissible under applicable law.
+ c. Affirmer disclaims responsibility for clearing rights of other persons
+    that may apply to the Work or any use thereof, including without
+    limitation any person's Copyright and Related Rights in the Work.
+    Further, Affirmer disclaims responsibility for obtaining any necessary
+    consents, permissions or other rights required for any use of the
+    Work.
+ d. Affirmer understands and acknowledges that Creative Commons is not a
+    party to this document and has no duty or obligation with respect to
+    this CC0 or use of the Work.
+
+      ]]></spdx:licenseText>
+      <rdfs:seeAlso>https://creativecommons.org/publicdomain/zero/1.0/legalcode</rdfs:seeAlso>
+    </spdx:ListedLicense>
+  </spdx:dataLicense>
+  <spdx:creationInfo>
+    <spdx:CreationInfo>
+      <spdx:licenseListVersion>3.19</spdx:licenseListVersion>
+      <spdx:creator>Person: thomas.graf@siemens.com (thomas.graf@siemens.com)</spdx:creator>
+      <spdx:creator>Organization: SIEMENS</spdx:creator>
+      <spdx:creator>Tool: fossology-4.2.0.140-ng</spdx:creator>
+      <spdx:created>2023-04-17T14:56:24Z</spdx:created>
+    </spdx:CreationInfo>
+  </spdx:creationInfo>
+  <spdx:name>/srv/fotransfer/repository/report</spdx:name>
+  <rdfs:comment>
+    This document was created using license information and a generator from Fossology.
+  </rdfs:comment>
+  <spdx:hasExtractedLicensingInfo>
+    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-GPL">
+      <spdx:licenseId>LicenseRef-fossology-GPL</spdx:licenseId>
+      <spdx:name>GNU General Public License</spdx:name>
+      <spdx:extractedText><![CDATA[
+GPL is referenced without a version number. Please look up GPL in the License Admin to view the different versions.
+      ]]></spdx:extractedText>
+    </spdx:ExtractedLicensingInfo>
+  </spdx:hasExtractedLicensingInfo>
+  <spdx:hasExtractedLicensingInfo>
+    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies">
+      <spdx:licenseId>LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies</spdx:licenseId>
+      <spdx:name>BSD-3-Clause_MIPS Technologies</spdx:name>
+      <spdx:extractedText><![CDATA[
+Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+      Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+      Redistributions in binary form must reproduce the above
+      copyright
+        notice, this list of conditions and the following disclaimer
+        in the documentation and/or other materials provided with
+        the distribution.
+      Neither the name of MIPS Technologies Inc. nor the names of its
+        contributors may be used to endorse or promote products derived
+        from this software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+      ]]></spdx:extractedText>
+    </spdx:ExtractedLicensingInfo>
+  </spdx:hasExtractedLicensingInfo>
+  <spdx:hasExtractedLicensingInfo>
+    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier">
+      <spdx:licenseId>LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier</spdx:licenseId>
+      <spdx:name>BSD-3-Clause-Pierre-Olivier</spdx:name>
+      <spdx:extractedText><![CDATA[
+Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ * The name of Pierre-Olivier Latour may not be used to endorse
+ or promote products derived from this software without specific
+ prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL PIERRE-OLIVIER LATOUR BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+      ]]></spdx:extractedText>
+    </spdx:ExtractedLicensingInfo>
+  </spdx:hasExtractedLicensingInfo>
+  <spdx:hasExtractedLicensingInfo>
+    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD">
+      <spdx:licenseId>LicenseRef-fossology-BSD</spdx:licenseId>
+      <spdx:name>BSD</spdx:name>
+      <spdx:extractedText><![CDATA[
+BSD is referenced without a version number. Please look up BSD in the License Admin to view the different versions.
+      ]]></spdx:extractedText>
+    </spdx:ExtractedLicensingInfo>
+  </spdx:hasExtractedLicensingInfo>
+  <spdx:relationship>
+    <spdx:Relationship>
+      <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_describes" />
+      <spdx:relatedSpdxElement>
+        <spdx:Package rdf:about="#SPDXRef-upload47128">
+          <spdx:name>xz-0.5.8.zip</spdx:name>
+          <spdx:packageFileName>xz-0.5.8.zip</spdx:packageFileName>
+          <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:versionInfo></spdx:versionInfo>
+          <spdx:filesAnalyzed>true</spdx:filesAnalyzed>
+          <spdx:packageVerificationCode>
+            <spdx:PackageVerificationCode>
+            <spdx:packageVerificationCodeValue>a88cd88c784441785f25a887ffaad23c7c39231f</spdx:packageVerificationCodeValue>
+            </spdx:PackageVerificationCode>
+          </spdx:packageVerificationCode>
+          <spdx:checksum>
+            <spdx:Checksum>
+              <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+              <spdx:checksumValue>63ea944cecce3e14722392e6203b6dff60dba599</spdx:checksumValue>
+            </spdx:Checksum>
+          </spdx:checksum>
+          <spdx:checksum>
+            <spdx:Checksum>
+              <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+              <spdx:checksumValue>07155dd5e22738586ff68278cebede3f3b683c11482367b7f2a980f0f077375b</spdx:checksumValue>
+            </spdx:Checksum>
+          </spdx:checksum>
+          <spdx:checksum>
+            <spdx:Checksum>
+              <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+              <spdx:checksumValue>1d3cc4f67037da6b995b42cc0f7aef2e</spdx:checksumValue>
+            </spdx:Checksum>
+          </spdx:checksum>
+          <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause" />
+          <spdx:licenseComments><![CDATA[
+            licenseInfoInFile determined by Scanners:
+   - nomos ("4.2.0.1-ng".b95470)
+   - monk ("4.2.0.1-ng".b95470)
+   - ojo ("4.2.0.1-ng".b95470)
+          ]]></spdx:licenseComments>
+          <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305014">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/bits.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>384f7ba134523c8548b7c09222a73c4c6c169345</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>a0866090ac31c1b9ee17747c3e7bfca1cc05db0413e75b579472a97f76b3981c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>6eb1f314cf77dbdb8a110cbce7f32a51</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b">
+                  <spdx:name>BSD-3-Clause-871ee238618e143aa808dee254a44d3b</spdx:name>
+                  <spdx:licenseId>BSD-3-Clause-871ee238618e143aa808dee254a44d3b</spdx:licenseId>
+                  <spdx:licenseText><![CDATA[
+          Redistribution and use in source and binary forms, with or without
+          modification, are permitted provided that the following conditions are met:
+          
+          * Redistributions of source code must retain the above copyright notice, this
+            list of conditions and the following disclaimer.
+          
+          * Redistributions in binary form must reproduce the above copyright notice,
+            this list of conditions and the following disclaimer in the documentation
+            and/or other materials provided with the distribution.
+          
+          * My name, Ulrich Kunitz, may not be used to endorse or promote products
+            derived from this software without specific prior written permission.
+          
+          THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+          AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+          IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+          DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+          FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+          DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+          SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+          CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+          OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+          OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                  ]]></spdx:licenseText>
+                </spdx:ListedLicense>
+              </spdx:licenseConcluded>
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+              <spdx:attributionText><![CDATA[Some dummy acknowledgement]]></spdx:attributionText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304983">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/licenses.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>9ab2836c0b65505a89ae0bee428bf514416030f1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>07d70ca9f4a6b34d6e616063be934716367fae36c1f7e4576db289c8902235dc</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>5060d142086b6b2e458ccc45278e5cde</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause-81f1634e09063200aeea05033ac4ac7c">
+                  <spdx:name>BSD-3-Clause-81f1634e09063200aeea05033ac4ac7c</spdx:name>
+                  <spdx:licenseId>BSD-3-Clause-81f1634e09063200aeea05033ac4ac7c</spdx:licenseId>
+                  <spdx:licenseText><![CDATA[
+          Redistribution and use in source and binary forms, with or without
+          modification, are permitted provided that the following conditions are
+          met:
+          
+             * Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+             * Redistributions in binary form must reproduce the above
+          copyright notice, this list of conditions and the following disclaimer
+          in the documentation and/or other materials provided with the
+          distribution.
+             * Neither the name of Google Inc. nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+          
+          THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+          "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+          LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+          A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+          OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+          SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+          LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+          DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+          THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+          (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+          OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                  ]]></spdx:licenseText>
+                </spdx:ListedLicense>
+              </spdx:licenseConcluded>
+              <spdx:licenseInfoInFile>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause">
+                  <spdx:name>BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License</spdx:name>
+                  <spdx:licenseId>BSD-3-Clause</spdx:licenseId>
+                  <spdx:licenseText><![CDATA[
+          Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+          
+             1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+          
+             2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+          
+             3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+          
+          THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                  ]]></spdx:licenseText>
+                  <rdfs:seeAlso>https://opensource.org/licenses/BSD-3-Clause</rdfs:seeAlso>
+                </spdx:ListedLicense>
+              </spdx:licenseInfoInFile>
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier" />
+              <spdx:copyrightText><![CDATA[
+                Copyright (c) 2009 The Go Authors
+                Copyright (c) 2014-2020 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304996">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/englm3.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>a843fa2cf03eb91fa4b15ce6788a12ff9a6cf858</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>07122273f881608385b915619e30cbf2ec110ce05bcd85c06c081664a26553ce</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>0d86e0de67c2fba8b1bdb9134cca40b7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-GPL" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305082">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzmafilter.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>295a7bb12f7eefc67665cf1a9b8fda215fc3cde5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>ad69681dec42d6fedfe602ffcf07249bbcecfd900c5427700a5397050c616a02</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>6206e59c3a7331db3e2776cf2c75143f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304988">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/bits_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>56549d7f556d64e212af6f3da294ccb343300114</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>94b377db64188b63f612379326ab0e3732e83ba28f75de74245c07589ebcc35c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>1740069b6abb81025ac25cedaf2254b7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305080">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/writer.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>6a35ab8bb9a2e271985e7b81baab4f851acfa206</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>72b40464e7611d2efa1e76ed0f2bc98ef305dad4a43f4e73121f61ec6e58b43d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>2e393cb2be9f7a2923c84ec941ea9da3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305078">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/encoder.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c1884a36aee5d6d32529eaf3ebb5dfaf27d44e02</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>ecae728e2ba2519830a9fbb027f093c47262205f7dd4783d1978dc25612d28a2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>1c59b6d5ffbc9454cf25ad69371db153</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305079">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/none-check.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>522a50b63523ebef72d17e0b411ea137b9506ec5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>14735d57998169998873b6911877b4bf97e17dcab6c6c528a299106a5fc80830</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>838934a2ed19dd6d8bf7002dbe7f0fa8</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305077">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bytewriter.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>58109ec01513162d4f2dea341a54bd019b8f5499</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>eb0bb7a1336981523c7d2002c86354801511dc434501e35016af8950df8c579d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>42d47c25f00d7af6f5479a1b67b6e79f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305075">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/lengthcodec.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>baa3f0077a58684f80186f0ad427b7e1116cee67</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>0ea9aa8b8d94bb4d454a92146bac16ece876e68e31007bde438c707ad235e000</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>7c6e85f0e4bc3cc2b46e3f7102bb9525</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305073">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>0c83b94d23c543cc3b238af6fa5bbdcc09a874a9</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>215e87f90ebc91baeed184878fb7f9d75950658fbffc1c08339eec4b7e692720</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>2a87102dea276357ab8c4ef91e6d3415</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305071">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/distcodec.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>5e437ba81c0609d96da8791811bbdb743e9bdbe6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>d92bee5548de98ca0e9a43fb63c7b5b04cf426f0e6c238547ea5c3081bbdede1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>d5e766ad22cec38558180a9dddfa632f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305076">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/rangecodec.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>b957568c2d8e2a3eb7006bf3892110ecf405569e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>7387453cd47a4f4572db9051c05c9fb5b92e349c371bcc87c57361f3e7ffc286</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>7f973cb2204f354511f0e483584e433d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305074">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/directcodec.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>85be7358c915c3b9722eb4f4c2fbd41b8fd29fce</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>9e1a6ffae6333a648c35409b0d09c43d0bd2d593feb80a5a541c09dde2037395</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>ed08606171029642b1a2a2de8c419628</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305072">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header2.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>23efe041282608373ea25e2b0b8248eb3e7620e0</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3fdc79e8b32055c3fb25a03b92ae4b2873b1e096dbf3d47e9ec8b156d426a2aa</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>29d84b58935d030c2832a5864c0bec82</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305070">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/buffer_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>63566024c039a055504cd61711024e36e9a51804</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>621a7171e57ca243fe1d73d4b213faff059580aa3de8498b2be8c03032b18196</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>a9d027d314573d6a198c96e21fc6b520</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305068">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/prob.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>324f579ba4a705f6adbd02684e1235741fd9e181</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>09bcc27658cff943648049319bced9d169299a61359514a226780daf512fde5b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>4b363788504e01b3b4c1d290f27c1f9e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305069">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer2_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>db8afcd22c08288b34ce92d6eaf51e8667e9bcee</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3fd8c09446a5ee88c6aad69db9f990f4315362153b0004e72b5d2ee15ff75e0d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>650dd79ab302ab370c840c66d3431ed7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305066">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>cb34999aa25c248f96a6da090020f214fcafe6ce</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>91b28fa6b8b3b3bc0370a20393df49b5ca3b83868f494157687a895c13268da8</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>83937497cc1100770cc34612457ce7bd</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305064">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/literalcodec.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>314ef3cb13e3b24b1e9f9af25b6e5f1ad1ee8929</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>08864110052db7a25cddbb81520825ebbfb52f45f7e33988f97ba66110d1b03e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>6d97bf6f8369d80ad21b9c28249e9b50</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305062">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer2.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>e0a35f512e77a2037e6b2f6ecfac199fcea6de50</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>074dcf16fa86f5b5d23ead8f97ce7bfd00ba06591516a16f1ab710633a93c79b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>907519d8168bb29e0a4d90551ee98322</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305060">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/encoderdict.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>cce78328deff14e98ccb476ea4a2649eec3f394c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>e03f8d8748e446e87dca0fc85fcf47113d70e27223bf62c7894aa6715b2eb0a4</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>fedc3a7d348ba8470d80323cd7535750</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305067">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/hashtable_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>47b08e6b9db86bf444ab3932770a052996def9d1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>8375cc2cb57842297dab4cc2d8b136da76de276ad82d9ef8e73196fbe0b600ae</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>5ea294bb87515500b4416fc47086d065</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305065">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/matchalgorithm.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>3d9b8a888506b9c19bc960fe8ed42363f3fc5dbf</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3c750c2436f9180ea5090309b33bfd5498c17d9277197f8bd684f3bf3b5fc12c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>e58da21b89165fce4fe5acd94a3a570f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305063">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/state.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c75cf69e572f090a41df07abe16063d240f03cf5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>b3e44a03ea08fb3b7896e512c87d9af559bdba37b9d600175fa6c6166262c188</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>8b10ba35f6da4b576c127445890ef110</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305061">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/reader2.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>20752e70dc8704f41c1e8f1df91517b4d8a046ac</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>efe78c6cba3a57bfe333e66e04b2d15b1ee7c6f515127e04680e38662c656353</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>d02a3ad057f4bd7efa784751c2612405</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305059">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bitops.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>47b25712dba9d513ef1055d42d0f2f3ad51c3e39</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>1cba267e82b8b073fda122131037746dc54d3d6e88ba79304b1031e5344628ce</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>546312ac80b8ab0d532f0cf8666e003f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305058">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/buffer.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>2cd64fbd57de69ffe7e6329abbf595da01e59d09</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>708f8c26909892dc79e84d66e90e8d0e1f938e43382fcb5294384d53784a3a61</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>c9ab5a6881f39d9643451830b50ffe2c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305056">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/breader.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>4e6f6a6876018f49de96bdc78adbad3a809cdf46</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>044fbf71b09432ebbc0cad77bf1f229a40fa2297c80c299beb786207774c1b3b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>0608b834227680859453ba2366d63eca</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305054">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bintree.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>ad9a19502517dd3cd805695e79b0f34bd8114529</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>dc9d26b2bd0a8d4981ac1c8d4c0f3c8781a287424493b40568fa7c23a921b6c6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>b8c7a6456e0705cdd50eb44b2242f135</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305052">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c57312ae097dbe18161e99e741ab92866e70df77</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>bfdccca7fb9750e60d78d19519c7cf8423f898f587b4a52fa42a50cccb2b911f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>36e3fd9f31eece7ef3851a86b78a9de2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305050">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/treecodecs.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>95f2ee0e2095366f03b27c2f6d3c12613f98a024</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>b22ce501faab035b7e308cf0007eb0d40898d1039e8cee07ab5c55e442b272b8</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>2fe45140d15859c2448085f5942e6988</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305057">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/reader.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>f34234033b78994aad7756f34388e7118ab444e6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>0455b9565cc7a52bfdb47e9ef978eff0006b2b9c52ece86144dcf31a446d3667</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>c691e52f3347b80f847604163e44ce77</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305055">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/encoder_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>5e4b924624a8ef4e430a1e00ec668433ec80832a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>22d6bf4990b069f2c94ca2f1f9fe611d3c901dbfb90f1e8cea0f3d5861d3bedc</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>7ae8c129ab274ee22d3ea5e13e6f4cd1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305053">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bintree_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>5af6424ec011b04e1905df6e19d6d7d3ef54cab1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3435d3b7fcec8d11c31bd4f11df30dc3a6cba300ca4c927c4ad4900379cfa001</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>8087ddf9b6651f5341db94d48f66f937</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305051">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoderdict.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>d453cca00f7f7e7408156e04fe603713421f7131</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>47e2ee21b03080aedba49309c3cecc8be24eb482b70d18a8cf6338e89e2e9a6a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>b961a31f0ae859c121fc3fdeb05afcd5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305032">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/properties.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>e82e8c9bd236cc26e97e579f3f57c8f7bd55e0ea</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>5c73578b2bdf5611dd02e5da35b2b6e5a86f94a71e7c6bf4712147d2ac0190f2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>103dc304d436a397f5a49e27df7395ea</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305030">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/reader_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>a873395879622b76b7866127e8d041370342d5d2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>18d3ca5caba9996d8d2c0bf98947b87ace6fa7c1893c6b1d6773aa1a34ed9fda</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>b246b3c5d4bfdd2f8723182a5f2e5d89</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305028">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/operation.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>8ae7dc392408c6d7d388c1c9cd0f32e72209f599</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3cd941b8bdc142ddc59901d82f751f6fb4b1c6c1ae8b73ba1ea2aeb0ddd2f8f6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>452067e7531da1252a64765f0654cc40</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305025">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoder_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>1caf4ae27ed87fbb45f5607a664fc4a04bf14da4</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>22d833e565077476070a57ce644c50f6bb9034074daa2d537ecc754d66976df2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>d5a34d16bc20ed3d7b5cc8f5db9142ac</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305023">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header2_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>7939bdc337298e59b0be935a2ac4644e42051042</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>03e2e617de470439cefb7788f3e24f3c6226f4245c03e8540db089b4c9732d1d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>dde8a442332d14b2f429e827b0f7dcda</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305020">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/format_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>f77f3776677a82773b2953fb93c0ab940cadc010</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>1e427203dfafb6a232cbab4684cad2344b5463b94fe353612dd25d62a638c694</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>a1b29fdf3a541af5367ca605ac908cd2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305031">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/hashtable.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>e97e5a3c1e633963c805c8ca7a06009054584ed0</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>a668c69074903269998191706c1cb51e122086b043461af985bbe7cf5d5ca575</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>b511c5d09fe2a50a01007167b275caeb</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305029">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>892f619c7a4ef534eb3888d64b4e4fb87f8c4e86</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3a68d52df2634d432538f424d149c1ed86ebab23c908d1ee19d3c29ea982fc4e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>8456f03c0c36f62736a1be146e20bf9a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305026">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoderdict_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>62784ad5f0e707aa77e3cf06246ab20944793b15</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>d5c6f453f6e9bedcd377b70b5527886a24b5d0c0e5092a30f70ec5ff1c27a98c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>e6d352477d6163fa323154d7c7f64944</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305024">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoder.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>876184f5b04be8e3dc19649823d59b8aee7dea88</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>b02ff55c33c6b925f0130e1eeafa55fddb52355201c48a49cb0aabf02444fb2b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>2970de8d584113bd497ee829ed430e95</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305019">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/format.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>1ca3b7a8178c1fc3487424c56b348290e296888f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>4bbbb5a79e9c2785056f217eb24e235cbfb109c24d97fe054865d6c47b0fee7c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>66d0f33442ff47079b55421c716b729b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305017">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/reader.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>efacf426165d4d0ddad7b25ec566b6ac8c2e178c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>c3decba79353069bea9a9787d9b2cfeca87693dca1c4ed81d508d6982f0c736f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>34ce30c73cc084eb95cd95afc76471a3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305011">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/rabin_karp.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>2dd7c6c961875a187545a6c2394177eddcda5c0f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>2f5a34c2f778e06536518c7f99dc9a9f4c1b0e720f5325830dfca5eb58a96e65</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>fb0faf8563667c8344b2d2cd07b9f18d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305009">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/roller.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>7a70f929a3306b63e77902aa5d11412a770c2d12</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>2b5a04157fbaadd10bb658aa91be3b08a9a5970fa67dcbe7dbf372b788bf930c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>e26d651b942423e55493052382bf6898</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305007">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/rabin_karp_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>b031efc4d3b791599e93272b385453087e486c2a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>7b4dddf8ca2c351d3dd642b0158c50bdf063295fa7f23ef192f27a203fd594c8</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>3be6a4a7c1b51ca103dc70b81ee818f0</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305004">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/ioctl_linux.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>400e8bcc169d9eb160b9551cca41447776321315</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>7a5080e1149b466d6915592ba8a9d0de245bf7951925f6b25bc3498367ad9128</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>00a890635418c8ed0af5614a0b7e242d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305013">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/xlog/xlog.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>6814a6c3ba1ccbd55503c3163dcbe2b97a2ea6e7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>8a6fd600d42213012ce6eeb47b6643134958533ed45b818116b0360ee52544ff</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>0813b789bbe000ed654b3f3738b71ffc</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305010">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/doc.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>d9e8c7c79887a5e1418c9cab663cddefaa1fe036</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>8d7c9b622b66e06b323e76c427c6a6aab4f2b48255f4b7694faee9f030f35df1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>f1e22009bb001d9f334c6d72d511ea8c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305008">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/cyclic_poly_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>668efd71786a3fc9baf3252a4ce7ccee2aeaa250</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>dc3fe4f8fdcaa5acf03f1b9ee7128fec8900c509da7e7efc36758b714eefca98</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>fe68d9940d546ece3d41d3087dfe992d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305006">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/cyclic_poly.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>bed9a04eab1f61d71ec22fc8adb358c17e2b58ad</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>686a48e063db0e4ad54db15d1811543db333d46bddcc04be022e58822773b783</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>2cbe5c4064f1ddf662a7683a245149a7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305003">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/isterminal_windows.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>a8c4d58c10fcb38a9d3afec66ddd05ac17999b7a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>1d2d83e9e3424e16aa5b2843e84a1b8a21254da7d21c2f8c301f9ef04edcd10a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>50a4d90674d8c774c447fd9625fc2513</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305002">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/isterminal.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>6b40ce16d37e34d3be8c95928b7a07dcddca49bd</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>7e441df8fcd51b621e2ca280b5e83326c8c9f91611ccef80d6cc2088bef9d318</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>0e8d64f795936e49a09584ae28323a34</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305001">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/ioctl_bsd.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>929da2c1426ddf671b65c56c56687515bc972ca3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>1ed03179be3b18178a395c9a132ce2aa53e590651454742c51056c14ebdc2072</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>a800c6a0d68818513f653d1a6b234327</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304999">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/probs_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>604fec88d6b33fd8602ba8634573a8d6f347c1d8</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>9b16ed2af30428da8367a0310d14a8fc49e89396f4a4483c3e369da7598b74d6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>778b18cd0e206813c86ee4007c5d12ed</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304998">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/probs.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>572b83aa595019e7de45c924359666b6492c6b21</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>b644055e960b468249fc0f3edce65d8fd9c9218b6e4cc480936817313e1ad3ca</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>b20e2bf99dd977a5033f762de79f1b9b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304997">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/groupreader.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>0bd38a0eaef092a4b8f3960dd7d70edcf05d0238</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>d3ab783874475e0101de450dd67e4303c264a1a73584123745de037af2e6224a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>15735c5ec52f95ee3a96efaaec30ae5e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304993">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/gflag/flag_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c846197b02984c96aa043786f9d766cdd0e027e3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>67f997968ae7bfdacecd51d5be74e4cc337eb6c3c9f926bf79fc159e3e55ec87</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>c74a381c8bb14498e4578b74e8291360</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304989">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/writer_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>99a9b2dca8fbcd94f859d037bd1c5a0ee2b3f3ac</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>660f3c9d7bb8588b889785bb574b0f29ca7aeea53b1ac3e446e55951ae61b4bc</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>74dfe5b8e5d22a71500089fac34e8d1b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304984">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/main.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>1b3b0579b93ec0ecc96d5b8e327f589785a3cfc1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>e8037fbf83e9d438077c37381f053200146bc6ee1bed6ae4c457c0c63e4d46a5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>f322bacdfae692b913852e888541dc82</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304981">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/version-file.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>51a78a45b76bb81f4b509a3ee067dafae59de4d4</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>748f71510c283a6d92da85bc28f15b814b787007128a46e4d8cbc47d5db54510</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>d72f1dfe4d5a2940c028cd2f143de90f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304978">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/main.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>ab255ca5681a48d6ed391dee440b0faa27814584</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3502369213a0eeee5f34cbfe0ba0a5ee824226b98c31d2ec9294733f37d5280b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>47ec50f7533af89e789e35e48dae0353</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304977">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/cat.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>54ceb725296e47910ea4e9fadfcbd6ed2249aa63</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>0d1e7d944db2bad48b4d50174a388eb4fc3a2a6afcebe8a5da6c43533f8cfce3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>73c6871a86757533f26f8d4083428631</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304994">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/gflag/flag.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>9dabe1a07a26a8a937e2e228837d515a4517e99c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>9b56b3dc65bb07ed254396a6fb6914dc2c385dd014fe644fb9a6e5ddac2c4798</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>f631359ec52241dfe9cb5351136b79bb</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304990">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/example.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>7412bb9ea76d42f91b82de640c9284d7fc311151</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>28183d7631a32e49cc074a69e6ef364e72d9a1f7ef85421679e9f1053669f839</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>80a0c36fd0f4b03878c7d0c24d833e0e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304985">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/file.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>b10aafce28d340af6e36e62da95950ae371da374</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>37587d11933eef1c437dddffac856e89f5ae3358f0c06ba1319ea31e74721421</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>5250947c3eca340965dc00f82eeeb0ac</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304979">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/copyright.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>26c7546e16afc6ba7f5ea8bf5ce2c258878bf0d2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>db4a1ffb8589944fbe839e0bcf1ff5353cd5536b6e153fdf636aab31a5969542</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>02de35e82f18e4e406cedd768db43656</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+                Copyright 2014-2020 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304974">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/none-check_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>1d0b6c80a7c5cab034eba06e90481db521ed263f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>09fd93887fc7fdb8412484067b1f1772df5f51581d4c04f99e8e546447d9a628</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>9cc38b7e76a3745e5437a6c5bd50ba3b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304970">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/reader_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>8f5fb63fc7ec57d29385a5c91b4887d23cad53ae</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>ec10b57689bcd9af167d4a6507fcf6abe1fb691123eb9fbcfbf5e1a2e48cc33f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>31600e761c98e363a10bc6e239ccf1b6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304973">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/crc.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>45333c0046bb63c2af520cc7a96dda4752b36491</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>245d1caed04c782a045afbe4048477b78cfb84af5187ff1a7fd349c06571156c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>4f3885f7412b64700aa8036a1ad0552a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2014-2019 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304949">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/LICENSE</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>f1fdbb57481f9defd8afeb7f8ab6aec43efc9a07</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>5e464cc3435f8e31b74e54b3a683a93bb14b6f50414c81a5d944f9bd7fcb0943</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>2b1ae3e59e3a121cc21946f197567323</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause-871ee238618e143aa808dee254a44d3b" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier" />
+              <spdx:licenseInfoInFile>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause" />
+              </spdx:licenseInfoInFile>
+              <spdx:copyrightText><![CDATA[
+                Copyright (c) 2014-2020 Ulrich Kunitz
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305081">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/go.mod</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>54ad0c582cdf1705e282c339771df7e1c7e86253</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>393876046d63d90f35f21c1bb4651b0985e76d8f14a48a7279ff947b96956e7b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>6eb1edb58e6699383f082c85e9452b55</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305044">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/info.txt</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>4d2b9b4f4be2fabd5449cf7729473d7c8428eb68</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>88aa12f7c1cb78f7d1312120f0aa4d1eac9e63287871a45b38517ccdcf2974cf</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>472351dd81dcbdb3af1eaa166ff54e90</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304964">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.4.1.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c87977a4ca501fbbd036e5a1251168793ea9bf68</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>6628e54f2c0bb2b7acf468cf2c936d2916b35868b251ce3e90b21cae37da1a79</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>e9fdad754005f3bb58835258f58c4b59</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304987">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/TODO.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>052366ece7176dd5741dbfc478e12f5de0b896c7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>d6be3c37454a2dc44d5f120159620f627006a6dfebd0dbc81337f9e18a561d7e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>b729ba72c729e20e22d3344610e2f812</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304961">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>caa235395561073a0953ebed60679e5338d7e99a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>d82f91f1fe854671f9edfbda5c5b477d5d88e948e3ff14090ef4e4b542b9ead4</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>a36ffe7017dd0902ad43c03d5f8ba1ef</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304953">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/LZMA2.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>63e383b635e8fa1c7137aaaa072c0ad36b744e22</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>050f8c1fc047da5f018624bcf3d684dbe781d6cbc39fd2fdece9f727e89de176</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>9911d6192d83375f0f218e93f2862e8c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304952">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/xz-issues.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>54333415dd3ddaed3ae064b02b8ae95d0cd40269</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>c4dce242a63fa5d2ab8311cd287371580ae849acebe01647bbcccbcce7af05c6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>5296e1723c87ebad5dadcada21001f34</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304969">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/.gitignore</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>fabab79a9b0e0602ec7f4eb9d60fc14b97e2ccda</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>05bf55db2a3bbb17b8cb0762ccb7dc4e46cf1235bdb8736eaebdda7cda11008a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>99fed25cbc7f0554f5c8bb471080e202</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304954">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/md.css</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>ab8ff0dcfc1fe20115bd7c7359cf98aa93f355ca</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>f7aea19d3fc0f951459aef10d9156df86acafc06731f72d187a3acfce953f9c5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>d123d16994b858c5528f3eaa79ba2178</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305048">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/README.txt</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>8b93828241c6ab15733f7f3d5fb94dbb25264f31</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>e0cac774afe8767aa86c872e7ca60461a6b6ee00ea905bc70203162ef6b9ed34</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>994c08698d89e914b3a327c9c1522ef9</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304951">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/.gitignore</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c9183f5f540778aaf8e29537308f3857f1296ed4</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>01f9cc439c3e7eb45219e526221a511ea75b2fc9f4907b8d17cc270669db6db5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>303b9a9ecea3339e9e38c54192c0ed4b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305049">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/bad_incorrect_size.lzma</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>930dba0c4fbe98cfe0eb2cec7dd0058341265767</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>4a5ad6134599225d675c20cdc7bcb5427d9cbc8f6ea326e7d87f96dbdaf3f9ef</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>9f4d164a86b85553aa267510b56462de</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304966">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.4.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>a78edf8c6e356160ae7d2978b70eb00b95c79710</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>2b7a6e5e85f958d3a6906a098c3b2c6eb57826bd8d343cd45a06bba1615b5941</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>8c4c5824cc61d1d4af4cc436baa0c750</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304967">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.7.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c9b21009c9eb703acd5df08fbf39c0be26c5dc0e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>8caebb1c81e5f91bfe85396eec59e81ec21536ff56cf89e6c44316036db97bc3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>03ce690affda4904612fab933df47893</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305042">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a_lp1_lc2_pb1.lzma/a_lp1_lc2_pb1</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>76f99c4b76465c813f4fe0fdc720ea9482755cf2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>db8ea649fdd9c7ed14f6fb79a79a3da97f510cad599009ee574374d5ab52312f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>57a42eb7f425c13fa644f2618a097ab7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304986">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/version.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>2d32f9bd27a9d5b6ab64f2e1b76c8863ac6e4289</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>2c14f7891e478cafa0e06c21b4371ab3fc3fa3dccf873482f3e206f7f05bc804</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>48100756025814dfbb73c56b828a750f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304980">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/version.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>2d32f9bd27a9d5b6ab64f2e1b76c8863ac6e4289</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>2c14f7891e478cafa0e06c21b4371ab3fc3fa3dccf873482f3e206f7f05bc804</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>48100756025814dfbb73c56b828a750f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304958">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.5.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>705c1cda340a1263a26cadd2b7fd8f4988e6e2d1</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>798c14c4c96763dce641ab074d2f9d7e5bc96509f7cea347ba6cb89a19b8d178</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>7b06ce49cd44cce6ccee0e47e3dc208c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305043">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/bad_eos_incorrect_size.lzma</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>660f20971cec002e0e9dc71074751373f66d5d29</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>b863bbdf169589cdb8c9f1b03b53372f189cce93c4354ad5931c94fc85be848d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>e24b5b7edae7ae72b671df9ea36f1292</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304968">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.3.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>8f7e5bb7caa680b35a69f8e82808f65abb41f312</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>dff8becc1b4a7b86253daea787582911bda22403dd00cab3fa8f9954293b0def</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>10c72d7d1521120aececc7d585d7fc03</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305038">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a_eos_and_size.lzma/a_eos_and_size</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>76f99c4b76465c813f4fe0fdc720ea9482755cf2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>db8ea649fdd9c7ed14f6fb79a79a3da97f510cad599009ee574374d5ab52312f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>57a42eb7f425c13fa644f2618a097ab7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305027">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/fox.lzma</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>80ad6321849d99062eed466d5653a05bdda275c0</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>9a6481a4aa6a0f126e1d8884c71d7ad55f89dc8dc876f435bf37dbe82bcb63c7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>0c746b0014c2366b4125615828ac1721</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305035">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a.txt</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>76f99c4b76465c813f4fe0fdc720ea9482755cf2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>db8ea649fdd9c7ed14f6fb79a79a3da97f510cad599009ee574374d5ab52312f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>57a42eb7f425c13fa644f2618a097ab7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305047">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a.lzma/a</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>76f99c4b76465c813f4fe0fdc720ea9482755cf2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>db8ea649fdd9c7ed14f6fb79a79a3da97f510cad599009ee574374d5ab52312f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>57a42eb7f425c13fa644f2618a097ab7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304959">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.6.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>018c9a813e31d9d4db7196791425a93712295b4e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>379cb623b83683e76c57a09beb60e54231a3d94d60ea201156f2892ba3f124a2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>f346fc75504ff48d4f5a80eac28424e2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305039">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/bad_corrupted.lzma</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>8e4c696e5f348382ae9f3ee672794c1aee58613e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>d5c39d14d9f9a3400b30f90400500e13d9447832eda4e4677962e092b541544b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>d738a04cbb8c2a62a5ee765c5144783b</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304962">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.8.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>01a39ec9827184804770ac83e6ed49ea37b050a4</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3253fd32a762494ce1094723f03450229bf1d8df589d994f5fac1f860d01473f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>fdcc19ad4dcd5c88df4a8949983f58ef</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304957">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.4.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>7979c9c96730165d237971b0b371bb2fe3c5be8e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>e6a9afa2556243e8656319f86982228831710bbb5e76bb99c627c5839bdc21b2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>676e88d155453d4318a027acd87c9532</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305021">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/make-docs</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>7d5f7ae887b0bf21a73b318d29ec3d442fe4be24</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>dda1e6b6b9906e3f9f8bc553d31a6d5b7ab5d52967bc0b8eb1a4aed836dd10b8</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>cf014ae8167e77c12a3e77e1bfea571f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304960">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.3.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>e539bf413368761c2ec60fae2211a2ebfaf5c125</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>b2d9c1c7e32d6c96eac03746c2461a30784a88ac1e5737a80bc9c1ccc9fae7b6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>fd4ae2517977f0d35e88cad259c68994</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304965">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.2.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>101bcdb5b4abc7e69457c2380fae1ccff29420cb</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>c4b9de6497071994d19de354d1197c0e120bcf2584030cef0e0c439894c50e17</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>0a5db1fb98c0f4955ae981df2b177a72</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305018">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/README.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>9fa0618092b3718b1939d5a1249ec65e0d8924a5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>d1c7c4a690979419b40442d2e3e654593530d61a924d572d5b50a214e52bb681</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>f81fc0d580ae0f54b9cd62c668f88091</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304955">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/make-docs</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>a79de337269099b44f6822b1f86b3661dbf8bf07</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>fa3d479d1ef12a51b0419d374b3d5cfa80e919b964be27842b1253f98666ad09</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>ac4910823b5e41c57f2da4708fba069d</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183304963">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.1.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>cde55c0710c71b610cb6a11861534f5d284e0d9c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>a5eeb6ad2b5d9027b11f78adde6e1b211d71ef4d293dbdd6f16a2dea001ec7bc</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>3c6b802285e498a6347d496f7fdf2ce7</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item183305034">
+              <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a_eos.lzma</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>e0bfc2c01fd6855966d6e77e587059c0baf5052a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>13209c5e161f9f22a685c31f978587856b5e331d070c72bf029e193d781ea60f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>25f14efd73868a224f53b14f96ce7b66</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          
+        </spdx:Package>
+      </spdx:relatedSpdxElement>
+    </spdx:Relationship>
+  </spdx:relationship>
+  
+</spdx:SpdxDocument>
+</rdf:RDF>

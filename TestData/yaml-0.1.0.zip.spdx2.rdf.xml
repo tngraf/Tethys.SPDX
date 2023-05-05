@@ -1,0 +1,594 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:spdx="http://spdx.org/rdf/terms#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://stage.fossology.siemens.com/repo/SPDX2_yaml-0.1.0.zip_1680269421.spdx.rdf">
+<spdx:SpdxDocument rdf:about="http://stage.fossology.siemens.com/repo/SPDX2_yaml-0.1.0.zip_1680269421.spdx.rdf#SPDXRef-DOCUMENT">
+  <spdx:specVersion>SPDX-2.3</spdx:specVersion>
+  <spdx:dataLicense>
+    <spdx:ListedLicense rdf:about="http://spdx.org/licenses/CC0-1.0">
+      <spdx:name>Creative Commons Zero v1.0 Universal</spdx:name>
+      <spdx:licenseId>CC0-1.0</spdx:licenseId>
+      <spdx:licenseText><![CDATA[
+Creative Commons Legal Code
+
+CC0 1.0 Universal
+
+    CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
+    LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+    ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
+    INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
+    REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+    PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
+    THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
+    HEREUNDER.
+
+Statement of Purpose
+
+The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator
+and subsequent owner(s) (each and all, an "owner") of an original work of
+authorship and/or a database (each, a "Work").
+
+Certain owners wish to permanently relinquish those rights to a Work for
+the purpose of contributing to a commons of creative, cultural and
+scientific works ("Commons") that the public can reliably and without fear
+of later claims of infringement build upon, modify, incorporate in other
+works, reuse and redistribute as freely as possible in any form whatsoever
+and for any purposes, including without limitation commercial purposes.
+These owners may contribute to the Commons to promote the ideal of a free
+culture and the further production of creative, cultural and scientific
+works, or to gain reputation or greater distribution for their Work in
+part through the use and efforts of others.
+
+For these and/or other purposes and motivations, and without any
+expectation of additional consideration or compensation, the person
+associating CC0 with a Work (the "Affirmer"), to the extent that he or she
+is an owner of Copyright and Related Rights in the Work, voluntarily
+elects to apply CC0 to the Work and publicly distribute the Work under its
+terms, with knowledge of his or her Copyright and Related Rights in the
+Work and the meaning and intended legal effect of CC0 on those rights.
+
+1. Copyright and Related Rights. A Work made available under CC0 may be
+protected by copyright and related or neighboring rights ("Copyright and
+Related Rights"). Copyright and Related Rights include, but are not
+limited to, the following:
+
+  i. the right to reproduce, adapt, distribute, perform, display,
+     communicate, and translate a Work;
+ ii. moral rights retained by the original author(s) and/or performer(s);
+iii. publicity and privacy rights pertaining to a person's image or
+     likeness depicted in a Work;
+ iv. rights protecting against unfair competition in regards to a Work,
+     subject to the limitations in paragraph 4(a), below;
+  v. rights protecting the extraction, dissemination, use and reuse of data
+     in a Work;
+ vi. database rights (such as those arising under Directive 96/9/EC of the
+     European Parliament and of the Council of 11 March 1996 on the legal
+     protection of databases, and under any national implementation
+     thereof, including any amended or successor version of such
+     directive); and
+vii. other similar, equivalent or corresponding rights throughout the
+     world based on applicable law or treaty, and any national
+     implementations thereof.
+
+2. Waiver. To the greatest extent permitted by, but not in contravention
+of, applicable law, Affirmer hereby overtly, fully, permanently,
+irrevocably and unconditionally waives, abandons, and surrenders all of
+Affirmer's Copyright and Related Rights and associated claims and causes
+of action, whether now known or unknown (including existing as well as
+future claims and causes of action), in the Work (i) in all territories
+worldwide, (ii) for the maximum duration provided by applicable law or
+treaty (including future time extensions), (iii) in any current or future
+medium and for any number of copies, and (iv) for any purpose whatsoever,
+including without limitation commercial, advertising or promotional
+purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each
+member of the public at large and to the detriment of Affirmer's heirs and
+successors, fully intending that such Waiver shall not be subject to
+revocation, rescission, cancellation, termination, or any other legal or
+equitable action to disrupt the quiet enjoyment of the Work by the public
+as contemplated by Affirmer's express Statement of Purpose.
+
+3. Public License Fallback. Should any part of the Waiver for any reason
+be judged legally invalid or ineffective under applicable law, then the
+Waiver shall be preserved to the maximum extent permitted taking into
+account Affirmer's express Statement of Purpose. In addition, to the
+extent the Waiver is so judged Affirmer hereby grants to each affected
+person a royalty-free, non transferable, non sublicensable, non exclusive,
+irrevocable and unconditional license to exercise Affirmer's Copyright and
+Related Rights in the Work (i) in all territories worldwide, (ii) for the
+maximum duration provided by applicable law or treaty (including future
+time extensions), (iii) in any current or future medium and for any number
+of copies, and (iv) for any purpose whatsoever, including without
+limitation commercial, advertising or promotional purposes (the
+"License"). The License shall be deemed effective as of the date CC0 was
+applied by Affirmer to the Work. Should any part of the License for any
+reason be judged legally invalid or ineffective under applicable law, such
+partial invalidity or ineffectiveness shall not invalidate the remainder
+of the License, and in such case Affirmer hereby affirms that he or she
+will not (i) exercise any of his or her remaining Copyright and Related
+Rights in the Work or (ii) assert any associated claims and causes of
+action with respect to the Work, in either case contrary to Affirmer's
+express Statement of Purpose.
+
+4. Limitations and Disclaimers.
+
+ a. No trademark or patent rights held by Affirmer are waived, abandoned,
+    surrendered, licensed or otherwise affected by this document.
+ b. Affirmer offers the Work as-is and makes no representations or
+    warranties of any kind concerning the Work, express, implied,
+    statutory or otherwise, including without limitation warranties of
+    title, merchantability, fitness for a particular purpose, non
+    infringement, or the absence of latent or other defects, accuracy, or
+    the present or absence of errors, whether or not discoverable, all to
+    the greatest extent permissible under applicable law.
+ c. Affirmer disclaims responsibility for clearing rights of other persons
+    that may apply to the Work or any use thereof, including without
+    limitation any person's Copyright and Related Rights in the Work.
+    Further, Affirmer disclaims responsibility for obtaining any necessary
+    consents, permissions or other rights required for any use of the
+    Work.
+ d. Affirmer understands and acknowledges that Creative Commons is not a
+    party to this document and has no duty or obligation with respect to
+    this CC0 or use of the Work.
+
+      ]]></spdx:licenseText>
+      <rdfs:seeAlso>https://creativecommons.org/publicdomain/zero/1.0/legalcode</rdfs:seeAlso>
+    </spdx:ListedLicense>
+  </spdx:dataLicense>
+  <spdx:creationInfo>
+    <spdx:CreationInfo>
+      <spdx:licenseListVersion>3.19</spdx:licenseListVersion>
+      <spdx:creator>Person: thomas.graf@siemens.com (thomas.graf@siemens.com)</spdx:creator>
+      <spdx:creator>Organization: SIEMENS</spdx:creator>
+      <spdx:creator>Tool: fossology-4.2.0.137-ng</spdx:creator>
+      <spdx:created>2023-03-31T13:30:22Z</spdx:created>
+    </spdx:CreationInfo>
+  </spdx:creationInfo>
+  <spdx:name>/srv/fotransfer/repository/report</spdx:name>
+  <rdfs:comment>
+    This document was created using license information and a generator from Fossology.
+  </rdfs:comment>
+  <spdx:hasExtractedLicensingInfo>
+    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies">
+      <spdx:licenseId>LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies</spdx:licenseId>
+      <spdx:name>BSD-3-Clause_MIPS Technologies</spdx:name>
+      <spdx:extractedText><![CDATA[
+Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 
+      Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+      Redistributions in binary form must reproduce the above
+      copyright
+        notice, this list of conditions and the following disclaimer
+        in the documentation and/or other materials provided with
+        the distribution.
+      Neither the name of MIPS Technologies Inc. nor the names of its
+        contributors may be used to endorse or promote products derived
+        from this software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+      ]]></spdx:extractedText>
+    </spdx:ExtractedLicensingInfo>
+  </spdx:hasExtractedLicensingInfo>
+  <spdx:hasExtractedLicensingInfo>
+    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD">
+      <spdx:licenseId>LicenseRef-fossology-BSD</spdx:licenseId>
+      <spdx:name>BSD</spdx:name>
+      <spdx:extractedText><![CDATA[
+BSD is referenced without a version number. Please look up BSD in the License Admin to view the different versions.
+      ]]></spdx:extractedText>
+    </spdx:ExtractedLicensingInfo>
+  </spdx:hasExtractedLicensingInfo>
+  <spdx:relationship>
+    <spdx:Relationship>
+      <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_describes" />
+      <spdx:relatedSpdxElement>
+        <spdx:Package rdf:about="#SPDXRef-upload42075">
+          <spdx:name>yaml-0.1.0.zip</spdx:name>
+          <spdx:packageFileName>yaml-0.1.0.zip</spdx:packageFileName>
+          <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:versionInfo></spdx:versionInfo>
+          <spdx:filesAnalyzed>true</spdx:filesAnalyzed>
+          <spdx:packageVerificationCode>
+            <spdx:PackageVerificationCode>
+            <spdx:packageVerificationCodeValue>21c75ea2ae3b5fa8bc294a0adfdc5d4b67744339</spdx:packageVerificationCodeValue>
+            </spdx:PackageVerificationCode>
+          </spdx:packageVerificationCode>
+          <spdx:checksum>
+            <spdx:Checksum>
+              <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+              <spdx:checksumValue>041fb905cce79a2d7e63d73a9ee1dc37c89507fe</spdx:checksumValue>
+            </spdx:Checksum>
+          </spdx:checksum>
+          <spdx:checksum>
+            <spdx:Checksum>
+              <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+              <spdx:checksumValue>34de5db6582d418dc24cc8cbe4d853b418722eca798ece9d811caff755f6a8c0</spdx:checksumValue>
+            </spdx:Checksum>
+          </spdx:checksum>
+          <spdx:checksum>
+            <spdx:Checksum>
+              <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+              <spdx:checksumValue>08249ad728a286cc630eeef9998c026c</spdx:checksumValue>
+            </spdx:Checksum>
+          </spdx:checksum>
+          <spdx:licenseComments><![CDATA[
+            licenseInfoInFile determined by Scanners:
+   - nomos ("4.2.0.137-ng".efc782)
+   - monk ("4.2.0.137-ng".efc782)
+   - ojo ("4.2.0.137-ng".efc782)
+          ]]></spdx:licenseComments>
+          <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940157">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/LICENSE</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>271aeaf56ee621c5accfc2a9db0b10717e038eaf</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>24653fd8a39354396da1a265d68316399edc39b1df48c5866d55f9f06484fa9a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>0ceb9ff3b27d3a8cf451ca3785d73c71</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/MIT">
+                  <spdx:name>MIT License</spdx:name>
+                  <spdx:licenseId>MIT</spdx:licenseId>
+                  <spdx:licenseText><![CDATA[
+          Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+          
+          The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+          
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                  ]]></spdx:licenseText>
+                  <rdfs:seeAlso>https://opensource.org/licenses/MIT</rdfs:seeAlso>
+                </spdx:ListedLicense>
+              </spdx:licenseInfoInFile>
+              <spdx:licenseInfoInFile>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause">
+                  <spdx:name>BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License</spdx:name>
+                  <spdx:licenseId>BSD-3-Clause</spdx:licenseId>
+                  <spdx:licenseText><![CDATA[
+          Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+          
+             1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+          
+             2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+          
+             3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+          
+          THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                  ]]></spdx:licenseText>
+                  <rdfs:seeAlso>https://opensource.org/licenses/BSD-3-Clause</rdfs:seeAlso>
+                </spdx:ListedLicense>
+              </spdx:licenseInfoInFile>
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies" />
+              <spdx:copyrightText><![CDATA[
+                Copyright (c) 2014 Sam Ghods
+                Copyright (c) 2012 The Go Authors. All rights reserved.
+                copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above
+                COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABI
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940160">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/.github/workflows/release.yaml</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>928587208251970cf2357f3682e184abf140e47e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>3d6e33c34b61648ad7b4863acc87745381c5861938624e5fcbeb324ba990bdb5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>cae865f831c512a76edbc96812ffac40</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940161">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/.github/workflows/lint.yaml</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>9148e64029889c1f0f4bfbf52970d437db15f0f0</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>5f6358b4e561744543cea8bce1cc7704f5dd459a7a43700ceda147f24cbfb354</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>c61a71910b9a924527a880103fa8ea60</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940162">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/.github/workflows/test.yaml</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>6a943bb8f380a496cce73f7e55ff9458d67e2fb6</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>ceb39081f8d795f173b706b289372d1edcbc57cf6f111907a307d2ac64018053</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>6e849a4fda0a9554a16be51e2c7e28d3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940163">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/fields.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>cb49d40e22d1ca1c597c7a0b4f5da8afcdb8a49e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>6ebedc65de9ae510f2cc3557107d1349cccf5f785e0e959f2b4363f3505610d0</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>daf030fe0927e5ce33d4ae4cf676dee2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD" />
+              <spdx:copyrightText><![CDATA[
+                Copyright 2013 The Go Authors. All rights reserved. Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+              ]]></spdx:copyrightText>
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940164">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/.gitignore</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>cab223bc31636d63dff5e2b4e54e3d0081a985cf</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>1358835b4188f30b734df4434e6a173f6fa8d9b03e1da29b5daf36b8b78f4d4f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>8875807f5ddd33b8026ffa5677d152e3</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940165">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/yaml_test.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>5b82619d18188ecc8aef7d5b073d4344a897bcc2</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>c4098cb1aa45339620ed1fd80f344453976b75ccdcb398dadf427ab43b75d474</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>123d39f9ea32bf4b0fe95696ae95f759</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940166">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/README.md</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>11e79bea8251cc5e47a618f331afc686149f967a</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>1c7dbc59bd8ebdfa469986e2c51d510e2b754f1c4866e9199064b9ee2c88ebc5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>adcf1d864fd3475ce3a8732abcd6664f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940167">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/.golangci.toml</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>d1cdb1c55f7e4e506f21199737ec0516c367668e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>2181b0b215a4b7df146aca9fefe49fc98ba3c2b3c3745871de34f254c8722937</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>a1a4b9e896d55adfcab8a5dfc944023c</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940168">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/go.sum</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c2644d8d42585f9539993a50676d111ec5f8dae5</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>e8526c4009f6a925d42ead1c75792ae99c8b38792edb400d0420c41afdda66c0</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>9ef47cfbc41d4e0a848b402776dbd520</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940169">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/go.mod</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>c35759470c18de485d51aae462a78a73e08ca9ab</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>be9aaf6c3cb155c75bc142b189a7cd3829f3055917ea5b3a58c2746ccbd8ebdc</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>13d0474c45f9994a279255a6d2fb104e</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          <spdx:hasFile>
+            <spdx:File rdf:about="#SPDXRef-item165940170">
+              <spdx:fileName>yaml-0.1.0.zip/yaml-0.1.0/yaml.go</spdx:fileName>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha1" />
+                  <spdx:checksumValue>25a8d408f07c566724eece2714b822ad8a04350f</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_sha256" />
+                  <spdx:checksumValue>b6bd43d1c2ce0ab94c1dc343dd8a64c97a48d31bc27038bb05d9cb9b0c734366</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:checksum>
+                <spdx:Checksum>
+                  <spdx:algorithm rdf:resource="http://spdx.org/rdf/terms#checksumAlgorithm_md5" />
+                  <spdx:checksumValue>45949ac9f1838f15275ee93103b73747</spdx:checksumValue>
+                </spdx:Checksum>
+              </spdx:checksum>
+              <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:licenseInfoInFile rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+              <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
+            </spdx:File>
+          </spdx:hasFile>
+          
+        </spdx:Package>
+      </spdx:relatedSpdxElement>
+    </spdx:Relationship>
+  </spdx:relationship>
+  
+</spdx:SpdxDocument>
+</rdf:RDF>

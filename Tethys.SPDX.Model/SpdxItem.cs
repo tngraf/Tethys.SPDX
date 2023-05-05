@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxItem.cs" company="Tethys">
 //   Copyright (C) 2018 T. Graf
 // </copyright>
@@ -53,6 +53,11 @@ namespace Tethys.SPDX.Model
         /// Gets or sets the license comments.
         /// </summary>
         public string LicenseComments { get; set; }
+
+        /// <summary>
+        /// Gets or sets the attribution text.
+        /// </summary>
+        public string AttributionText { get; set; }
         #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------

@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="LicenseInfoFactory.cs" company="Tethys">
 //   Copyright (C) 2019-2022 T. Graf
 // </copyright>
@@ -99,7 +99,8 @@ namespace Tethys.SimpleSpdxParser
 
             var license = (GetLicenseFromUri(parent)
                 ?? GetLicenseFromId(parent, parser))
-                ?? GetLicenseFromType(parent, parser);
+                ?? GetLicenseFromType(parent, parser)
+                ?? GetLicenseFromListedLicense(parent, parser);
             if (license == null)
             {
                 Log.Error("Error reading license: No ID associated with a license!");
@@ -113,6 +114,38 @@ namespace Tethys.SimpleSpdxParser
         //// ---------------------------------------------------------------------
 
         #region PRIVATE METHODS
+        /// <summary>
+        /// Gets the license information from a listed license.
+        /// </summary>
+        /// <param name="parent">The parent.</param>
+        /// <param name="parser">The parser.</param>
+        /// <returns>AnyLicenseInfo.</returns>
+        private static AnyLicenseInfo GetLicenseFromListedLicense(XContainer parent, RdfParser parser)
+        {
+            var parent2 = XmlSupport.GetFirstSubNode(parent, "ListedLicense", false);
+            if (parent2 != null)
+            {
+                var about = XmlSupport.GetAttributeValue(parent2, "about", false);
+                if (about != null)
+                {
+                    var existing = parser.FindListedLicense(about);
+                    if (existing != null)
+                    {
+                        return existing;
+                    } // if
+                } // if
+
+                var info = new ListedLicenseInfo();
+                info.Name = XmlSupport.GetFirstSubNodeValue(parent2, "name", false);
+                info.Id = XmlSupport.GetFirstSubNodeValue(parent2, "licenseId", false);
+                info.Text = XmlSupport.GetFirstSubNodeValue(parent2, "licenseText");
+                parser.AddListedLicense(about, info);
+                return info;
+            } // if
+
+            return null;
+        } // GetLicenseFromListedLicense()
+
         /// <summary>
         /// Gets the type of the license from.
         /// </summary>
