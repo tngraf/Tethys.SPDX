@@ -455,6 +455,16 @@ namespace Tethys.SimpleSpdxParser
                 return this.listedLicenses[identifier];
             } // if
 
+#if false
+            foreach (var license in this.knownLicenseManager.Licenses)
+            {
+                if (license.LicenseId.Equals(identifier))
+                {
+                    return license
+                }
+            }
+#endif
+
             Log.Warn($"Listed license reference not found: {identifier}");
 
             return null;
@@ -520,7 +530,7 @@ namespace Tethys.SimpleSpdxParser
             snippet.SpdxIdentifier = GetSpdxIdentifierFromUri(text);
             snippet.Name = XmlSupport.GetFirstSubNodeValue(parent, "name");
             snippet.LicenseComments = XmlSupport.GetFirstSubNodeValue(parent, "licenseComments");
-            snippet.AttributionText = XmlSupport.GetFirstSubNodeValue(parent, "attributionText");
+            snippet.AttributionText = XmlSupport.GetFirstSubNodeValue(parent, "attributionText", false);
 
             var xRange = XmlSupport.GetFirstSubNode(parent, "range");
             var xStartEndPointer = XmlSupport.GetFirstSubNode(xRange, "StartEndPointer");

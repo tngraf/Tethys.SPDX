@@ -5,12 +5,13 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
-## 1.1.0 (2023-04-18)
+## 1.1.0 (NEXT)
 
 * handle `spdx:ListedLicense` correctly.
 * support `spdx:attributionText`.  
   This is now a propery of `SpdxItem`.
 * have the updated SPDX license list.
+* Improve parsing of FOSSology 4.3 SPDX files.
 
 ## 1.0.1 (2023-03-31)
 

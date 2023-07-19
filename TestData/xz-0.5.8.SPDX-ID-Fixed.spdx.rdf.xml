@@ -1,14 +1,14 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:spdx="http://spdx.org/rdf/terms#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xml:base="http://stage.fossology.siemens.com/repo/SPDX2_xz-0.5.8.zip_1680261989.spdx.rdf">
-<spdx:SpdxDocument rdf:about="http://stage.fossology.siemens.com/repo/SPDX2_xz-0.5.8.zip_1680261989.spdx.rdf#SPDXRef-DOCUMENT">
+    xml:base="http://stage.fossology.siemens.com/repo/SPDX2_xz-0.5.8.zip_1689662517.spdx.rdf">
+<spdx:SpdxDocument rdf:about="http://stage.fossology.siemens.com/repo/SPDX2_xz-0.5.8.zip_1689662517.spdx.rdf#SPDXRef-DOCUMENT">
   <spdx:specVersion>SPDX-2.3</spdx:specVersion>
   <spdx:dataLicense>
     <spdx:ListedLicense rdf:about="http://spdx.org/licenses/CC0-1.0">
       <spdx:name>Creative Commons Zero v1.0 Universal</spdx:name>
       <spdx:licenseId>CC0-1.0</spdx:licenseId>
-      <spdx:licenseText><![CDATA[AABBCC-1
+      <spdx:licenseText><![CDATA[
 Creative Commons Legal Code
 
 CC0 1.0 Universal
@@ -140,8 +140,8 @@ express Statement of Purpose.
       <spdx:licenseListVersion>3.19</spdx:licenseListVersion>
       <spdx:creator>Person: thomas.graf@siemens.com (thomas.graf@siemens.com)</spdx:creator>
       <spdx:creator>Organization: SIEMENS</spdx:creator>
-      <spdx:creator>Tool: fossology-4.2.0.137-ng</spdx:creator>
-      <spdx:created>2023-03-31T11:26:32Z</spdx:created>
+      <spdx:creator>Tool: fossology-3853</spdx:creator>
+      <spdx:created>2023-07-18T06:42:01Z</spdx:created>
     </spdx:CreationInfo>
   </spdx:creationInfo>
   <spdx:name>/srv/fotransfer/repository/report</spdx:name>
@@ -158,69 +158,6 @@ GPL is referenced without a version number. Please look up GPL in the License Ad
     </spdx:ExtractedLicensingInfo>
   </spdx:hasExtractedLicensingInfo>
   <spdx:hasExtractedLicensingInfo>
-    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies">
-      <spdx:licenseId>LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies</spdx:licenseId>
-      <spdx:name>BSD-3-Clause_MIPS Technologies</spdx:name>
-      <spdx:extractedText><![CDATA[AABBCC-2
-Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions
- are met:
- 
-      Redistributions of source code must retain the above copyright
-        notice, this list of conditions and the following disclaimer.
-      Redistributions in binary form must reproduce the above
-      copyright
-        notice, this list of conditions and the following disclaimer
-        in the documentation and/or other materials provided with
-        the distribution.
-      Neither the name of MIPS Technologies Inc. nor the names of its
-        contributors may be used to endorse or promote products derived
-        from this software without specific prior written permission.
- 
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
- OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
- LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-      ]]></spdx:extractedText>
-    </spdx:ExtractedLicensingInfo>
-  </spdx:hasExtractedLicensingInfo>
-  <spdx:hasExtractedLicensingInfo>
-    <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier">
-      <spdx:licenseId>LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier</spdx:licenseId>
-      <spdx:name>BSD-3-Clause-Pierre-Olivier</spdx:name>
-      <spdx:extractedText><![CDATA[AABBCC-3
-Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are met:
- * Redistributions of source code must retain the above copyright
- notice, this list of conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright
- notice, this list of conditions and the following disclaimer in the
- documentation and/or other materials provided with the distribution.
- * The name of Pierre-Olivier Latour may not be used to endorse
- or promote products derived from this software without specific
- prior written permission.
- 
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- DISCLAIMED. IN NO EVENT SHALL PIERRE-OLIVIER LATOUR BE LIABLE FOR ANY
- DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-      ]]></spdx:extractedText>
-    </spdx:ExtractedLicensingInfo>
-  </spdx:hasExtractedLicensingInfo>
-  <spdx:hasExtractedLicensingInfo>
     <spdx:ExtractedLicensingInfo rdf:about="#LicenseRef-fossology-BSD">
       <spdx:licenseId>LicenseRef-fossology-BSD</spdx:licenseId>
       <spdx:name>BSD</spdx:name>
@@ -233,7 +170,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
     <spdx:Relationship>
       <spdx:relationshipType rdf:resource="http://spdx.org/rdf/terms#relationshipType_describes" />
       <spdx:relatedSpdxElement>
-        <spdx:Package rdf:about="#SPDXRef-upload42073">
+        <spdx:Package rdf:about="#SPDXRef-upload42085">
           <spdx:name>xz-0.5.8.zip</spdx:name>
           <spdx:packageFileName>xz-0.5.8.zip</spdx:packageFileName>
           <spdx:downloadLocation rdf:resource="http://spdx.org/rdf/terms#noassertion" />
@@ -264,15 +201,15 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
           </spdx:checksum>
           <spdx:licenseComments><![CDATA[
             licenseInfoInFile determined by Scanners:
-   - nomos ("4.2.0.137-ng".efc782)
-   - monk ("4.2.0.137-ng".efc782)
-   - ojo ("4.2.0.137-ng".efc782)
+   - nomos ("4.2.0.149-ng".be4bd5)
+   - monk ("4.2.0.149-ng".be4bd5)
+   - ojo ("4.2.0.149-ng".be4bd5)
           ]]></spdx:licenseComments>
           <spdx:licenseDeclared rdf:resource="http://spdx.org/rdf/terms#noassertion" />
           <spdx:licenseInfoFromFiles rdf:resource="http://spdx.org/rdf/terms#noassertion" />
           <spdx:copyrightText rdf:resource="http://spdx.org/rdf/terms#noassertion" />
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940001">
+            <spdx:File rdf:about="#SPDXRef-item165943785">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/LICENSE</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -295,30 +232,79 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
               <spdx:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion" />
               <spdx:licenseInfoInFile>
                 <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause">
-                  <spdx:name>BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License</spdx:name>
+                  <spdx:name>BSD-3-Clause_MIPS Technologies</spdx:name>
                   <spdx:licenseId>BSD-3-Clause</spdx:licenseId>
-                  <spdx:licenseText><![CDATA[AABBCC-4
-          Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-          
-             1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-          
-             2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-          
-             3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-          
-          THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                  <spdx:licenseText><![CDATA[
+          Redistribution and use in source and binary forms, with or without
+           modification, are permitted provided that the following conditions
+           are met:
+           
+                Redistributions of source code must retain the above copyright
+                  notice, this list of conditions and the following disclaimer.
+                Redistributions in binary form must reproduce the above
+                copyright
+                  notice, this list of conditions and the following disclaimer
+                  in the documentation and/or other materials provided with
+                  the distribution.
+                Neither the name of MIPS Technologies Inc. nor the names of its
+                  contributors may be used to endorse or promote products derived
+                  from this software without specific prior written permission.
+           
+           THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+           "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+           LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+           A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+           OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+           SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+           LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+           DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+           THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+           (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+           OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                   ]]></spdx:licenseText>
-                  <rdfs:seeAlso>https://opensource.org/licenses/BSD-3-Clause</rdfs:seeAlso>
                 </spdx:ListedLicense>
               </spdx:licenseInfoInFile>
-              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier" />
+              <spdx:licenseInfoInFile>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause">
+                  <spdx:name>BSD-3-Clause_MIPS Technologies</spdx:name>
+                  <spdx:licenseId>BSD-3-Clause</spdx:licenseId>
+                  <spdx:licenseText><![CDATA[
+          Redistribution and use in source and binary forms, with or without
+           modification, are permitted provided that the following conditions
+           are met:
+           
+                Redistributions of source code must retain the above copyright
+                  notice, this list of conditions and the following disclaimer.
+                Redistributions in binary form must reproduce the above
+                copyright
+                  notice, this list of conditions and the following disclaimer
+                  in the documentation and/or other materials provided with
+                  the distribution.
+                Neither the name of MIPS Technologies Inc. nor the names of its
+                  contributors may be used to endorse or promote products derived
+                  from this software without specific prior written permission.
+           
+           THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+           "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+           LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+           A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+           OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+           SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+           LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+           DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+           THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+           (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+           OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                  ]]></spdx:licenseText>
+                </spdx:ListedLicense>
+              </spdx:licenseInfoInFile>
               <spdx:copyrightText><![CDATA[
                 Copyright (c) 2014-2020 Ulrich Kunitz All rights reserved.
               ]]></spdx:copyrightText>
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940003">
+            <spdx:File rdf:about="#SPDXRef-item165943787">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/.gitignore</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -344,7 +330,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940004">
+            <spdx:File rdf:about="#SPDXRef-item165943788">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/xz-issues.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -370,7 +356,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940005">
+            <spdx:File rdf:about="#SPDXRef-item165943789">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/LZMA2.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -396,7 +382,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940006">
+            <spdx:File rdf:about="#SPDXRef-item165943790">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/md.css</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -422,7 +408,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940007">
+            <spdx:File rdf:about="#SPDXRef-item165943791">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/make-docs</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -448,7 +434,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940009">
+            <spdx:File rdf:about="#SPDXRef-item165943793">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.4.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -474,7 +460,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940010">
+            <spdx:File rdf:about="#SPDXRef-item165943794">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.5.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -500,7 +486,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940011">
+            <spdx:File rdf:about="#SPDXRef-item165943795">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.6.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -526,7 +512,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940012">
+            <spdx:File rdf:about="#SPDXRef-item165943796">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.3.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -552,7 +538,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940013">
+            <spdx:File rdf:about="#SPDXRef-item165943797">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -578,7 +564,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940014">
+            <spdx:File rdf:about="#SPDXRef-item165943798">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.8.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -604,7 +590,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940015">
+            <spdx:File rdf:about="#SPDXRef-item165943799">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.1.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -630,7 +616,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940016">
+            <spdx:File rdf:about="#SPDXRef-item165943800">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.4.1.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -656,7 +642,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940017">
+            <spdx:File rdf:about="#SPDXRef-item165943801">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.2.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -682,7 +668,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940018">
+            <spdx:File rdf:about="#SPDXRef-item165943802">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.4.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -708,7 +694,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940019">
+            <spdx:File rdf:about="#SPDXRef-item165943803">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.7.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -734,7 +720,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940020">
+            <spdx:File rdf:about="#SPDXRef-item165943804">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/doc/relnotes/release-v0.5.3.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -760,7 +746,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940021">
+            <spdx:File rdf:about="#SPDXRef-item165943805">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/.gitignore</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -786,7 +772,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940022">
+            <spdx:File rdf:about="#SPDXRef-item165943806">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/reader_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -814,7 +800,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940025">
+            <spdx:File rdf:about="#SPDXRef-item165943809">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/crc.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -842,7 +828,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940026">
+            <spdx:File rdf:about="#SPDXRef-item165943810">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/none-check_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -870,7 +856,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940029">
+            <spdx:File rdf:about="#SPDXRef-item165943813">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/cat.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -898,7 +884,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940030">
+            <spdx:File rdf:about="#SPDXRef-item165943814">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/main.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -930,7 +916,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940031">
+            <spdx:File rdf:about="#SPDXRef-item165943815">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/copyright.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -971,7 +957,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940032">
+            <spdx:File rdf:about="#SPDXRef-item165943816">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/version.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -997,7 +983,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940033">
+            <spdx:File rdf:about="#SPDXRef-item165943817">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/xb/version-file.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1025,7 +1011,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940035">
+            <spdx:File rdf:about="#SPDXRef-item165943819">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/licenses.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1049,8 +1035,12 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
               <spdx:licenseInfoInFile>
                 <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause" />
               </spdx:licenseInfoInFile>
-              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD-3-Clause_MIPS-Technologies" />
-              <spdx:licenseInfoInFile rdf:resource="#LicenseRef-fossology-BSD-3-Clause-Pierre-Olivier" />
+              <spdx:licenseInfoInFile>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause" />
+              </spdx:licenseInfoInFile>
+              <spdx:licenseInfoInFile>
+                <spdx:ListedLicense rdf:about="http://spdx.org/licenses/BSD-3-Clause" />
+              </spdx:licenseInfoInFile>
               <spdx:copyrightText><![CDATA[
                 Copyright (c) 2009 The Go Authors. All rights reserved.
                 copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above
@@ -1060,7 +1050,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940036">
+            <spdx:File rdf:about="#SPDXRef-item165943820">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/main.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1088,7 +1078,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940037">
+            <spdx:File rdf:about="#SPDXRef-item165943821">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/file.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1116,7 +1106,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940038">
+            <spdx:File rdf:about="#SPDXRef-item165943822">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/cmd/gxz/version.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1142,7 +1132,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940039">
+            <spdx:File rdf:about="#SPDXRef-item165943823">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/TODO.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1170,7 +1160,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940040">
+            <spdx:File rdf:about="#SPDXRef-item165943824">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/bits_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1198,7 +1188,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940041">
+            <spdx:File rdf:about="#SPDXRef-item165943825">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/writer_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1226,7 +1216,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940042">
+            <spdx:File rdf:about="#SPDXRef-item165943826">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/example.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1254,7 +1244,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940045">
+            <spdx:File rdf:about="#SPDXRef-item165943829">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/gflag/flag_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1282,7 +1272,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940046">
+            <spdx:File rdf:about="#SPDXRef-item165943830">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/gflag/flag.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1310,7 +1300,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940048">
+            <spdx:File rdf:about="#SPDXRef-item165943832">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/englm3.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1339,7 +1329,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940049">
+            <spdx:File rdf:about="#SPDXRef-item165943833">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/groupreader.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1367,7 +1357,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940050">
+            <spdx:File rdf:about="#SPDXRef-item165943834">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/probs.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1395,7 +1385,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940051">
+            <spdx:File rdf:about="#SPDXRef-item165943835">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/randtxt/probs_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1423,7 +1413,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940053">
+            <spdx:File rdf:about="#SPDXRef-item165943837">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/ioctl_bsd.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1451,7 +1441,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940054">
+            <spdx:File rdf:about="#SPDXRef-item165943838">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/isterminal.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1479,7 +1469,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940055">
+            <spdx:File rdf:about="#SPDXRef-item165943839">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/isterminal_windows.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1507,7 +1497,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940056">
+            <spdx:File rdf:about="#SPDXRef-item165943840">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/term/ioctl_linux.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1535,7 +1525,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940058">
+            <spdx:File rdf:about="#SPDXRef-item165943842">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/cyclic_poly.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1563,7 +1553,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940059">
+            <spdx:File rdf:about="#SPDXRef-item165943843">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/rabin_karp_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1591,7 +1581,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940060">
+            <spdx:File rdf:about="#SPDXRef-item165943844">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/cyclic_poly_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1619,7 +1609,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940061">
+            <spdx:File rdf:about="#SPDXRef-item165943845">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/roller.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1647,7 +1637,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940062">
+            <spdx:File rdf:about="#SPDXRef-item165943846">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/doc.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1675,7 +1665,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940063">
+            <spdx:File rdf:about="#SPDXRef-item165943847">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/hash/rabin_karp.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1703,7 +1693,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940065">
+            <spdx:File rdf:about="#SPDXRef-item165943849">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/internal/xlog/xlog.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1731,7 +1721,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940066">
+            <spdx:File rdf:about="#SPDXRef-item165943850">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/bits.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1759,7 +1749,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940069">
+            <spdx:File rdf:about="#SPDXRef-item165943853">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/reader.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1787,7 +1777,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940070">
+            <spdx:File rdf:about="#SPDXRef-item165943854">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/README.md</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1813,7 +1803,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940071">
+            <spdx:File rdf:about="#SPDXRef-item165943855">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/format.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1841,7 +1831,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940072">
+            <spdx:File rdf:about="#SPDXRef-item165943856">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/format_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1869,7 +1859,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940073">
+            <spdx:File rdf:about="#SPDXRef-item165943857">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/make-docs</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1895,7 +1885,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940075">
+            <spdx:File rdf:about="#SPDXRef-item165943859">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header2_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1923,7 +1913,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940076">
+            <spdx:File rdf:about="#SPDXRef-item165943860">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoder.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1951,7 +1941,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940077">
+            <spdx:File rdf:about="#SPDXRef-item165943861">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoder_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -1979,7 +1969,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940078">
+            <spdx:File rdf:about="#SPDXRef-item165943862">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoderdict_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2007,7 +1997,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940079">
+            <spdx:File rdf:about="#SPDXRef-item165943863">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/fox.lzma</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2033,7 +2023,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940080">
+            <spdx:File rdf:about="#SPDXRef-item165943864">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/operation.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2061,7 +2051,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940081">
+            <spdx:File rdf:about="#SPDXRef-item165943865">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2089,7 +2079,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940082">
+            <spdx:File rdf:about="#SPDXRef-item165943866">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/reader_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2117,7 +2107,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940083">
+            <spdx:File rdf:about="#SPDXRef-item165943867">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/hashtable.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2145,7 +2135,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940084">
+            <spdx:File rdf:about="#SPDXRef-item165943868">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/properties.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2173,7 +2163,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940086">
+            <spdx:File rdf:about="#SPDXRef-item165943870">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a_eos.lzma</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2199,7 +2189,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940087">
+            <spdx:File rdf:about="#SPDXRef-item165943871">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a.txt</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2225,7 +2215,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940090">
+            <spdx:File rdf:about="#SPDXRef-item165943874">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a_eos_and_size.lzma/a_eos_and_size</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2251,7 +2241,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940091">
+            <spdx:File rdf:about="#SPDXRef-item165943875">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/bad_corrupted.lzma</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2277,7 +2267,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940094">
+            <spdx:File rdf:about="#SPDXRef-item165943878">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a_lp1_lc2_pb1.lzma/a_lp1_lc2_pb1</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2303,7 +2293,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940095">
+            <spdx:File rdf:about="#SPDXRef-item165943879">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/bad_eos_incorrect_size.lzma</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2329,7 +2319,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940096">
+            <spdx:File rdf:about="#SPDXRef-item165943880">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/info.txt</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2355,7 +2345,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940099">
+            <spdx:File rdf:about="#SPDXRef-item165943883">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/a.lzma/a</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2381,7 +2371,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940100">
+            <spdx:File rdf:about="#SPDXRef-item165943884">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/README.txt</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2407,7 +2397,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940101">
+            <spdx:File rdf:about="#SPDXRef-item165943885">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/examples/bad_incorrect_size.lzma</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2433,7 +2423,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940102">
+            <spdx:File rdf:about="#SPDXRef-item165943886">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/treecodecs.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2461,7 +2451,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940103">
+            <spdx:File rdf:about="#SPDXRef-item165943887">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/decoderdict.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2489,7 +2479,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940104">
+            <spdx:File rdf:about="#SPDXRef-item165943888">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2517,7 +2507,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940105">
+            <spdx:File rdf:about="#SPDXRef-item165943889">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bintree_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2545,7 +2535,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940106">
+            <spdx:File rdf:about="#SPDXRef-item165943890">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bintree.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2573,7 +2563,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940107">
+            <spdx:File rdf:about="#SPDXRef-item165943891">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/encoder_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2601,7 +2591,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940108">
+            <spdx:File rdf:about="#SPDXRef-item165943892">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/breader.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2629,7 +2619,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940109">
+            <spdx:File rdf:about="#SPDXRef-item165943893">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/reader.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2657,7 +2647,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940110">
+            <spdx:File rdf:about="#SPDXRef-item165943894">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/buffer.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2685,7 +2675,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940111">
+            <spdx:File rdf:about="#SPDXRef-item165943895">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bitops.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2713,7 +2703,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940112">
+            <spdx:File rdf:about="#SPDXRef-item165943896">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/encoderdict.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2741,7 +2731,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940113">
+            <spdx:File rdf:about="#SPDXRef-item165943897">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/reader2.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2769,7 +2759,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940114">
+            <spdx:File rdf:about="#SPDXRef-item165943898">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer2.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2797,7 +2787,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940115">
+            <spdx:File rdf:about="#SPDXRef-item165943899">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/state.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2825,7 +2815,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940116">
+            <spdx:File rdf:about="#SPDXRef-item165943900">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/literalcodec.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2853,7 +2843,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940117">
+            <spdx:File rdf:about="#SPDXRef-item165943901">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/matchalgorithm.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2881,7 +2871,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940118">
+            <spdx:File rdf:about="#SPDXRef-item165943902">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2909,7 +2899,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940119">
+            <spdx:File rdf:about="#SPDXRef-item165943903">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/hashtable_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2937,7 +2927,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940120">
+            <spdx:File rdf:about="#SPDXRef-item165943904">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/prob.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2965,7 +2955,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940121">
+            <spdx:File rdf:about="#SPDXRef-item165943905">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer2_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -2993,7 +2983,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940122">
+            <spdx:File rdf:about="#SPDXRef-item165943906">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/buffer_test.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3021,7 +3011,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940123">
+            <spdx:File rdf:about="#SPDXRef-item165943907">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/distcodec.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3049,7 +3039,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940124">
+            <spdx:File rdf:about="#SPDXRef-item165943908">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/header2.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3077,7 +3067,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940125">
+            <spdx:File rdf:about="#SPDXRef-item165943909">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/writer.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3105,7 +3095,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940126">
+            <spdx:File rdf:about="#SPDXRef-item165943910">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/directcodec.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3133,7 +3123,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940127">
+            <spdx:File rdf:about="#SPDXRef-item165943911">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/lengthcodec.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3161,7 +3151,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940128">
+            <spdx:File rdf:about="#SPDXRef-item165943912">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/rangecodec.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3189,7 +3179,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940129">
+            <spdx:File rdf:about="#SPDXRef-item165943913">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/bytewriter.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3217,7 +3207,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940130">
+            <spdx:File rdf:about="#SPDXRef-item165943914">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzma/encoder.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3245,7 +3235,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940131">
+            <spdx:File rdf:about="#SPDXRef-item165943915">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/none-check.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3273,7 +3263,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940132">
+            <spdx:File rdf:about="#SPDXRef-item165943916">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/writer.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3301,7 +3291,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940133">
+            <spdx:File rdf:about="#SPDXRef-item165943917">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/go.mod</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>
@@ -3327,7 +3317,7 @@ BSD is referenced without a version number. Please look up BSD in the License Ad
             </spdx:File>
           </spdx:hasFile>
           <spdx:hasFile>
-            <spdx:File rdf:about="#SPDXRef-item165940134">
+            <spdx:File rdf:about="#SPDXRef-item165943918">
               <spdx:fileName>xz-0.5.8.zip/xz-0.5.8/lzmafilter.go</spdx:fileName>
               <spdx:checksum>
                 <spdx:Checksum>

@@ -14,6 +14,7 @@
 
 namespace Tethys.SimpleSpdxParser
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
@@ -128,23 +129,68 @@ namespace Tethys.SimpleSpdxParser
                 var about = XmlSupport.GetAttributeValue(parent2, "about", false);
                 if (about != null)
                 {
-                    var existing = parser.FindListedLicense(about);
+                    // option A: this is a license listed in the SPDX license list, *BUT*
+                    // all license dateil have been specified in the SPDX file.
+                    // In this case we use the information from the file.
+                    var nested = FindNestedLicenseInfo(parent2);
+                    if (nested != null)
+                    {
+                        parser.AddListedLicense(about, nested);
+                        return nested;
+                    } // if
+
+                    // option B: this is a license listed in the SPDX license list, but no additional
+                    // information has been specified. In this case we try to look up the license information
+                    // in our 'listed' license list.
+                    var existing2 = parser.FindListedLicense(about);
+                    if (existing2 != null)
+                    {
+                        return existing2;
+                    } // if
+
+                    // option C: this is a license listed in the SPDX license list, but no additional
+                    // information has been specified. In this case we try to look up the license information
+                    // in our known license list.
+                    var existing = GetLicenseFromKnownLicenseList(about);
                     if (existing != null)
                     {
                         return existing;
                     } // if
                 } // if
-
-                var info = new ListedLicenseInfo();
-                info.Name = XmlSupport.GetFirstSubNodeValue(parent2, "name", false);
-                info.Id = XmlSupport.GetFirstSubNodeValue(parent2, "licenseId", false);
-                info.Text = XmlSupport.GetFirstSubNodeValue(parent2, "licenseText");
-                parser.AddListedLicense(about, info);
-                return info;
             } // if
 
             return null;
         } // GetLicenseFromListedLicense()
+
+        /// <summary>
+        /// Finds the nested license information. If any psrt of the information is missing
+        /// we return null.
+        /// </summary>
+        /// <param name="parent">The parent.</param>
+        /// <returns>AnyLicenseInfo or null.</returns>
+        private static AnyLicenseInfo FindNestedLicenseInfo(XContainer parent)
+        {
+            var info = new ListedLicenseInfo();
+            info.Name = XmlSupport.GetFirstSubNodeValue(parent, "name", false);
+            if (string.IsNullOrEmpty(info.Name))
+            {
+                return null;
+            } // if
+
+            info.Id = XmlSupport.GetFirstSubNodeValue(parent, "licenseId", false);
+            if (string.IsNullOrEmpty(info.Id))
+            {
+                return null;
+            } // if
+
+            info.Text = XmlSupport.GetFirstSubNodeValue(parent, "licenseText");
+            if (string.IsNullOrEmpty(info.Text))
+            {
+                return null;
+            } // if
+
+            return info;
+        } // FindNestedLicenseInfo()
 
         /// <summary>
         /// Gets the type of the license from.
