@@ -6,11 +6,11 @@
   "licenseId": "Linux-man-pages-copyleft",
   "crossRef": [
     {
-      "match": "false",
+      "match": "N/A",
       "url": "https://www.kernel.org/doc/man-pages/licenses.html",
       "isValid": true,
-      "isLive": true,
-      "timestamp": "2023-03-23T16:33:02Z",
+      "isLive": false,
+      "timestamp": "2023-10-05T15:10:54Z",
       "isWayBackLink": false,
       "order": 0
     }
