@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxSnippet.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -16,8 +16,9 @@ namespace Tethys.SPDX.Model
 {
     using System.Collections.Generic;
 
-    using Tethys.SPDX.Model.License;
+    using Newtonsoft.Json;
 
+    using Tethys.SPDX.Model.License;
     using Tethys.SPDX.Model.Pointer;
 
     /// <summary>
@@ -30,7 +31,12 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// The license information in this snippet.
         /// </summary>
-        private readonly List<AnyLicenseInfo> licenseInfoInSnippet;
+        private List<AnyLicenseInfo> licenseInfoInSnippet;
+
+        /// <summary>
+        /// The ranges.
+        /// </summary>
+        private List<StartEndPointer> ranges;
         #endregion // PRIVATE PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -39,21 +45,21 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets or sets the snippet from file.
         /// </summary>
+        [JsonProperty("snippetFromFile")]
+        [JsonConverter(typeof(SpdxElementRefConverter))]
         public SpdxFile SnippetFromFile { get; set; }
 
         /// <summary>
-        /// Gets or sets the byte range.
+        /// Gets the ranges.
         /// </summary>
-        public StartEndPointer ByteRange { get; set; }
-
-        /// <summary>
-        /// Gets or sets the line range.
-        /// </summary>
-        public StartEndPointer LineRange { get; set; }
+        [JsonProperty("ranges")]
+        public IReadOnlyList<StartEndPointer> Ranges => this.ranges;
 
         /// <summary>
         /// Gets the license information in this snippet.
         /// </summary>
+        [JsonProperty("licenseInfoInSnippets")]
+        [JsonConverter(typeof(JsonLicenseListConverter))]
         public IReadOnlyList<AnyLicenseInfo> LicenseInfoInSnippet => this.licenseInfoInSnippet;
         #endregion // PUBLIC PROPERTIES
 
@@ -66,6 +72,7 @@ namespace Tethys.SPDX.Model
         public SpdxSnippet()
         {
             this.licenseInfoInSnippet = new List<AnyLicenseInfo>();
+            this.ranges = new List<StartEndPointer>();
         } // SpdxSnippet()
         #endregion // CONSTRUCTION
 
@@ -80,6 +87,33 @@ namespace Tethys.SPDX.Model
         {
             this.licenseInfoInSnippet.Add(license);
         } // AddLicenseInfoInSnippet()
+
+        /// <summary>
+        /// Sets the license information in snippet.
+        /// </summary>
+        /// <param name="newLicenses">The new licenses.</param>
+        public void SetLicenseInfoInSnippet(IEnumerable<AnyLicenseInfo> newLicenses)
+        {
+            this.licenseInfoInSnippet = new List<AnyLicenseInfo>(newLicenses);
+        } // SetLicenseInfoInSnippet()
+
+        /// <summary>
+        /// Adds a range.
+        /// </summary>
+        /// <param name="pointer">The pointer.</param>
+        public void AddRange(StartEndPointer pointer)
+        {
+            this.ranges.Add(pointer);
+        } // AddRange()
+
+        /// <summary>
+        /// Sets the ranges.
+        /// </summary>
+        /// <param name="newRanges">The new ranges.</param>
+        public void SetRanges(IEnumerable<StartEndPointer> newRanges)
+        {
+            this.ranges = new List<StartEndPointer>(newRanges);
+        } // SetRanges()
         #endregion // PUBLIC METHODS
 
         //// ---------------------------------------------------------------------

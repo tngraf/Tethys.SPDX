@@ -39,6 +39,11 @@ namespace Tethys.SPDX.KnownLicenses
         /// The licenses.
         /// </summary>
         private readonly List<ISpdxLicenseInfo> licenses;
+
+        /// <summary>
+        /// The exceptions.
+        /// </summary>
+        private readonly List<ISpdxExceptionInfo> exceptions;
         #endregion // PRIVATE PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -48,6 +53,21 @@ namespace Tethys.SPDX.KnownLicenses
         /// Gets the licenses.
         /// </summary>
         public IReadOnlyList<ISpdxLicenseInfo> Licenses => this.licenses;
+
+        /// <summary>
+        /// Gets the exceptions.
+        /// </summary>
+        public IReadOnlyList<ISpdxExceptionInfo> Exceptions => this.exceptions;
+
+        /// <summary>
+        /// Gets the license list version.
+        /// </summary>
+        public string LicenseListVersion { get; private set; }
+
+        /// <summary>
+        /// Gets the release date.
+        /// </summary>
+        public string ReleaseDate { get; private set; }
         #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -59,6 +79,7 @@ namespace Tethys.SPDX.KnownLicenses
         public KnownLicenseManager()
         {
             this.licenses = new List<ISpdxLicenseInfo>();
+            this.exceptions = new List<ISpdxExceptionInfo>();
         } // KnownLicenseManager()
         #endregion // CONSTRUCTION
 
@@ -66,7 +87,7 @@ namespace Tethys.SPDX.KnownLicenses
 
         #region PUBLIC METHODS
         /// <summary>
-        /// Reads SPDX data from the given file stream.
+        /// Reads SPDX license data from the given file stream.
         /// </summary>
         /// <param name="fileContents">The file contents.</param>
         /// <returns>
@@ -77,6 +98,19 @@ namespace Tethys.SPDX.KnownLicenses
             var spdxinfo = JsonConvert.DeserializeObject<SpdxLicenseInfo>(fileContents);
             return spdxinfo;
         } // ReadFromString()
+
+        /// <summary>
+        /// Reads SPDX exception data from the given file stream.
+        /// </summary>
+        /// <param name="fileContents">The file contents.</param>
+        /// <returns>
+        /// A <see cref="ISpdxExceptionInfo" /> object.
+        /// </returns>
+        public static ISpdxExceptionInfo ReadFromExceptionString(string fileContents)
+        {
+            var spdxinfo = JsonConvert.DeserializeObject<SpdxExceptionInfo>(fileContents);
+            return spdxinfo;
+        } // ReadFromExceptionString()
 
         /// <summary>
         /// Loads a SPDX license source files.
@@ -101,6 +135,28 @@ namespace Tethys.SPDX.KnownLicenses
         } // LoadSpdxSourceFiles()
 
         /// <summary>
+        /// Loads a SPDX exception source files.
+        /// </summary>
+        /// <param name="folderName">The folder name.</param>
+        public void LoadSpdxExceptionFiles(string folderName)
+        {
+            if (!Directory.Exists(folderName))
+            {
+                var di = new DirectoryInfo(folderName);
+                Log.Warn($"SPDX exception info folder does not exist: '{di.FullName}'");
+                return;
+            } // if
+
+            foreach (var file in Directory.EnumerateFiles(folderName))
+            {
+                var spdxInfo = LoadSpdxExceptionFile(file);
+                this.exceptions.Add(spdxInfo);
+            } // foreach
+
+            Log.Info($"{this.licenses.Count} SPDX licenses read.");
+        } // LoadSpdxExceptionFiles()
+
+        /// <summary>
         /// Loads the SPDX license list.
         /// </summary>
         /// <param name="fileName">Name of the file.</param>
@@ -115,6 +171,12 @@ namespace Tethys.SPDX.KnownLicenses
                 {
                     stream = null;
                     var spdxinfo = JsonConvert.DeserializeObject<SpdxLicenseListInfo>(sr.ReadToEnd());
+                    if (spdxinfo != null)
+                    {
+                        this.LicenseListVersion = spdxinfo.LicenseListVersion;
+                        this.ReleaseDate = spdxinfo.ReleaseDate;
+                    } // if
+
                     return spdxinfo;
                 } // using
             }
@@ -191,6 +253,34 @@ namespace Tethys.SPDX.KnownLicenses
                 stream?.Dispose();
             } // finally
         } // LoadSpdxSourceFile()
+
+        /// <summary>
+        /// Loads a SPDX exception source file.
+        /// </summary>
+        /// <param name="filename">The filename.</param>
+        /// <returns>A <see cref="SpdxLicenseInfo"/> object.</returns>
+        private static ISpdxExceptionInfo LoadSpdxExceptionFile(string filename)
+        {
+            FileStream stream = null;
+            try
+            {
+                stream = File.OpenRead(filename);
+                using (var sr = new StreamReader(stream))
+                {
+                    stream = null;
+                    return ReadFromExceptionString(sr.ReadToEnd());
+                } // using
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error reading SPDX license exception file", ex);
+                throw;
+            }
+            finally
+            {
+                stream?.Dispose();
+            } // finally
+        } // LoadSpdxExceptionFile()
         #endregion // PRIVATE METHODS
     } // KnownLicenseManager
 }

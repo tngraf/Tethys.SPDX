@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="ByteOffsetPointer.cs" company="Tethys">
-//   Copyright (C) 2019 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model.Pointer
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// The byte offset pointer.
     /// </summary>
@@ -24,6 +26,7 @@ namespace Tethys.SPDX.Model.Pointer
         /// <summary>
         /// Gets or sets the offset.
         /// </summary>
+        [JsonProperty("offset")]
         public int Offset { get; set; }
         #endregion // PUBLIC PROPERTIES
 

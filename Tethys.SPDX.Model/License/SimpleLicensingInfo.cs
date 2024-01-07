@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SimpleLicensingInfo.cs" company="Tethys">
 //   Copyright (C) 2018 T. Graf
 // </copyright>
@@ -15,6 +15,8 @@
 namespace Tethys.SPDX.Model.License
 {
     using System.Collections.Generic;
+
+    using Newtonsoft.Json;
 
     /// <summary>
     /// The SimpleLicenseInfo class includes all resources that represent
@@ -35,21 +37,25 @@ namespace Tethys.SPDX.Model.License
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
+        [JsonProperty("licenseId")]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or sets the comment.
         /// </summary>
+        [JsonProperty("comment")]
         public string Comment { get; set; }
 
         /// <summary>
         /// Gets the 'see also' elements.
         /// </summary>
+        [JsonProperty("seeAlsos")]
         public IReadOnlyList<string> SeeAlso => this.seeAlso;
         #endregion // PUBLIC PROPERTIES
 

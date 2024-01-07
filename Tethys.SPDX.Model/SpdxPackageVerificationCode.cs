@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxPackageVerificationCode.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -15,6 +15,8 @@
 namespace Tethys.SPDX.Model
 {
     using System.Collections.Generic;
+
+    using Newtonsoft.Json;
 
     /// <summary>
     /// Contains an SPDX Package Verification Code, currently consisting
@@ -35,11 +37,13 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets the excluded file names.
         /// </summary>
+        [JsonProperty("packageVerificationCodeExcludedFiles")]
         public IReadOnlyList<string> ExcludedFileNames => this.excludedFileNames;
 
         /// <summary>
         /// Gets or sets the value.
         /// </summary>
+        [JsonProperty("packageVerificationCodeValue")]
         public string Value { get; set; }
         #endregion // PUBLIC PROPERTIES
 

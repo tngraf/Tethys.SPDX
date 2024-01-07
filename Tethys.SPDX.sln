@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-# SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
-# SPDX-License-Identifier: Apache-2.0
-VisualStudioVersion = 16.0.31727.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.SimpleSpdxParser", "Tethys.SPDX.SimpleSpdxParser\Tethys.SPDX.SimpleSpdxParser.csproj", "{338415E5-782B-497A-BC88-F31AD05B34B1}"
 EndProject
@@ -42,7 +40,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{B92CB183-8B1
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpdxParserDemo", "SpdxParserDemo\SpdxParserDemo.csproj", "{24CCEA1D-84A4-4966-944D-B9D42CD8D32E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpdxParserDemo", "SpdxParserDemo\SpdxParserDemo.csproj", "{24CCEA1D-84A4-4966-944D-B9D42CD8D32E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.Writer", "Tethys.SPDX.Writer\Tethys.SPDX.Writer.csproj", "{C1170C15-0BC6-4139-A39B-4875F8BBD51A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpdxWriterDemo", "SpdxWriterDemo\SpdxWriterDemo.csproj", "{C3CEE357-5954-4DF6-8F8A-0CE2E6AC99DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.ExpressionParser", "Tethys.SPDX.ExpressionParser\Tethys.SPDX.ExpressionParser.csproj", "{22346A08-3ED0-4CFE-ABA4-872EB1562F2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.ExpressionParser.Test", "Tethys.SPDX.ExpressionParser.Test\Tethys.SPDX.ExpressionParser.Test.csproj", "{0083E4BC-FAD0-47D2-8A64-F41DAAB75773}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +88,22 @@ Global
 		{24CCEA1D-84A4-4966-944D-B9D42CD8D32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24CCEA1D-84A4-4966-944D-B9D42CD8D32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24CCEA1D-84A4-4966-944D-B9D42CD8D32E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1170C15-0BC6-4139-A39B-4875F8BBD51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1170C15-0BC6-4139-A39B-4875F8BBD51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1170C15-0BC6-4139-A39B-4875F8BBD51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1170C15-0BC6-4139-A39B-4875F8BBD51A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3CEE357-5954-4DF6-8F8A-0CE2E6AC99DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3CEE357-5954-4DF6-8F8A-0CE2E6AC99DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3CEE357-5954-4DF6-8F8A-0CE2E6AC99DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3CEE357-5954-4DF6-8F8A-0CE2E6AC99DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22346A08-3ED0-4CFE-ABA4-872EB1562F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22346A08-3ED0-4CFE-ABA4-872EB1562F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22346A08-3ED0-4CFE-ABA4-872EB1562F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22346A08-3ED0-4CFE-ABA4-872EB1562F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0083E4BC-FAD0-47D2-8A64-F41DAAB75773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0083E4BC-FAD0-47D2-8A64-F41DAAB75773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0083E4BC-FAD0-47D2-8A64-F41DAAB75773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0083E4BC-FAD0-47D2-8A64-F41DAAB75773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

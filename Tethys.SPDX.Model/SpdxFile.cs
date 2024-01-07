@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxFile.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -16,6 +16,8 @@ namespace Tethys.SPDX.Model
 {
     using System.Collections.Generic;
     using System.Linq;
+
+    using Newtonsoft.Json;
 
     /// <summary>
     /// A File represents a named sequence of information
@@ -44,28 +46,34 @@ namespace Tethys.SPDX.Model
 
         #region PUBLIC PROPERTIES
         /// <summary>
-        /// Gets or sets the SHA1 checksum.
+        /// Gets or sets the file name.
         /// </summary>
-        public string SHA1 { get; set; }
+        [JsonProperty("fileName")]
+        public string FileName { get; set; }
 
         /// <summary>
         /// Gets the file types.
         /// </summary>
-        public IReadOnlyList<FileType> Filetypes => this.filetypes;
+        [JsonProperty("fileTypes")]
+        [JsonConverter(typeof(FileTypeConverter))]
+        public IReadOnlyList<FileType> FileTypes => this.filetypes;
 
         /// <summary>
         /// Gets the checksums.
         /// </summary>
+        [JsonProperty("checksums")]
         public IReadOnlyList<Checksum> Checksums => this.checksums;
 
         /// <summary>
         /// Gets the file contributors.
         /// </summary>
+        [JsonProperty("fileContributors")]
         public IReadOnlyList<string> FileContributors => this.fileContributors;
 
         /// <summary>
         /// Gets or sets the notice text.
         /// </summary>
+        [JsonProperty("noticeText")]
         public string NoticeText { get; set; }
         #endregion // PUBLIC PROPERTIES
 

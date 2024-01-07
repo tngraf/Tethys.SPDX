@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="RelationShip.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Describes a relationship between SPDX items.
     /// </summary>
@@ -28,17 +30,22 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets or sets the relation ship type.
         /// </summary>
+        [JsonProperty("relationshipType")]
+        [JsonConverter(typeof(RelationshipTypeConverter))]
         public RelationshipType Type { get; set; }
 
         /// <summary>
         /// Gets or sets the comment.
         /// </summary>
+        [JsonProperty("comment")]
         public string Comment { get; set; }
 
         /// <summary>
         /// Gets or sets the related element.
         /// </summary>
-        public SpdxElement ReleatedElement { get; set; }
+        [JsonProperty("relatedSpdxElement")]
+        [JsonConverter(typeof(SpdxElementRefConverter))]
+        public SpdxElement RelatedElement { get; set; }
         #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------

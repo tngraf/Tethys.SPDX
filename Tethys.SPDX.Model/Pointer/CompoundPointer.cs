@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="CompoundPointer.cs" company="Tethys">
-//   Copyright (C) 2019 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model.Pointer
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// A pointing method made up of a pair of pointers that identify a well defined section
     /// within a document delimited by a begin and an end.
@@ -27,6 +29,8 @@ namespace Tethys.SPDX.Model.Pointer
         /// <summary>
         /// Gets or sets the start pointer.
         /// </summary>
+        [JsonProperty("startPointer")]
+        [JsonConverter(typeof(PointerConverter))]
         public SinglePointer StartPointer { get; set; }
         #endregion // PUBLIC PROPERTIES
     } // CompoundPointer

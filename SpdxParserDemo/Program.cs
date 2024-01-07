@@ -17,8 +17,8 @@ using System;
 namespace SpdxParserDemo
 {
     using System.IO;
-    using Tethys.SimpleSpdxParser;
     using Tethys.SPDX.KnownLicenses;
+    using Tethys.SPDX.SimpleSpdxParser;
 
     /// <summary>
     /// Main class.

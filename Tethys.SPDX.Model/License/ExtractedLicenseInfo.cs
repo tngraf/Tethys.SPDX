@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="ExtractedLicenseInfo.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model.License
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// An ExtractedLicensingInfo represents a License or licensing notice that was found in the package.
     /// Any License text that is recognized as a License may be represented as a License
@@ -26,6 +28,7 @@ namespace Tethys.SPDX.Model.License
         /// <summary>
         /// Gets or sets the extracted text.
         /// </summary>
+        [JsonProperty("extractedText")]
         public string ExtractedText { get; set; }
         #endregion // PUBLIC PROPERTIES
 

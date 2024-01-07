@@ -1,4 +1,4 @@
-<!-- 
+﻿<!-- 
 SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
 SPDX-License-Identifier: Apache-2.0
 -->
@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>

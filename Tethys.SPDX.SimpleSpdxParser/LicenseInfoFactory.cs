@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // <copyright file="LicenseInfoFactory.cs" company="Tethys">
-//   Copyright (C) 2019-2022 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -12,14 +12,12 @@
 // either express or implied.
 // ---------------------------------------------------------------------------
 
-namespace Tethys.SimpleSpdxParser
+namespace Tethys.SPDX.SimpleSpdxParser
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
     using System.Xml.Linq;
-
     using Tethys.Logging;
     using Tethys.SPDX.Interfaces;
     using Tethys.SPDX.KnownLicenses;
@@ -487,7 +485,7 @@ namespace Tethys.SimpleSpdxParser
         /// </summary>
         /// <param name="licenseInfo">The license information.</param>
         /// <returns>A <see cref="License"/> object.</returns>
-        private static License LicenseFromLicenseInfo(ISpdxLicenseInfo licenseInfo)
+        public static License LicenseFromLicenseInfo(ISpdxLicenseInfo licenseInfo)
         {
             var license = new License();
             license.Id = licenseInfo.LicenseId;

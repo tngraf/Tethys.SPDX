@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SinglePointer.cs" company="Tethys">
-//   Copyright (C) 2019 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model.Pointer
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// A pointing method made up of a unique pointer. This is an abstract single pointer that
     /// provides the necessary framework, but it does not provide any kind of pointer, so more
@@ -27,6 +29,8 @@ namespace Tethys.SPDX.Model.Pointer
         /// <summary>
         /// Gets or sets the document within which the pointer is applicable or meaningful.
         /// </summary>
+        [JsonProperty("reference")]
+        [JsonConverter(typeof(SpdxElementRefConverter))]
         public SpdxElement Reference { get; set; }
         #endregion // PUBLIC PROPERTIES
     } // SinglePointer

@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="IKnownLicenseManager.cs" company="Tethys">
-//   Copyright (C) 2019-2022 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -28,10 +28,31 @@ namespace Tethys.SPDX.Interfaces
         IReadOnlyList<ISpdxLicenseInfo> Licenses { get; }
 
         /// <summary>
+        /// Gets the exceptions.
+        /// </summary>
+        IReadOnlyList<ISpdxExceptionInfo> Exceptions { get; }
+
+        /// <summary>
+        /// Gets the license list version.
+        /// </summary>
+        string LicenseListVersion { get; }
+
+        /// <summary>
+        /// Gets the release date.
+        /// </summary>
+        string ReleaseDate { get; }
+
+        /// <summary>
         /// Loads a SPDX license source files.
         /// </summary>
         /// <param name="folderName">The folder name.</param>
         void LoadSpdxSourceFiles(string folderName);
+
+        /// <summary>
+        /// Loads a SPDX exception source files.
+        /// </summary>
+        /// <param name="folderName">The folder name.</param>
+        void LoadSpdxExceptionFiles(string folderName);
 
         /// <summary>
         /// Loads the SPDX license list.
@@ -46,5 +67,5 @@ namespace Tethys.SPDX.Interfaces
         /// <param name="fileName">Name of the file.</param>
         /// <returns>The <see cref="ISpdxExceptionList"/> license list.</returns>
         ISpdxExceptionList LoadSpdxExceptionList(string fileName);
-    }
+    } // IKnownLicenseManager
 }

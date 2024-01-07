@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="ExternalDocumentRef.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Information about an external SPDX document reference including the checksum.
     /// This allows for verification of the external references.
@@ -31,21 +33,20 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets or sets the checksum.
         /// </summary>
+        [JsonProperty("checksum")]
         public Checksum Checksum { get; set; }
-
-        /// <summary>
-        /// Gets or sets the SPDX document namespace.
-        /// </summary>
-        public string SpdxDocumentNamespace { get; set; }
 
         /// <summary>
         /// Gets or sets the external document identifier.
         /// </summary>
+        [JsonProperty("externalDocumentId")]
         public string ExternalDocumentId { get; set; }
 
         /// <summary>
         /// Gets or sets the SPDX document.
         /// </summary>
+        [JsonProperty("spdxDocument")]
+        [JsonConverter(typeof(SpdxDocumentRefConverter))]
         public SpdxDocument SpdxDocument { get; set; }
         #endregion // PUBLIC PROPERTIES
     } // ExternalDocumentRef

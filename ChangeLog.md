@@ -5,7 +5,20 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
-## 1.1.0 (NEXT)
+## 2.0.0
+
+* Incompatible changes:
+	* Namespace change: `Tethys.SimpleSpdxParser` => `Tethys.SPDX.SimpleSpdxParser`
+	* RelationshipType has now enum values according to C# naming rules.
+	* In the past all packages, files and snippets where related. This has now been changed.
+	  There are separate lists of packages, files and snippets, relations and documentDecribes.
+* `KnownLicenseManager` can read license exceptions.
+* Data model fully support SPDX 2.3.
+* Support of JSON file format for writing and reading.
+* SPDX license list updated to version 3.22 or 2023-10-05.
+* SPDX expression parser added.
+
+## 1.1.0
 
 * handle `spdx:ListedLicense` correctly.
 * support `spdx:attributionText`.  

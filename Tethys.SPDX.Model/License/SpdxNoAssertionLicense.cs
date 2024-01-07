@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxNoAssertionLicense.cs" company="Tethys">
-//   Copyright (C) 2019 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -20,15 +20,6 @@ namespace Tethys.SPDX.Model.License
     /// </summary>
     public class SpdxNoAssertionLicense : AnyLicenseInfo
     {
-        #region PUBLIC PROPERTIES
-        /// <summary>
-        /// The no assertion license name.
-        /// </summary>
-        public const string NoAssertionLicenseName = "NOASSERTION";
-        #endregion // PUBLIC PROPERTIES
-
-        //// ---------------------------------------------------------------------
-
         #region PUBLIC METHODS
         /// <summary>
         /// Returns a <see cref="string" /> that represents this instance.
@@ -38,7 +29,7 @@ namespace Tethys.SPDX.Model.License
         /// </returns>
         public override string ToString()
         {
-            return NoAssertionLicenseName;
+            return Constants.NoAssertion;
         } // ToString()
         #endregion // PUBLIC METHODS
     } // SpdxNoAssertionLicense

@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxPackage.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,7 +14,10 @@
 
 namespace Tethys.SPDX.Model
 {
+    using System;
     using System.Collections.Generic;
+
+    using Newtonsoft.Json;
 
     using Tethys.SPDX.Model.License;
 
@@ -25,11 +28,6 @@ namespace Tethys.SPDX.Model
     public class SpdxPackage : SpdxItem
     {
         #region PRIVATE PROPERTIES
-        /// <summary>
-        /// The licenses from files.
-        /// </summary>
-        private readonly List<AnyLicenseInfo> licensesFromFiles;
-
         /// <summary>
         /// The checksums.
         /// </summary>
@@ -44,7 +42,7 @@ namespace Tethys.SPDX.Model
         /// The files.
         /// </summary>
         private List<SpdxFile> files;
-        #endregion // PRIVATE PROPERTIES
+#endregion // PRIVATE PROPERTIES
 
         //// ---------------------------------------------------------------------
 
@@ -52,83 +50,114 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets or sets a value indicating whether the files are analyzed.
         /// </summary>
+        [JsonProperty("filesAnalyzed")]
         public bool IsFilesAnalyzed { get; set; }
 
         /// <summary>
         /// Gets or sets the license declared.
         /// </summary>
+        [JsonProperty("licenseDeclared")]
+        [JsonConverter(typeof(JsonLicenseConverter))]
         public AnyLicenseInfo LicenseDeclared { get; set; }
-
-        /// <summary>
-        /// Gets the licenses from files.
-        /// </summary>
-        public IReadOnlyList<AnyLicenseInfo> LicensesFromFiles => this.licensesFromFiles;
 
         /// <summary>
         /// Gets the checksums.
         /// </summary>
+        [JsonProperty("checksums")]
         public IReadOnlyList<Checksum> Checksums => this.checksums;
 
         /// <summary>
         /// Gets or sets the description.
         /// </summary>
+        [JsonProperty("description")]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or sets the download location.
         /// </summary>
+        [JsonProperty("downloadLocation")]
         public string DownloadLocation { get; set; }
 
         /// <summary>
         /// Gets or sets the homepage.
         /// </summary>
+        [JsonProperty("homepage")]
         public string Homepage { get; set; }
 
         /// <summary>
         /// Gets or sets the originator.
         /// </summary>
+        [JsonProperty("originator")]
         public string Originator { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the package file.
         /// </summary>
+        [JsonProperty("packageFileName")]
         public string PackageFileName { get; set; }
 
         /// <summary>
         /// Gets or sets the package verification code.
         /// </summary>
+        [JsonProperty("packageVerificationCode")]
         public SpdxPackageVerificationCode PackageVerificationCode { get; set; }
 
         /// <summary>
         /// Gets or sets the source information.
         /// </summary>
+        [JsonProperty("sourceInfo")]
         public string SourceInfo { get; set; }
 
         /// <summary>
         /// Gets or sets the summary.
         /// </summary>
+        [JsonProperty("summary")]
         public string Summary { get; set; }
 
         /// <summary>
         /// Gets or sets the supplier.
         /// </summary>
+        [JsonProperty("supplier")]
         public string Supplier { get; set; }
 
         /// <summary>
         /// Gets or sets the version information.
         /// </summary>
+        [JsonProperty("versionInfo")]
         public string VersionInfo { get; set; }
 
         /// <summary>
         /// Gets the external refs.
         /// </summary>
+        [JsonProperty("externalRefs")]
         public IReadOnlyList<ExternalRef> ExternalRefs => this.externalRefs;
+
+        /// <summary>
+        /// Gets or sets the built date.
+        /// </summary>
+        [JsonProperty("builtDate")]
+        [JsonConverter(typeof(JsonDateConverter))]
+        public DateTime BuiltDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the primary package purpose.
+        /// </summary>
+        [JsonProperty("primaryPackagePurpose")]
+        [JsonConverter(typeof(PrimaryPackagePurposeConverter))]
+        public PrimaryPackagePurpose PrimaryPackagePurpose { get; set; }
+
+        /// <summary>
+        /// Gets or sets the "valid until" date.
+        /// </summary>
+        [JsonProperty("validUntilDate")]
+        [JsonConverter(typeof(JsonDateConverter))]
+        public DateTime ValidUntilDate { get; set; }
 
         /// <summary>
         /// Gets the files.
         /// </summary>
         public List<SpdxFile> Files => this.files;
-        #endregion // PUBLIC PROPERTIES
+#endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------
 
@@ -141,7 +170,6 @@ namespace Tethys.SPDX.Model
             this.checksums = new List<Checksum>();
             this.externalRefs = new List<ExternalRef>();
             this.files = new List<SpdxFile>();
-            this.licensesFromFiles = new List<AnyLicenseInfo>();
         } // SpdxPackage()
         #endregion // CONSTRUCTION
 
@@ -201,15 +229,6 @@ namespace Tethys.SPDX.Model
         {
             this.files = new List<SpdxFile>(newFiles);
         } // SetFiles()
-
-        /// <summary>
-        /// Adds the license information from files.
-        /// </summary>
-        /// <param name="license">The license.</param>
-        public void AddLicenseInfoFromFiles(AnyLicenseInfo license)
-        {
-            this.licensesFromFiles.Add(license);
-        } // AddLicenseInfoFromFiles()
         #endregion // PUBLIC METHODS
 
         //// ---------------------------------------------------------------------

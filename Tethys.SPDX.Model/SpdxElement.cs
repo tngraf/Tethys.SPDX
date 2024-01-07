@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxElement.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -15,6 +15,8 @@
 namespace Tethys.SPDX.Model
 {
     using System.Collections.Generic;
+
+    using Newtonsoft.Json;
 
     /// <summary>
     /// An SpdxElement is any thing described in SPDX, either a document or an SpdxItem.
@@ -43,30 +45,34 @@ namespace Tethys.SPDX.Model
         //// ---------------------------------------------------------------------
 
         #region PUBLIC PROPERTIES
-
         /// <summary>
         /// Gets the OPTIONAL annotations.
         /// </summary>
+        [JsonProperty("annotations")]
         public IReadOnlyList<Annotation> Annotations => this.annotations;
 
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the comment.
         /// </summary>
+        [JsonProperty("comment")]
         public string Comment { get; set; }
 
         /// <summary>
         /// Gets the relation ships.
         /// </summary>
+        [JsonProperty("relationships")]
         public IReadOnlyList<RelationShip> RelationShips => this.relationShips;
 
         /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
+        [JsonProperty("SPDXID")]
         public string SpdxIdentifier { get; set; }
         #endregion // PUBLIC PROPERTIES
 

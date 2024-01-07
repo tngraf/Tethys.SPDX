@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="Checksum.cs" company="Tethys">
 //   Copyright (C) 2018 T. Graf
 // </copyright>
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// SPDX Checksum class for packages and files.
     /// </summary>
@@ -23,11 +25,14 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets or sets the algorithm.
         /// </summary>
+        [JsonProperty("algorithm")]
+        [JsonConverter(typeof(ChecksumAlgorithmConverter))]
         public ChecksumAlgorithm Algorithm { get; set; }
 
         /// <summary>
         /// Gets or sets the value.
         /// </summary>
+        [JsonProperty("checksumValue")]
         public string Value { get; set; }
         #endregion // PUBLIC PROPERTIES
 

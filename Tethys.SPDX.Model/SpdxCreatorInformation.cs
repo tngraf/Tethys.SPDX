@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxCreatorInformation.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -16,6 +16,8 @@ namespace Tethys.SPDX.Model
 {
     using System;
     using System.Collections.Generic;
+
+    using Newtonsoft.Json;
 
     /// <summary>
     /// Creator class for SPDX documents.
@@ -35,21 +37,26 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets the creators.
         /// </summary>
+        [JsonProperty("creators")]
         public IReadOnlyList<string> Creators => this.creators;
 
         /// <summary>
         /// Gets or sets the comment.
         /// </summary>
+        [JsonProperty("comment")]
         public string Comment { get; set; }
 
         /// <summary>
         /// Gets or sets the created date.
         /// </summary>
+        [JsonProperty("created")]
+        [JsonConverter(typeof(JsonDateConverter))]
         public DateTime CreatedDate { get; set; }
 
         /// <summary>
         /// Gets or sets the license list version.
         /// </summary>
+        [JsonProperty("licenseListVersion")]
         public string LicenseListVersion { get; set; }
         #endregion // PUBLIC PROPERTIES
 

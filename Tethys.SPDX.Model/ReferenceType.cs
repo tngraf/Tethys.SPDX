@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="ReferenceType.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,36 +14,81 @@
 
 namespace Tethys.SPDX.Model
 {
-    using System;
+    using Newtonsoft.Json;
 
     /// <summary>
-    /// Type of external reference
-    /// Note that there are very few required fields for this class in that
-    /// the external reference type does not need to be provided in the SPDX
-    /// document for the document to be valid.
+    /// Type of external reference.
     /// </summary>
-    public class ReferenceType
+    public enum ReferenceType
     {
-        #region PUBLIC PROPERTIES
         /// <summary>
-        /// Gets or sets the contextual example.
+        /// A CPE 2.2 value.
         /// </summary>
-        public string ContextualExample { get; set; }
+        Cpe22Type,
 
         /// <summary>
-        /// Gets or sets the documentation.
+        /// A CPE 2.3 value.
         /// </summary>
-        public Uri Documentation { get; set; }
+        Cpe23Type,
 
         /// <summary>
-        /// Gets or sets the external reference site.
+        /// A reference to the published security advisory
         /// </summary>
-        public Uri ExternalReferenceSite { get; set; }
+        Advisory,
 
         /// <summary>
-        /// Gets or sets the reference type URI.
+        /// A reference to the source code with a fix for the vulnerability
         /// </summary>
-        public Uri ReferenceTypeUri { get; set; }
-        #endregion // PUBLIC PROPERTIES
+        Fix,
+
+        /// <summary>
+        /// URL as defined by https://www.ietf.org/rfc/rfc1738.txt.
+        /// </summary>
+        Url,
+
+        /// <summary>
+        /// A SW-ID.
+        /// </summary>
+        SwId,
+
+        /// <summary>
+        /// Maven coordinates.
+        /// </summary>
+        MavenCentral,
+
+        /// <summary>
+        /// A NPM package.
+        /// </summary>
+        Npm,
+
+        /// <summary>
+        /// A NuGet package.
+        /// </summary>
+        NuGet,
+
+        /// <summary>
+        /// A Bower package.
+        /// </summary>
+        Bower,
+
+        /// <summary>
+        /// A package URL.
+        /// </summary>
+        Purl,
+
+        /// <summary>
+        /// A SoftWare Heritage persistent Identifier.
+        /// </summary>
+        Swh,
+
+        /// <summary>
+        /// A git object id.
+        /// </summary>
+        GitOid,
+
+        /// <summary>
+        /// Any kind of ID string.
+        /// </summary>
+        IdString,
     } // ReferenceType
 }

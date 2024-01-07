@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="Annotation.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -15,6 +15,9 @@
 namespace Tethys.SPDX.Model
 {
     using System;
+
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// An Annotation is a comment on an SpdxItem by an agent.
@@ -33,21 +36,27 @@ namespace Tethys.SPDX.Model
         /// <remarks>
         /// This field identifies the person, organization or tool that has commented on a file, package, or entire document.
         /// </remarks>
+        [JsonProperty("annotator")]
         public string Annotator { get; set; }
 
         /// <summary>
         /// Gets or sets the type of the annotation.
         /// </summary>
+        [JsonProperty("annotationType")]
+        [JsonConverter(typeof(StringUppercaseEnumConverter))]
         public AnnotationType AnnotationType { get; set; }
 
         /// <summary>
         /// Gets or sets the date.
         /// </summary>
+        [JsonProperty("annotationDate")]
+        [JsonConverter(typeof(JsonDateConverter))]
         public DateTime Date { get; set; }
 
         /// <summary>
         /// Gets or sets the comment.
         /// </summary>
+        [JsonProperty("comment")]
         public string Comment { get; set; }
         #endregion // PUBLIC PROPERTIES
 

@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // <copyright file="RdfParser.cs" company="Tethys">
-//   Copyright (C) 2018-2023 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -12,7 +12,7 @@
 // either express or implied.
 // ---------------------------------------------------------------------------
 
-namespace Tethys.SimpleSpdxParser
+namespace Tethys.SPDX.SimpleSpdxParser
 {
     using System;
     using System.Collections.Generic;
@@ -21,7 +21,6 @@ namespace Tethys.SimpleSpdxParser
     using System.Text;
     using System.Xml;
     using System.Xml.Linq;
-
     using Tethys.Logging;
     using Tethys.SPDX.KnownLicenses;
     using Tethys.SPDX.Model;
@@ -167,7 +166,7 @@ namespace Tethys.SimpleSpdxParser
         private readonly Dictionary<string, AnyLicenseInfo> knownDocumentLicenses;
 
         /// <summary>
-        /// The list of lsited licenses of this SPDX document.
+        /// The list of listed licenses of this SPDX document.
         /// </summary>
         private readonly Dictionary<string, AnyLicenseInfo> listedLicenses;
         #endregion // PRIVATE PROPERTIES
@@ -189,16 +188,6 @@ namespace Tethys.SimpleSpdxParser
         /// The none URI.
         /// </summary>
         public const string NoneUri = "http://spdx.org/rdf/terms#none";
-
-        /// <summary>
-        /// The no assertion value.
-        /// </summary>
-        public const string NoAssertionValue = "NOASSERTION";
-
-        /// <summary>
-        /// The none value.
-        /// </summary>
-        public const string NoneValue = "NONE";
 
         /// <summary>
         /// Gets the SPDX name space.
@@ -394,9 +383,9 @@ namespace Tethys.SimpleSpdxParser
                 } // if
             } // foreach
 
-            if (spdxDoc != null)
+            if ((spdxDoc != null) && (snippet != null))
             {
-                spdxDoc.Snippet = snippet;
+                spdxDoc.AddSnippet(snippet);
             } // if
 
             return spdxDoc;
@@ -543,16 +532,18 @@ namespace Tethys.SimpleSpdxParser
 
             if ((lcpEnd != null) && (lcpStart != null))
             {
-                snippet.LineRange = new StartEndPointer();
-                snippet.LineRange.StartPointer = lcpStart;
-                snippet.LineRange.EndPointer = lcpEnd;
+                var range = new StartEndPointer();
+                range.StartPointer = lcpStart;
+                range.EndPointer = lcpEnd;
+                snippet.AddRange(range);
             } // if
 
             if ((bopEnd != null) && (bopStart != null))
             {
-                snippet.ByteRange = new StartEndPointer();
-                snippet.ByteRange.StartPointer = bopStart;
-                snippet.ByteRange.EndPointer = bopEnd;
+                var range = new StartEndPointer();
+                range.StartPointer = bopStart;
+                range.EndPointer = bopEnd;
+                snippet.AddRange(range);
             } // if
 
             var xSnippetFromFile = XmlSupport.GetFirstSubNode(parent, "snippetFromFile");
@@ -781,12 +772,12 @@ namespace Tethys.SimpleSpdxParser
             {
                 if (help.Equals(RdfParser.NoAssertionUri, StringComparison.OrdinalIgnoreCase))
                 {
-                    return NoAssertionValue;
+                    return Constants.NoAssertion;
                 } // if
 
                 if (help.Equals(RdfParser.NoneUri, StringComparison.OrdinalIgnoreCase))
                 {
-                    return NoneValue;
+                    return Constants.None;
                 } // if
             } // if
 
@@ -847,14 +838,14 @@ namespace Tethys.SimpleSpdxParser
             help = GetResourceAttributeOrValue(xLicenseInfoFromFiles);
             if (!string.IsNullOrEmpty(help))
             {
-                if (help == NoneValue)
+                if (help == Constants.None)
                 {
-                    package.AddLicenseInfoFromFiles(new SpdxNoneLicense());
+                    package.AddLicenseInfoFromFile(new SpdxNoneLicense());
                 } // if
 
-                if (help == NoAssertionValue)
+                if (help == Constants.NoAssertion)
                 {
-                    package.AddLicenseInfoFromFiles(new SpdxNoAssertionLicense());
+                    package.AddLicenseInfoFromFile(new SpdxNoAssertionLicense());
                 } // if
             }
             else
@@ -863,7 +854,7 @@ namespace Tethys.SimpleSpdxParser
                                             select xLicenseFormFiles;
                 foreach (var xLicenseFormFiles in xLicenseFormFilesList)
                 {
-                    package.AddLicenseInfoFromFiles(this.ReadLicense(xLicenseFormFiles));
+                    package.AddLicenseInfoFromFile(this.ReadLicense(xLicenseFormFiles));
                 } // foreach
             } // if
 
@@ -1329,8 +1320,8 @@ namespace Tethys.SimpleSpdxParser
             {
                 // for example: http://spdx.org/spdxdocs/spdx-example-444504E0-4F89-41D3-9A0C-0305E82C3301#SPDXRef-JenaLib
                 var id = GetSpdxIdentifierFromUri(resource);
-                relation.ReleatedElement = FindSpdxElementByName(id);
-                if (relation.ReleatedElement != null)
+                relation.RelatedElement = FindSpdxElementByName(id);
+                if (relation.RelatedElement != null)
                 {
                     return relation;
                 } // if
@@ -1349,28 +1340,28 @@ namespace Tethys.SimpleSpdxParser
             if (xSpdxElement != null)
             {
                 reference = XmlSupport.GetAttributeValue(xSpdxElement, "about");
-                relation.ReleatedElement = FindSpdxElementByName(reference);
+                relation.RelatedElement = FindSpdxElementByName(reference);
                 found = true;
             } // if
 
             var xSpdxFile = XmlSupport.GetFirstSubNode(xRelatedSpdxElement, "File", false);
             if (xSpdxFile != null)
             {
-                relation.ReleatedElement = this.ReadSpdxFile(xSpdxFile);
+                relation.RelatedElement = this.ReadSpdxFile(xSpdxFile);
                 found = true;
             } // if
 
             var xSpdxPackage = XmlSupport.GetFirstSubNode(xRelatedSpdxElement, "Package", false);
             if (xSpdxPackage != null)
             {
-                relation.ReleatedElement = this.ReadSpdxPackage(xSpdxPackage);
+                relation.RelatedElement = this.ReadSpdxPackage(xSpdxPackage);
                 found = true;
             } // if
 
             if (!found)
             {
                 reference = XmlSupport.GetAttributeValue(xRelatedSpdxElement, "resource");
-                relation.ReleatedElement = FindSpdxElementByName(reference);
+                relation.RelatedElement = FindSpdxElementByName(reference);
             } // if
 
             return relation;
@@ -1474,35 +1465,35 @@ namespace Tethys.SimpleSpdxParser
         private static void InitializeMapRelationshipTypes()
         {
             mapRelationshipTypes = new Dictionary<string, RelationshipType>();
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_ammends", RelationshipType.AMENDS);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_ancestorOf", RelationshipType.ANCESTOR_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_buildToolOf", RelationshipType.BUILD_TOOL_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_containedBy", RelationshipType.CONTAINED_BY);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_contains", RelationshipType.CONTAINS);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_copyOf", RelationshipType.COPY_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_dataFileOf", RelationshipType.DATA_FILE_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_descendantOf", RelationshipType.DESCENDANT_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_distributionArtifact", RelationshipType.DISTRIBUTION_ARTIFACT);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_documentationof", RelationshipType.DOCUMENTATION_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_dynamicLink", RelationshipType.DYNAMIC_LINK);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_expandedFromArchive", RelationshipType.EXPANDED_FROM_ARCHIVE);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_fileAdded", RelationshipType.FILE_ADDED);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_fileDeleted", RelationshipType.FILE_DELETED);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_describes", RelationshipType.DESCRIBES);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_describedBy", RelationshipType.DESCRIBED_BY);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_fileModified", RelationshipType.FILE_MODIFIED);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_generatedFrom", RelationshipType.GENERATED_FROM);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_generates", RelationshipType.GENERATES);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_metafileOf", RelationshipType.METAFILE_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_optionalComponentOf", RelationshipType.OPTIONAL_COMPONENT_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_other", RelationshipType.OTHER);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_packageOf", RelationshipType.PACKAGE_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_patchApplied", RelationshipType.PATCH_APPLIED);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_patchFor", RelationshipType.PATCH_FOR);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_staticLink", RelationshipType.STATIC_LINK);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_testCaseOf", RelationshipType.TEST_CASE_OF);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_prerequisite_for", RelationshipType.PREREQUISITE_FOR);
-            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_hasPrerequisite", RelationshipType.HAS_PREREQUISITE);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_amends", RelationshipType.Amends);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_ancestorOf", RelationshipType.AncestorOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_buildToolOf", RelationshipType.BuildToolOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_containedBy", RelationshipType.ContainedBy);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_contains", RelationshipType.Contains);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_copyOf", RelationshipType.CopyOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_dataFileOf", RelationshipType.DataFileOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_descendantOf", RelationshipType.DescendantOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_distributionArtifact", RelationshipType.DistributionArtifact);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_documentationof", RelationshipType.DocumentationOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_dynamicLink", RelationshipType.DynamicLink);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_expandedFromArchive", RelationshipType.ExpandedFromArchive);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_fileAdded", RelationshipType.FileAdded);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_fileDeleted", RelationshipType.FileDeleted);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_describes", RelationshipType.Describes);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_describedBy", RelationshipType.DescribedBy);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_fileModified", RelationshipType.FileModified);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_generatedFrom", RelationshipType.GeneratedFrom);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_generates", RelationshipType.Generates);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_metafileOf", RelationshipType.MetaFileOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_optionalComponentOf", RelationshipType.OptionalComponentOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_other", RelationshipType.Other);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_packageOf", RelationshipType.PackageOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_patchApplied", RelationshipType.PatchApplied);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_patchFor", RelationshipType.PatchFor);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_staticLink", RelationshipType.StatikLink);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_testCaseOf", RelationshipType.TestCaseOf);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_prerequisite_for", RelationshipType.PrerequisiteFor);
+            mapRelationshipTypes.Add("http://spdx.org/rdf/terms#relationshipType_hasPrerequisite", RelationshipType.HasPrerequisite);
         } // InitializeMapRelationshipTypes()
 
         /// <summary>

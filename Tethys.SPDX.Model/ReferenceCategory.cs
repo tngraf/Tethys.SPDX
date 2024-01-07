@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // <copyright file="ReferenceCategory.cs" company="Tethys">
-//   Copyright (C) 2018-2022 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,6 +14,8 @@
 
 namespace Tethys.SPDX.Model
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Enumeration of reference categories.
     /// </summary>
@@ -33,5 +35,10 @@ namespace Tethys.SPDX.Model
         /// Another reference.
         /// </summary>
         Other,
+
+        /// <summary>
+        /// A persistent id.
+        /// </summary>
+        PersistentId,
     } // ReferenceCategory
 }
