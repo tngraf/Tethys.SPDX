@@ -82,7 +82,7 @@ namespace Tethys.SPDX.Model.License
         /// </returns>
         public override string ToString()
         {
-            if (this.Id == null)
+            if (string.IsNullOrEmpty(this.Id))
             {
                 return "NULL LICENSE";
             } // if

@@ -1,0 +1,27 @@
+{
+  "creationInfo": {
+    "creators": [
+      "Organization: Siemens",
+      "Tool: Software Clearing Workbench",
+      "Person: Thomas Graf"
+    ],
+    "created": "2024-01-05T09:55:11Z",
+    "licenseListVersion": "3.22"
+  },
+  "dataLicense": "CC0-1.0",
+  "externalDocumentRefs": [],
+  "hasExtractedLicenseInfos": [],
+  "spdxVersion": "SPDX-2.3",
+  "reviewers": [],
+  "documentNamespace": "http://spdx.org/spdxdocs/spdx-example-007",
+  "documentDescribes": [
+    "SPDXRef-Package-AbrarJahin.DiffMatchPatch",
+    "SPDXRef-DoapSource",
+    "SPDXRef-Snippet"
+  ],
+  "packages": [],
+  "files": [],
+  "snippets": [],
+  "annotations": [],
+  "SPDXID": "SPDXRef-DOCUMENT"
+}

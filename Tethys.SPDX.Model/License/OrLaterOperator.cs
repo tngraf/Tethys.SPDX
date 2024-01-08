@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="OrLaterOperator.cs" company="Tethys">
-//   Copyright (C) 2018 T. Graf
+//   Copyright (C) 2018-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -60,7 +60,7 @@ namespace Tethys.SPDX.Model.License
                 return "UNDEFINED OR EXCEPTION";
             } // if
 
-            return $"{this.License}+";
+            return $"{this.License.Id}+";
         } // ToString()
         #endregion // PUBLIC METHODS
     } // OrLaterOperator

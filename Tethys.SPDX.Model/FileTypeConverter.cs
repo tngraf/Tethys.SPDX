@@ -17,12 +17,35 @@ namespace Tethys.SPDX.Model
     using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Linq;
 
     /// <summary>
     /// Converts a list of file types to its correct string value.
     /// </summary>
     public class FileTypeConverter : JsonConverter
     {
+        #region PRIVATE PROPERTIES
+        /// <summary>
+        /// The PrimaryPackagePurpose dictionary.
+        /// </summary>
+        private static Dictionary<string, FileType> mapFileTypes;
+        #endregion // PRIVATE PROPERTIES
+
+        //// ---------------------------------------------------------------------
+
+        #region CONSTRUCTION
+        /// <summary>
+        /// Initializes static members of the <see cref="FileTypeConverter"/> class.
+        /// </summary>
+        static FileTypeConverter()
+        {
+            InitializeMapFileTypes();
+        } // FileTypeConverter()
+        #endregion // CONSTRUCTION
+
+        //// ---------------------------------------------------------------------
+
+        #region PUBLIC METHODS
         /// <summary>
         /// Writes the JSON representation of the object.
         /// </summary>
@@ -41,44 +64,7 @@ namespace Tethys.SPDX.Model
 
             foreach (var ft in list)
             {
-                switch (ft)
-                {
-                    case FileType.Source:
-                        writer.WriteValue("SOURCE");
-                        continue;
-                    case FileType.Binary:
-                        writer.WriteValue("BINARY");
-                        continue;
-                    case FileType.Other:
-                        writer.WriteValue("OTHER");
-                        continue;
-                    case FileType.Archive:
-                        writer.WriteValue("ARCHIVE");
-                        continue;
-                    case FileType.Application:
-                        writer.WriteValue("APPLICATION");
-                        continue;
-                    case FileType.Audio:
-                        writer.WriteValue("AUDIO");
-                        continue;
-                    case FileType.Image:
-                        writer.WriteValue("IMAGE");
-                        continue;
-                    case FileType.Text:
-                        writer.WriteValue("TEXT");
-                        continue;
-                    case FileType.Video:
-                        writer.WriteValue("VIDEO");
-                        continue;
-                    case FileType.Documentation:
-                        writer.WriteValue("DOCUMENTATION");
-                        continue;
-                    case FileType.Spdx:
-                        writer.WriteValue("SPDX");
-                        continue;
-                } // switch
-
-                throw new NotSupportedException("Unknown FileType value!");
+                writer.WriteValue(EnumToString(ft));
             } // foreach
 
             writer.WriteEndArray();
@@ -96,8 +82,30 @@ namespace Tethys.SPDX.Model
         /// </returns>
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            throw new NotImplementedException("Unnecessary because CanRead is false. The type will skip the converter.");
-        }
+            var result = new List<FileType>();
+
+            if (reader.TokenType != JsonToken.Null)
+            {
+                if (reader.TokenType == JsonToken.StartArray)
+                {
+                    // this does not respect other registered converters
+                    var token = JToken.Load(reader);
+                    var stringArray = token.ToObject<string[]>();
+                    if (stringArray == null)
+                    {
+                        return result;
+                    } // if
+
+                    foreach (var licenseText in stringArray)
+                    {
+                        var ft = StringToEnum(licenseText);
+                        result.Add(ft);
+                    } // foreach
+                } // if
+            } // if
+
+            return result;
+        } // ReadJson()
 
         /// <summary>
         /// Gets a value indicating whether this <see cref="T:Newtonsoft.Json.JsonConverter" /> can read JSON.
@@ -107,7 +115,7 @@ namespace Tethys.SPDX.Model
         /// </value>
         public override bool CanRead
         {
-            get { return false; }
+            get { return true; }
         }
 
         /// <summary>
@@ -120,6 +128,65 @@ namespace Tethys.SPDX.Model
         public override bool CanConvert(Type objectType)
         {
             return objectType == typeof(IReadOnlyList<FileType>);
-        }
+        } // CanConvert()
+        #endregion // PUBLIC METHODS
+
+        //// ---------------------------------------------------------------------
+
+        #region PRIVATE METHODS
+        /// <summary>
+        /// Converts the enum value to a matching string.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <returns>A string.</returns>
+        private static string EnumToString(FileType type)
+        {
+            foreach (var mapEntry in mapFileTypes)
+            {
+                if (mapEntry.Value == type)
+                {
+                    return mapEntry.Key;
+                } // if
+            } // foreach
+
+            throw new ArgumentOutOfRangeException(nameof(type), "Unknown FileType");
+        } // EnumToString()
+
+        /// <summary>
+        /// Converts a strings to the matching enum value.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <returns>A <see cref="FileType"/> value.</returns>
+        private static FileType StringToEnum(string text)
+        {
+            if (mapFileTypes.ContainsKey(text))
+            {
+                return mapFileTypes[text];
+            } // if
+
+            throw new ArgumentOutOfRangeException(nameof(text), "Unknown FileType");
+        } // StringToEnum()
+
+        /// <summary>
+        /// Initializes the map of file types.
+        /// </summary>
+        private static void InitializeMapFileTypes()
+        {
+            mapFileTypes = new Dictionary<string, FileType>
+            {
+                { "OTHER", FileType.Other },
+                { "APPLICATION", FileType.Application },
+                { "SOURCE", FileType.Source },
+                { "BINARY", FileType.Binary },
+                { "ARCHIVE", FileType.Archive },
+                { "AUDIO", FileType.Audio },
+                { "IMAGE", FileType.Image },
+                { "TEXT", FileType.Text },
+                { "VIDEO", FileType.Video },
+                { "DOCUMENTATION", FileType.Documentation },
+                { "SPDX", FileType.Spdx },
+            };
+        } // InitializeMapFileTypes()
+        #endregion PRIVATE METHODS
     } // FileTypeConverter
 }

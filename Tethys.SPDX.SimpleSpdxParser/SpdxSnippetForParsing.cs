@@ -79,8 +79,15 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
             // SpdxSnippet properties
             result.SnippetFromFile = this.SnippetFromFile;
-            result.SetLicenseInfoInSnippet(this.LicenseInfoInSnippet);
-            result.SetRanges(this.Ranges);
+            if (this.LicenseInfoInSnippet != null)
+            {
+                result.SetLicenseInfoInSnippet(this.LicenseInfoInSnippet);
+            } // if
+
+            if (this.Ranges != null)
+            {
+                result.SetRanges(this.Ranges);
+            } // if
 
             return result;
         } // ToSpdxSnippet()

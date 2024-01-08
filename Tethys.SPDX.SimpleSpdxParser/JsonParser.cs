@@ -15,7 +15,6 @@
 namespace Tethys.SPDX.SimpleSpdxParser
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
     using System.Text;
     using Newtonsoft.Json;
@@ -39,11 +38,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
         /// The known license manager.
         /// </summary>
         private readonly KnownLicenseManager knownLicenseManager;
-
-        /// <summary>
-        /// The data manager.
-        /// </summary>
-        private IDataManager dataManager;
         #endregion // PRIVATE PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -67,9 +61,9 @@ namespace Tethys.SPDX.SimpleSpdxParser
         {
             this.knownLicenseManager = licenseManager;
             this.SpdxParsingOptions = options ?? new SpdxParsingOptions();
-            this.dataManager = new DataManager(this.knownLicenseManager, options);
-            JsonLicenseConverter.DataManager = this.dataManager;
-            SpdxDocumentRefConverter.DataManager = this.dataManager;
+            var dataManager = new DataManager(this.knownLicenseManager, options);
+            JsonLicenseConverter.DataManager = dataManager;
+            SpdxDocumentRefConverter.DataManager = dataManager;
         } // JsonParser()
         #endregion // CONSTRUCTION
 
@@ -147,6 +141,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
             return final;
         } // ReadFromString()
 
+#if false // not used at the moment
         // public void ResolveRelationShips()
 
         /// <summary>
@@ -196,6 +191,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
             return true;
         } // IsValidSpdxIdentifier()
+#endif
         #endregion // PUBLIC METHODS
 
         //// ---------------------------------------------------------------------

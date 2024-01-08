@@ -1,0 +1,186 @@
+{
+  "creationInfo": {
+    "creators": [
+      "Organization: Siemens",
+      "Tool: Software Clearing Workbench",
+      "Person: Thomas Graf"
+    ],
+    "created": "2024-01-05T09:55:11Z",
+    "licenseListVersion": "3.22"
+  },
+  "dataLicense": "CC0-1.0",
+  "externalDocumentRefs": [
+    {
+      "checksum": {
+        "algorithm": "SHA1",
+        "checksumValue": "d6a770ba38583ed4bb4525bd96e50461655d2759"
+      },
+      "externalDocumentId": "DocumentRef-spdx-tool-1.2",
+      "spdxDocument": "http://spdx.org/spdxdocs/spdx-tools-v1.2-3F2504E0-4F89-41D3-9A0C-0305E82C3301"
+    }
+  ],
+  "hasExtractedLicenseInfos": [],
+  "spdxVersion": "SPDX-2.3",
+  "reviewers": [],
+  "documentNamespace": "http://spdx.org/spdxdocs/spdx-example-007",
+  "documentDescribes": [
+    "SPDXRef-Package-AbrarJahin.DiffMatchPatch",
+    "SPDXRef-DoapSource",
+    "SPDXRef-Snippet"
+  ],
+  "packages": [
+    {
+      "filesAnalyzed": true,
+      "licenseInfoFromFiles": [
+        "GPL-2.0-only",
+        "EPL-1.0",
+        "CPL-1.0 WITH LZMA-exception"
+      ],
+      "checksums": [
+        {
+          "algorithm": "MD5",
+          "checksumValue": "deadbeefdeadbeefdeadbeefdeadbeef"
+        },
+        {
+          "algorithm": "MD5",
+          "checksumValue": "deadbeefdeadbeefdeadbeefdeadbeef"
+        }
+      ],
+      "downloadLocation": "NONE",
+      "homepage": "http://ftp.gnu.org/gnu/glibc",
+      "originator": "Organization: ExampleCodeInspect (contact@example.com)",
+      "packageFileName": "glibc-2.11.1.tar.gz",
+      "packageVerificationCode": {
+        "packageVerificationCodeExcludedFiles": [
+          "./package.spdx"
+        ],
+        "packageVerificationCodeValue": "d6a770ba38583ed4bb4525bd96e50461655d2758"
+      },
+      "versionInfo": "99.88",
+      "externalRefs": [
+        {
+          "comment": "External ref comment",
+          "referenceCategory": "OTHER",
+          "referenceType": "[idstring]",
+          "referenceLocator": "cpe:2.3:a:pivotal_software:spring_framework:4.1.0:*:*:*:*:*:*:*"
+        }
+      ],
+      "builtDate": "2024-01-05T09:55:11Z",
+      "primaryPackagePurpose": "OPERATING-SYSTEM",
+      "validUntilDate": "2024-01-05T09:55:11Z",
+      "Files": [],
+      "licenseConcluded": "(LGPL-2.0-only OR MIT)",
+      "copyrightText": "Copyright Google",
+      "licenseComments": "Some license comment",
+      "attributionTexts": [
+        "some text"
+      ],
+      "annotations": [],
+      "name": "AbrarJahin.DiffMatchPatch, 0.1.0",
+      "relationShips": [],
+      "SPDXID": "SPDXRef-Package-AbrarJahin.DiffMatchPatch"
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./src/org/spdx/parser/DOAPProject.java",
+      "fileTypes": [
+        "SOURCE",
+        "ARCHIVE"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "0123456789012345678901234567890123456789"
+        }
+      ],
+      "fileContributors": [
+        "Protecode Inc.",
+        "Open Logic Inc."
+      ],
+      "noticeText": "A notice for this file.",
+      "licenseConcluded": "MIT",
+      "licenseInfoFromFiles": [
+        "LGPL-2.0-only"
+      ],
+      "copyrightText": "Copyright 2010, 2011 Source Auditor Inc.",
+      "licenseComments": "File license comment",
+      "attributionTexts": [
+        "File attribution text"
+      ],
+      "annotations": [],
+      "comment": "Some file comment",
+      "relationShips": [],
+      "SPDXID": "SPDXRef-DoapSource"
+    }
+  ],
+  "snippets": [
+    {
+      "snippetFromFile": "SPDXRef-DoapSource",
+      "ranges": [
+        {
+          "endPointer": {
+            "lineNumber": 23,
+            "reference": "SPDXRef-DoapSource"
+          },
+          "startPointer": {
+            "lineNumber": 5,
+            "reference": "SPDXRef-DoapSource"
+          }
+        },
+        {
+          "endPointer": {
+            "offset": 420,
+            "reference": "SPDXRef-DoapSource"
+          },
+          "startPointer": {
+            "offset": 310,
+            "reference": "SPDXRef-DoapSource"
+          }
+        }
+      ],
+      "licenseInfoInSnippets": [
+        "LGPL-2.0-only"
+      ],
+      "licenseConcluded": "MIT",
+      "licenseInfoFromFiles": [],
+      "copyrightText": "Copyright 2008-2010 John Smith",
+      "licenseComments": "The concluded license was taken from package xyz, from which the snippet was copied into the current file. The concluded license information was found in the COPYING.txt file in package xyz.",
+      "annotations": [],
+      "name": "from linux kernel",
+      "comment": "This snippet was identified as significant and highlighted in this Apache-2.0 file, when a commercial scanner identified it as being derived from file foo.c in package xyz which is licensed under GPL-2.0.",
+      "relationShips": [],
+      "SPDXID": "SPDXRef-Snippet"
+    }
+  ],
+  "annotations": [
+    {
+      "annotator": "Person: Jane Doe",
+      "annotationType": "OTHER",
+      "annotationDate": "2024-01-05T09:55:11Z",
+      "comment": "Document level annotation"
+    },
+    {
+      "annotator": "Person: Thomas Graf",
+      "annotationType": "REVIEW",
+      "annotationDate": "2024-01-05T09:55:11Z",
+      "comment": "Another annotation"
+    }
+  ],
+  "name": "SPDX SBOM for FOSS disclosure",
+  "relationShips": [
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-AbrarJahin.DiffMatchPatch"
+    },
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-DoapSource"
+    },
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Snippet"
+    }
+  ],
+  "SPDXID": "SPDXRef-DOCUMENT"
+}

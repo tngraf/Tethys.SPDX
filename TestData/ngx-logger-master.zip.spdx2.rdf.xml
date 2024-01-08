@@ -14,7 +14,7 @@ SPDX-License-Identifier: Apache-2.0
     <spdx:CreationInfo>
       <spdx:licenseListVersion>2.6</spdx:licenseListVersion>
       <spdx:creator>Person: thomas.graf@siemens.com (thomas.graf@siemens.com)</spdx:creator>
-      <spdx:creator>Organization: </spdx:creator>
+      <spdx:creator>Organization: AnyOrg</spdx:creator>
       <spdx:creator>Tool: spdx2</spdx:creator>
       <spdx:created>2022-02-07T08:11:36Z</spdx:created>
     </spdx:CreationInfo>

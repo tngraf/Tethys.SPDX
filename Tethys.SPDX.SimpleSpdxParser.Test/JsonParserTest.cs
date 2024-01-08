@@ -15,9 +15,11 @@
 namespace Tethys.SPDX.SimpleSpdxParser.Test
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using Newtonsoft.Json;
+    using Tethys.SPDX.ExpressionParser;
     using Tethys.SPDX.KnownLicenses;
     using Tethys.SPDX.Model;
     using Tethys.SPDX.Model.License;
@@ -638,6 +640,317 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
         }
 
         [TestMethod]
+        public void TestReaExternalDocumentRefsSuccess()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""CC0-1.0"",
+                ""SPDXID"": ""SPDXRef-DOCUMENT"",
+                ""externalDocumentRefs"": [
+                    {
+                      ""externalDocumentId"": ""1"",
+                      ""spdxDocument"": ""NONE"",
+                    },
+                    {
+                      ""externalDocumentId"": ""2"",
+                      ""spdxDocument"": ""NOASSERTION""
+                    }
+                  ]
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            var spdxDoc = reader.ReadFromString(Json);
+            Assert.IsNotNull(spdxDoc);
+            Assert.AreEqual("SPDXRef-DOCUMENT", spdxDoc.SpdxIdentifier);
+
+            Assert.IsNotNull(spdxDoc.ExternalDocumentRefs);
+            Assert.AreEqual(2, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.AreEqual("1", spdxDoc.ExternalDocumentRefs[0].ExternalDocumentId);
+            Assert.AreEqual(null, spdxDoc.ExternalDocumentRefs[0].SpdxDocument);
+
+            Assert.AreEqual("2", spdxDoc.ExternalDocumentRefs[1].ExternalDocumentId);
+            Assert.AreEqual("NOASSERTION", spdxDoc.ExternalDocumentRefs[1].SpdxDocument.SpdxIdentifier);
+        }
+
+        [TestMethod]
+        public void TestReadNoneLicense()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""NONE""
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            var spdxDoc = reader.ReadFromString(Json);
+            Assert.IsNotNull(spdxDoc);
+
+            var license = spdxDoc.DataLicense as SpdxNoneLicense;
+            Assert.IsNotNull(license);
+        }
+
+        [TestMethod]
+        public void TestReadNoAssertionLicense()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""NOASSERTION""
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            var spdxDoc = reader.ReadFromString(Json);
+            Assert.IsNotNull(spdxDoc);
+
+            var license = spdxDoc.DataLicense as SpdxNoAssertionLicense;
+            Assert.IsNotNull(license);
+        }
+
+        [TestMethod]
+        public void TestReadConjunctiveLicenseSetLicense()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""MIT AND GPL-3.0""
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            var spdxDoc = reader.ReadFromString(Json);
+            Assert.IsNotNull(spdxDoc);
+
+            var license = spdxDoc.DataLicense as ConjunctiveLicenseSet;
+            Assert.IsNotNull(license);
+            Assert.AreEqual(2, license.LicenseInfos.Count);
+            var l1 = license.LicenseInfos[0] as SimpleLicensingInfo;
+            Assert.IsNotNull(l1);
+            Assert.AreEqual("MIT", l1.Id);
+
+            l1 = license.LicenseInfos[1] as SimpleLicensingInfo;
+            Assert.IsNotNull(l1);
+            Assert.AreEqual("GPL-3.0", l1.Id);
+        }
+
+        [TestMethod]
+        public void TestReadSpdxElementRef()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""CC0-1.0"",
+                ""files"" : [
+                ],
+                ""relationships"" : [
+                  {
+                    ""spdxElementId"" : ""SPDXRef-DOCUMENT"",
+                    ""relationshipType"" : ""CONTAINS"",
+                    ""relatedSpdxElement"" : ""NONE""
+                  }
+                ],
+                ""snippets"" : [
+                  {
+                    ""snippetFromFile"" : ""NOASSERTION""
+                  }
+                ]
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            var spdxDoc = reader.ReadFromString(Json);
+
+            Assert.IsNotNull(spdxDoc);
+            Assert.AreEqual(1, spdxDoc.RelationShips.Count);
+            Assert.AreEqual(null, spdxDoc.RelationShips[0].RelatedElement);
+
+            Assert.AreEqual(1, spdxDoc.Snippets.Count);
+            Assert.AreEqual("NOASSERTION", spdxDoc.Snippets[0].SnippetFromFile.SpdxIdentifier);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(JsonSerializationException))]
+        public void TestReadLineCharPointerInvalidValue()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""CC0-1.0"",
+                ""snippets"" : [
+                  {
+                    ""snippetFromFile"" : ""NOASSERTION"",
+                    ""ranges"" : [
+                        {
+                          ""endPointer"" : {
+                            ""lineNumber"" : ""ABC"",
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          },
+                          ""startPointer"" : {
+                            ""offset"" : 310,
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          }
+                       }
+                    ]
+                  }
+                ]
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            reader.ReadFromString(Json);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(JsonSerializationException))]
+        public void TestReadLineCharPointerNullValue()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""CC0-1.0"",
+                ""snippets"" : [
+                  {
+                    ""snippetFromFile"" : ""NOASSERTION"",
+                    ""ranges"" : [
+                        {
+                          ""endPointer"" : {
+                            ""lineNumber"" : null,
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          },
+                          ""startPointer"" : {
+                            ""offset"" : 310,
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          }
+                       }
+                    ]
+                  }
+                ]
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            reader.ReadFromString(Json);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(JsonSerializationException))]
+        public void TestReadByteOffsetPointerInvalidValue()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""CC0-1.0"",
+                ""snippets"" : [
+                  {
+                    ""snippetFromFile"" : ""NOASSERTION"",
+                    ""ranges"" : [
+                        {
+                          ""endPointer"" : {
+                            ""offset"" : ""ABC"",
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          },
+                          ""startPointer"" : {
+                            ""offset"" : 310,
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          }
+                       }
+                    ]
+                  }
+                ]
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            reader.ReadFromString(Json);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(JsonSerializationException))]
+        public void TestReadByteOffsetPointerNullValue()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""CC0-1.0"",
+                ""snippets"" : [
+                  {
+                    ""snippetFromFile"" : ""NOASSERTION"",
+                    ""ranges"" : [
+                        {
+                          ""endPointer"" : {
+                            ""offset"" : null,
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          },
+                          ""startPointer"" : {
+                            ""offset"" : 310,
+                            ""reference"" : ""SPDXRef-DoapSource""
+                          }
+                       }
+                    ]
+                  }
+                ]
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            reader.ReadFromString(Json);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(SpdxExpressionException))]
+        public void TestReadInvalidLicenseFail()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""XXX""
+
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            reader.ReadFromString(Json);
+        }
+
+        [TestMethod]
+        public void TestReadExtractedLicenseWithSeeAlso()
+        {
+            const string Json = @"{
+                ""dataLicense"": ""CC0-1.0"",
+                ""hasExtractedLicensingInfos"" : [
+                 {
+                    ""licenseId"" : ""LicenseRef-Beerware-4.2"",
+                    ""comment"" : ""The beerware license has a couple of other standard variants."",
+                    ""extractedText"" : ""\""THE BEER-WARE LICENSE\"" (Revision 42)..."",
+                    ""name"" : ""Beer-Ware License (Version 42)"",
+                    ""seeAlsos"" : [ ""http://people.freebsd.org/~phk/"" ]
+                 }
+               ]
+            }";
+            var knownLicenseManager = GetKnownLicenseManager();
+            var reader = new JsonParser(knownLicenseManager);
+            var spdxDoc = reader.ReadFromString(Json);
+            Assert.AreEqual(1, spdxDoc.ExtractedLicenseInfos.Count);
+            Assert.AreEqual(1, spdxDoc.ExtractedLicenseInfos[0].SeeAlso.Count);
+            Assert.AreEqual("http://people.freebsd.org/~phk/", spdxDoc.ExtractedLicenseInfos[0].SeeAlso[0]);
+        }
+
+        [TestMethod]
+        public void TestWriteLicenses()
+        {
+            const string JsonFile = "licenses.spdx.json";
+
+            // step 1 - create and write SPDX JSON file
+            var spdxDoc = new SpdxDocument();
+            spdxDoc.SpdxIdentifier = "SPDXRef-DOCUMENT";
+            spdxDoc.SpecVersion = "SPDX-2.3";
+
+            spdxDoc.CreationInfo = new SpdxCreatorInformation();
+            spdxDoc.CreationInfo.CreatedDate = DateTime.Now;
+
+            spdxDoc.Name = "SPDX SBOM for FOSS disclosure";
+            spdxDoc.DataLicense = new ConjunctiveLicenseSet(new[]
+            {
+                new License { Id = "MIT" },
+                new License { Id = "0BSD" },
+            });
+
+            var file = new SpdxFile();
+            file.FileName = "1";
+            file.LicenseConcluded = new SpdxNoneLicense();
+            spdxDoc.AddFile(file);
+
+            file = new SpdxFile();
+            file.FileName = "2";
+            file.LicenseConcluded = new SpdxNoAssertionLicense();
+            spdxDoc.AddFile(file);
+
+            var extref = new ExternalDocumentRef();
+            extref.SpdxDocument = new SpdxDocument { SpdxIdentifier = "NONE" };
+            spdxDoc.AddExternalDocumentRef(extref);
+
+            extref = new ExternalDocumentRef();
+            extref.SpdxDocument = new SpdxDocument { SpdxIdentifier = "NOASSERTION" };
+            spdxDoc.AddExternalDocumentRef(extref);
+
+            var writer = new Writer.JsonWriter();
+            writer.WriteToFile(spdxDoc, JsonFile);
+        }
+
+        [TestMethod]
         public void TestReadFullSpdxDocumentSuccess()
         {
             const string JsonFileFullTest = @"..\..\..\..\Testdata\fulltest.spdx.json";
@@ -713,21 +1026,225 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
         }
 
         [TestMethod]
-        public void TestReadXSuccess()
+        public void TestWriteReadSuccess()
         {
-            const string Json = @"{
-                ""dataLicense"": ""CC0-1.0""
-            }";
-            var knownLicenseManager = GetKnownLicenseManager();
-            var reader = new JsonParser(knownLicenseManager);
-            var spdxDoc = reader.ReadFromString(Json);
-            Assert.IsNotNull(spdxDoc);
+            const string JsonFile = "test_rw.spdx.json";
 
-            var license = spdxDoc.DataLicense as License;
-            Assert.IsNotNull(license);
-            Assert.AreEqual("CC0-1.0", license.Id);
-            Assert.AreEqual("Creative Commons Zero v1.0 Universal", license.Name);
-            Assert.IsNotNull(license.LicenseText);
+            var knownLicenseManager = GetKnownLicenseManager();
+
+            // step 1 - create and write SPDX JSON file
+            var spdxDoc = new SpdxDocument();
+            spdxDoc.SpdxIdentifier = "SPDXRef-DOCUMENT";
+            spdxDoc.SpecVersion = "SPDX-2.3";
+
+            spdxDoc.CreationInfo = new SpdxCreatorInformation();
+            spdxDoc.CreationInfo.CreatedDate = DateTime.Now;
+            // SPDX 2.3 requires a prefix like "Person", "Organization", or "Tool"
+            spdxDoc.CreationInfo.AddCreator("Organization: Siemens");
+            spdxDoc.CreationInfo.AddCreator("Tool: Software Clearing Workbench");
+            spdxDoc.CreationInfo.AddCreator("Person: Thomas Graf");
+            spdxDoc.CreationInfo.LicenseListVersion = knownLicenseManager.LicenseListVersion;
+
+            spdxDoc.Name = "SPDX SBOM for FOSS disclosure";
+            spdxDoc.DataLicense = new ListedLicenseInfo
+            {
+                Id = "CC0-1.0",
+            };
+
+            spdxDoc.SpdxDocumentNamespace = "http://spdx.org/spdxdocs/spdx-example-007";
+
+            spdxDoc.AddAnnotation(new Annotation
+            {
+                Date = DateTime.Now,
+                AnnotationType = AnnotationType.Other,
+                Annotator = "Person: Jane Doe",
+                Comment = "Document level annotation",
+            });
+            spdxDoc.AddAnnotation(new Annotation
+            {
+                Date = DateTime.Now,
+                AnnotationType = AnnotationType.Review,
+                // SPDX 2.3 requires a prefix like "Person", "Organization", or "Tool"
+                Annotator = "Person: Thomas Graf",
+                Comment = "Another annotation",
+            });
+
+            spdxDoc.AddExternalDocumentRef(new ExternalDocumentRef
+            {
+                ExternalDocumentId = "DocumentRef-spdx-tool-1.2",
+                SpdxDocument = new SpdxDocument
+                {
+                    SpdxDocumentNamespace = "http://spdx.org/spdxdocs/spdx-tools-v1.2-3F2504E0-4F89-41D3-9A0C-0305E82C3301",
+                },
+                Checksum = new Checksum
+                {
+                    Algorithm = ChecksumAlgorithm.SHA1,
+                    Value = "d6a770ba38583ed4bb4525bd96e50461655d2759",
+                },
+            });
+
+            var package = new SpdxPackage();
+            package.SpdxIdentifier = "SPDXRef-Package-AbrarJahin.DiffMatchPatch";
+            package.Name = "AbrarJahin.DiffMatchPatch, 0.1.0";
+            package.DownloadLocation = "NONE";
+            package.CopyrightText = "Copyright Google";
+            package.AttributionText = "some text";
+            package.VersionInfo = "99.88";
+            package.ValidUntilDate = DateTime.Now;
+
+            package.AddChecksum(new Checksum
+            {
+                Algorithm = ChecksumAlgorithm.MD5,
+                Value = "deadbeefdeadbeefdeadbeefdeadbeef",
+            });
+            package.AddChecksum(new Checksum
+            {
+                Algorithm = ChecksumAlgorithm.MD5,
+                Value = "deadbeefdeadbeefdeadbeefdeadbeef",
+            });
+
+            package.BuiltDate = DateTime.Now;
+
+            package.AddExternalRef(new ExternalRef
+            {
+                Comment = "External ref comment",
+                ReferenceCategory = ReferenceCategory.Other,
+                ReferenceLocator = "cpe:2.3:a:pivotal_software:spring_framework:4.1.0:*:*:*:*:*:*:*",
+                ReferenceType = ReferenceType.IdString.ToString(),
+            });
+
+            package.Homepage = "http://ftp.gnu.org/gnu/glibc";
+            package.LicenseComments = "Some license comment";
+            package.Originator = "Organization: ExampleCodeInspect (contact@example.com)";
+            package.PackageFileName = "glibc-2.11.1.tar.gz";
+
+            package.IsFilesAnalyzed = true;
+
+            // PackageVerificationCode is only allowed when IsFilesAnalyzed == true
+            package.PackageVerificationCode = new SpdxPackageVerificationCode
+            {
+                Value = "d6a770ba38583ed4bb4525bd96e50461655d2758",
+            };
+            package.PackageVerificationCode.AddExcludedFileName("./package.spdx");
+            package.PrimaryPackagePurpose = PrimaryPackagePurpose.OperatingSystem;
+
+            var l1 = new ListedLicenseInfo();
+            l1.Id = "LGPL-2.0-only";
+
+            var license = new ListedLicenseInfo();
+            license.Id = "MIT";
+            package.LicenseConcluded = new DisjunctiveLicenseSet(new List<AnyLicenseInfo> { l1, license });
+
+            package.AddLicenseInfoFromFile(new ListedLicenseInfo { Id = "GPL-2.0-only" });
+            package.AddLicenseInfoFromFile(new ListedLicenseInfo { Id = "EPL-1.0" });
+            package.AddLicenseInfoFromFile(new ListedLicenseInfo { Id = "CPL-1.0 WITH LZMA-exception" });
+            package.AddLicenseInfoFromFile(new SpdxNoneLicense());
+            package.AddLicenseInfoFromFile(new SpdxNoAssertionLicense());
+            package.AddLicenseInfoFromFile(new ConjunctiveLicenseSet(new []
+            {
+                new License() { Id = "MIT" },
+                new License() { Id = "AGPL-3.0" },
+            }));
+
+            spdxDoc.AddPackage(package);
+            spdxDoc.AddRelationShip(new RelationShip
+            {
+                Type = RelationshipType.Describes,
+                RelatedElement = package,
+            });
+            spdxDoc.AddDocumentDescribes(package.SpdxIdentifier);
+
+            var file = new SpdxFile();
+            file.SpdxIdentifier = "SPDXRef-DoapSource";
+            file.AddChecksum(new Checksum
+            {
+                Algorithm = ChecksumAlgorithm.SHA1,
+                Value = "0123456789012345678901234567890123456789",
+            });
+            file.CopyrightText = "Copyright 2010, 2011 Source Auditor Inc.";
+            file.AddFileContributor("Protecode Inc.");
+            file.AddFileContributor("Open Logic Inc.");
+            file.FileName = "./src/org/spdx/parser/DOAPProject.java";
+            file.AddFileType(FileType.Source);
+            file.AddFileType(FileType.Archive);
+            file.LicenseComments = "File license comment";
+            file.LicenseConcluded = license;
+            file.AddLicenseInfoFromFile(l1);
+            file.NoticeText = "A notice for this file.";
+            file.Comment = "Some file comment";
+            file.AttributionText = "File attribution text";
+
+            spdxDoc.AddFile(file);
+            spdxDoc.AddRelationShip(new RelationShip
+            {
+                Type = RelationshipType.Contains,
+                RelatedElement = file,
+            });
+
+            var snippet = new SpdxSnippet();
+            snippet.SpdxIdentifier = "SPDXRef-Snippet";
+            snippet.SnippetFromFile = file;
+            snippet.Comment =
+                "This snippet was identified as significant and highlighted in this Apache-2.0 file, when a commercial scanner identified it as being derived from file foo.c in package xyz which is licensed under GPL-2.0.";
+            snippet.CopyrightText = "Copyright 2008-2010 John Smith";
+            snippet.LicenseComments =
+                "The concluded license was taken from package xyz, from which the snippet was copied into the current file. The concluded license information was found in the COPYING.txt file in package xyz.";
+            snippet.LicenseConcluded = license;
+            snippet.AddLicenseInfoInSnippet(l1);
+            snippet.Name = "from linux kernel";
+            snippet.AttributionText = "";
+            // you always have to provide line AND binary ranges!
+            snippet.AddRange(new StartEndPointer
+            {
+                StartPointer = new LineCharPointer
+                {
+                    LineNumber = 5,
+                    Reference = file,
+                },
+                EndPointer = new LineCharPointer
+                {
+                    LineNumber = 23,
+                    Reference = file,
+                },
+            });
+            snippet.AddRange(new StartEndPointer
+            {
+                StartPointer = new ByteOffsetPointer
+                {
+                    Offset = 310,
+                    Reference = file,
+                },
+                EndPointer = new ByteOffsetPointer
+                {
+                    Offset = 420,
+                    Reference = file,
+                },
+            });
+
+            spdxDoc.AddSnippet(snippet);
+
+            var writer = new Writer.JsonWriter();
+            writer.WriteToFile(spdxDoc, JsonFile);
+
+            // step 2 - read the created SPDX JSON file
+            var reader = new JsonParser(knownLicenseManager);
+            var spdxDocRead = reader.ReadFromFile(JsonFile);
+            Assert.IsNotNull(spdxDocRead);
+
+            var lr = spdxDocRead.DataLicense as License;
+            Assert.IsNotNull(lr);
+            Assert.AreEqual("CC0-1.0", lr.Id);
+            Assert.AreEqual("Creative Commons Zero v1.0 Universal", lr.Name);
+            Assert.IsNotNull(lr.LicenseText);
+
+            Assert.IsNotNull(spdxDocRead.CreationInfo);
+
+            Assert.AreEqual(1, spdxDocRead.Files.Count);
+            Assert.AreEqual(1, spdxDocRead.Packages.Count);
+            Assert.AreEqual(2, spdxDocRead.RelationShips.Count);
+            Assert.AreEqual(2, spdxDocRead.Annotations.Count);
+            Assert.AreEqual(1, spdxDocRead.ExternalDocumentRefs.Count);
+            Assert.AreEqual(0, spdxDocRead.ExtractedLicenseInfos.Count);
         }
     }
 }

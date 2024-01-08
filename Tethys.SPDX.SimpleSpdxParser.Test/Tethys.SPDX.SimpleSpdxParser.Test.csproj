@@ -25,6 +25,7 @@ SPDX-License-Identifier: Apache-2.0
   <ItemGroup>
     <ProjectReference Include="..\Tethys.Spdx.Model\Tethys.Spdx.Model.csproj" />
     <ProjectReference Include="..\Tethys.SPDX.SimpleSpdxParser\Tethys.SPDX.SimpleSpdxParser.csproj" />
+    <ProjectReference Include="..\Tethys.SPDX.Writer\Tethys.SPDX.Writer.csproj" />
   </ItemGroup>
 
 </Project>
