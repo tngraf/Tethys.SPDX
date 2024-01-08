@@ -69,7 +69,6 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual("LicenseRef-MIT", spdxDoc.ExtractedLicenseInfos[1].Id);
 
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
-            Assert.AreEqual(0, spdxDoc.Reviewers.Count);
             Assert.AreEqual("http://fossology.siemens.com/repo/SPDX2_ngx-logger-master.zip_1644217891-spdx.rdf", spdxDoc.SpdxDocumentNamespace);
         }
 
@@ -118,7 +117,6 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual("LicenseRef-fossology-BSD", spdxDoc.ExtractedLicenseInfos[1].Id);
 
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
-            Assert.AreEqual(0, spdxDoc.Reviewers.Count);
             Assert.AreEqual("http://stage.fossology.siemens.com/repo/SPDX2_yaml-0.1.0.zip_1680269421.spdx.rdf", spdxDoc.SpdxDocumentNamespace);
         }
 
@@ -174,7 +172,6 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual("BSD-3-Clause", license.Id);
 
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
-            Assert.AreEqual(0, spdxDoc.Reviewers.Count);
             Assert.AreEqual("http://stage.fossology.siemens.com/repo/SPDX2_xz-0.5.8.zip_1680261989.spdx.rdf", spdxDoc.SpdxDocumentNamespace);
 
             license2 = package.Files[27].LicenseInfoFromFiles[1] as ExtractedLicenseInfo;

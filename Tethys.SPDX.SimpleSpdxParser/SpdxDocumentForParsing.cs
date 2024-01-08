@@ -59,12 +59,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
         public string SpecVersion { get; set; }
 
         /// <summary>
-        /// Gets or sets the newReviewers.
-        /// </summary>
-        [JsonProperty("reviewers")]
-        public List<Review> Reviewers { get; set; }
-
-        /// <summary>
         /// Gets or sets the SPDX document namespace.
         /// </summary>
         [JsonProperty("documentNamespace")]
@@ -129,11 +123,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
             if (this.DocumentDescribes != null)
             {
                 result.SetDocumentDescribes(this.DocumentDescribes);
-            } // if
-
-            if (this.Reviewers != null)
-            {
-                result.SetReviewers(this.Reviewers);
             } // if
 
             if (this.ExternalDocumentRefs != null)

@@ -41,11 +41,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
         private static readonly XNamespace RdfNameSpace;
 
         /// <summary>
-        /// The review name.
-        /// </summary>
-        private static readonly XName ReviewName;
-
-        /// <summary>
         /// The snippet name.
         /// </summary>
         private static readonly XName SnippetName;
@@ -64,11 +59,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
         /// The annotation name.
         /// </summary>
         private static readonly XName AnnotationName;
-
-        /// <summary>
-        /// The reviewed name.
-        /// </summary>
-        private static readonly XName ReviewedName;
 
         /// <summary>
         /// The data license name.
@@ -193,26 +183,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
         /// Gets the SPDX name space.
         /// </summary>
         public static readonly XNamespace SpdxNameSpace;
-
-        /// <summary>
-        /// Gets the <c>j.0</c> name space.
-        /// </summary>
-        public static XNamespace J0NameSpace { get; }
-
-        /// <summary>
-        /// Gets the <c>RDFS</c> name space.
-        /// </summary>
-        public static XNamespace RdfsNameSpace { get; }
-
-        /// <summary>
-        /// Gets the known document licenses.
-        /// </summary>
-        public IReadOnlyDictionary<string, AnyLicenseInfo> KnownDocumentLicenses => this.knownDocumentLicenses;
-
-        /// <summary>
-        /// Gets the known document licenses.
-        /// </summary>
-        public IReadOnlyDictionary<string, AnyLicenseInfo> ListedLicenses => this.listedLicenses;
         #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -226,16 +196,12 @@ namespace Tethys.SPDX.SimpleSpdxParser
             // namespaces
             SpdxNameSpace = "http://spdx.org/rdf/terms#";
             RdfNameSpace = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
-            J0NameSpace = "http://www.w3.org/2009/pointers#";
-            RdfsNameSpace = "http://www.w3.org/2000/01/rdf-schema#";
 
             // element names
-            ReviewName = SpdxNameSpace + "Review";
             SnippetName = SpdxNameSpace + "Snippet";
             RdfRootName = SpdxNameSpace + "SpdxDocument";
             RelationshipName = SpdxNameSpace + "relationship";
             AnnotationName = SpdxNameSpace + "annotation";
-            ReviewedName = SpdxNameSpace + "reviewed";
             DataLicenseName = SpdxNameSpace + "dataLicense";
             HasExtractedLicensingInfoName = SpdxNameSpace + "hasExtractedLicensingInfo";
             ExternalDocumentRefName = SpdxNameSpace + "externalDocumentRef";
@@ -365,12 +331,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
             SpdxSnippet snippet = null;
             foreach (var xElement in parent.Elements())
             {
-                if (xElement.Name == ReviewName)
-                {
-                    this.ReadReview(xElement);
-                    continue;
-                } // if
-
                 if (xElement.Name == SnippetName)
                 {
                     snippet = this.ReadSnippet(xElement);
@@ -481,30 +441,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
         #region PRIVATE METHODS
         /// <summary>
-        /// Reads the review.
-        /// </summary>
-        /// <param name="parent">The parent.</param>
-        /// <returns>A <see cref="Review"/> object.</returns>
-        private Review ReadReview(XElement parent)
-        {
-            Log.Debug("Reading Review...");
-
-            if (parent.Name.LocalName == "reviewed")
-            {
-                parent = XmlSupport.GetFirstSubNode(parent, "Review");
-            } // if
-
-            var review = new Review();
-
-            review.Comment = XmlSupport.GetFirstSubNodeValue(parent, "comment", false);
-            var text = XmlSupport.GetFirstSubNodeValue(parent, "reviewDate", false);
-            review.Date = DateTime.Parse(text);
-            review.Reviewer = XmlSupport.GetFirstSubNodeValue(parent, "reviewer", false);
-
-            return review;
-        } // ReadReview()
-
-        /// <summary>
         /// Reads the snippet.
         /// </summary>
         /// <param name="parent">The parent.</param>
@@ -552,7 +488,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
             snippet.SnippetFromFile = FindSpdxElementByName(id) as SpdxFile;
 
             var xLicenseInfoInSnippetList = from xLicenseInfoInSnippet in parent.Elements(LicenseInfoInSnippetName)
-                                select xLicenseInfoInSnippet;
+                                            select xLicenseInfoInSnippet;
             foreach (var xLicenseInfoInSnippet in xLicenseInfoInSnippetList)
             {
                 var license = this.ReadLicense(xLicenseInfoInSnippet);
@@ -706,12 +642,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
                     continue;
                 } // if
 
-                if (xElement.Name == ReviewedName)
-                {
-                    spdxDoc.AddReviewer(this.ReadReview(xElement));
-                    continue;
-                } // if
-
                 if (xElement.Name == DataLicenseName)
                 {
                     var license = this.ReadLicense(xElement);
@@ -728,7 +658,8 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
                 if (xElement.Name == ExternalDocumentRefName)
                 {
-                    /*var reference = */ReadExternalDocumentRef(xElement);
+                    /*var reference = */
+                    ReadExternalDocumentRef(xElement);
                     continue;
                 } // if
 
@@ -817,7 +748,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
             } // if
 
             var xChecksumList = from xChecksum in parent.Elements(ChecksumName)
-                                    select xChecksum;
+                                select xChecksum;
             foreach (var xChecksum in xChecksumList)
             {
                 package.AddChecksum(ReadChecksum(xChecksum));
@@ -864,7 +795,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
             if (xHasFiles != null)
             {
                 var xHasFileList = from xHasFile in parent.Elements(HasFileName)
-                                    select xHasFile;
+                                   select xHasFile;
                 foreach (var xHasFile in xHasFileList)
                 {
                     package.AddFile(this.ReadSpdxFile(xHasFile));
@@ -908,7 +839,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
             } // foreach
 
             var xContributorList = from xContributor in parent.Elements(ContributorName)
-                                select xContributor;
+                                   select xContributor;
             foreach (var xContributor in xContributorList)
             {
                 file.AddFileContributor(xContributor.Value);
@@ -922,7 +853,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
 #if true
             var xLicenseInfoInFileList = from xLicenseInfoInFile in parent.Elements(LicenseInfoInFileName)
-                                   select xLicenseInfoInFile;
+                                         select xLicenseInfoInFile;
             foreach (var xLicenseInfoInFile in xLicenseInfoInFileList)
             {
                 var help = this.ReadLicense(xLicenseInfoInFile);
@@ -1101,7 +1032,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
             code.Value = XmlSupport.GetFirstSubNodeValue(parent, "packageVerificationCodeValue");
             var xExcludedFileList = from xExcludedFile in parent.Elements(PackageVerificationCodeExcludedFileName)
-                               select xExcludedFile;
+                                    select xExcludedFile;
             foreach (var xExcludedFile in xExcludedFileList)
             {
                 code.AddExcludedFileName(xExcludedFile.Value);
@@ -1166,7 +1097,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
             info.Comment = XmlSupport.GetFirstSubNodeValue(parent, "comment", false);
 
             var xCreatorList = from xCreator in parent.Elements(CreatorName)
-                                 select xCreator;
+                               select xCreator;
             foreach (var xCreator in xCreatorList)
             {
                 info.AddCreator(xCreator.Value);
@@ -1520,6 +1451,6 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
             return item;
         } // ReadBaseProperties()
-#endregion // PRIVATE METHODS
+        #endregion // PRIVATE METHODS
     } // RdfParser
 }

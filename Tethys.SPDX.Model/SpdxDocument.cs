@@ -14,7 +14,6 @@
 
 namespace Tethys.SPDX.Model
 {
-    using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
     using Tethys.SPDX.Model.License;
@@ -38,11 +37,6 @@ namespace Tethys.SPDX.Model
         /// The extracted license information.
         /// </summary>
         private List<ExtractedLicenseInfo> extractedLicenseInfos;
-
-        /// <summary>
-        /// The newReviewers.
-        /// </summary>
-        private List<Review> reviewers;
 
         /// <summary>
         /// The "document describes" list.
@@ -100,12 +94,6 @@ namespace Tethys.SPDX.Model
         public string SpecVersion { get; set; }
 
         /// <summary>
-        /// Gets the newReviewers.
-        /// </summary>
-        [JsonProperty("reviewers")]
-        public IReadOnlyList<Review> Reviewers => this.reviewers;
-
-        /// <summary>
         /// Gets or sets the SPDX document namespace.
         /// </summary>
         [JsonProperty("documentNamespace")]
@@ -146,7 +134,6 @@ namespace Tethys.SPDX.Model
         {
             this.extractedLicenseInfos = new List<ExtractedLicenseInfo>();
             this.externalDocumentRefs = new List<ExternalDocumentRef>();
-            this.reviewers = new List<Review>();
             this.documentDescribes = new List<string>();
             this.packages = new List<SpdxPackage>();
             this.files = new List<SpdxFile>();
@@ -157,32 +144,6 @@ namespace Tethys.SPDX.Model
         //// ---------------------------------------------------------------------
 
         #region PUBLIC METHODS
-        /// <summary>
-        /// Adds a reviewer.
-        /// </summary>
-        /// <param name="reviewer">The reviewer.</param>
-        public void AddReviewer(Review reviewer)
-        {
-            this.reviewers.Add(reviewer);
-        } // AddReviewer()
-
-        /// <summary>
-        /// Sets the newReviewers.
-        /// </summary>
-        /// <param name="newReviewers">The new reviewers.</param>
-        public void SetReviewers(IEnumerable<Review> newReviewers)
-        {
-            this.reviewers = new List<Review>(newReviewers);
-        } // SetExternalDocumentRefs()
-
-        /// <summary>
-        /// Clears the reviewers.
-        /// </summary>
-        public void ClearReviewers()
-        {
-            this.reviewers.Clear();
-        } // ClearReviewers()
-
         /// <summary>
         /// Adds a external document reference.
         /// </summary>
@@ -322,89 +283,6 @@ namespace Tethys.SPDX.Model
         {
             this.snippets.Clear();
         } // ClearSnippets()
-
-        /// <summary>
-        /// Gets the packages from items.
-        /// </summary>
-        /// <param name="items">The items.</param>
-        /// <returns>A list of <see cref="SpdxItem"/> objects.</returns>
-        public IReadOnlyList<SpdxItem> GetPackagesFromItems(IEnumerable<SpdxItem> items)
-        {
-            return null;
-        } // GetPackagesFromItems()
-
-        /// <summary>
-        /// Gets the files from items.
-        /// </summary>
-        /// <param name="items">The items.</param>
-        /// <returns>A list of <see cref="SpdxItem"/> objects.</returns>
-        public IReadOnlyList<SpdxItem> GetFilesFromItems(IEnumerable<SpdxItem> items)
-        {
-            return null;
-        } // GetFileFromItems()
-
-        /// <summary>
-        /// Gets the document describes.
-        /// </summary>
-        /// <returns>A list of <see cref="SpdxItem"/> objects.</returns>
-        public IReadOnlyList<SpdxItem> GetDocumentDescribes()
-        {
-            return this.GetItems(RelationshipType.Describes);
-        } // GetDocumentDescribes()
         #endregion // PUBLIC METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PROTECTED METHODS
-        /// <summary>
-        /// Gets the items of a specific type.
-        /// </summary>
-        /// <param name="type">The type.</param>
-        /// <returns>
-        /// A list of <see cref="SpdxItem" /> objects.
-        /// </returns>
-        public IReadOnlyList<SpdxItem> GetItems(RelationshipType type)
-        {
-            var result = new List<SpdxItem>();
-
-            foreach (var relationShip in this.RelationShips)
-            {
-                if ((relationShip.Type == type)
-                    && (relationShip.RelatedElement is SpdxItem item))
-                {
-                    result.Add(item);
-                } // if
-            } // foreach
-
-            return result;
-        } // GetItems()
-
-        /// <summary>
-        /// Gets the items of a specific type.
-        /// </summary>
-        /// <param name="type">The type.</param>
-        /// <returns>
-        /// A list of <see cref="SpdxItem" /> objects.
-        /// </returns>
-        public IReadOnlyList<SpdxItem> GetItems(Type type)
-        {
-            var result = new List<SpdxItem>();
-
-            foreach (var relationShip in this.RelationShips)
-            {
-                if (relationShip.RelatedElement is SpdxItem item && item.GetType() == type)
-                {
-                    result.Add(item);
-                } // foreach
-            } // foreach
-
-            return result;
-        } // GetItems()
-        #endregion // PROTECTED METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PRIVATE METHODS
-        #endregion // PRIVATE METHODS
     } // SpdxDocument
 }
