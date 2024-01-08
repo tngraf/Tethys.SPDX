@@ -139,7 +139,7 @@ namespace Tethys.SPDX.Model
         } // StringToEnum()
 
         /// <summary>
-        /// Initializes the map relationship types.
+        /// Initializes the map of reference categories.
         /// </summary>
         private static void InitializeMapReferenceCategories()
         {
