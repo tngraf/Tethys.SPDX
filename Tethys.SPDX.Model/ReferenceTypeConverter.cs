@@ -12,6 +12,7 @@
 // either express or implied.
 // ---------------------------------------------------------------------------
 
+#if false // not used at the moment
 namespace Tethys.SPDX.Model
 {
     using System;
@@ -139,7 +140,7 @@ namespace Tethys.SPDX.Model
         } // StringToEnum()
 
         /// <summary>
-        /// Initializes the map relationship types.
+        /// Initializes the map reference types.
         /// </summary>
         private static void InitializeMapReferenceTypes()
         {
@@ -164,3 +165,4 @@ namespace Tethys.SPDX.Model
         #endregion PRIVATE METHODS
     } // SpdxDocumentRefConverter
 }
+#endif
