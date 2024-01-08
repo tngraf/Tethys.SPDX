@@ -139,7 +139,7 @@ namespace Tethys.SPDX.Model
         } // StringToEnum()
 
         /// <summary>
-        /// Initializes the map relationship types.
+        /// Initializes the map of package purposes.
         /// </summary>
         private static void InitializeMapPrimaryPackagePurposes()
         {
