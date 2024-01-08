@@ -32,7 +32,7 @@ namespace Tethys.SPDX.Model
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             var date = (DateTime)value;
-            var niceLookingDate = date.ToString("yyyy-MM-ddThh:mm:ssZ");
+            var niceLookingDate = date.ToString("yyyy-MM-ddTHH:mm:ssZ");
             writer.WriteValue(niceLookingDate);
         } // WriteJson()
 
