@@ -141,7 +141,7 @@ namespace Tethys.SPDX.Model
         } // StringToEnum()
 
         /// <summary>
-        /// Initializes the map relationship types.
+        /// Initializes the map of checksum algorithms.
         /// </summary>
         private static void InitializeMapChecksumAlgorithms()
         {
