@@ -6,9 +6,22 @@
 	  <CodeAnalysisRuleSet>..\Dotnet.ruleset</CodeAnalysisRuleSet>
       <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
       <Title>SPDX Expression Parser</Title>
-      <Company>Siemens</Company>
+      <Company>Tethys</Company>
       <PackageTags>SPDX</PackageTags>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
+      <PackageIcon>tethys_spdx_icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\tethys_spdx_icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">

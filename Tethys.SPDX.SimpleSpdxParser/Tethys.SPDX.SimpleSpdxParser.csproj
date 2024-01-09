@@ -10,6 +10,7 @@ SPDX-License-Identifier: Apache-2.0
     <CodeAnalysisRuleSet>..\Dotnet.ruleset</CodeAnalysisRuleSet>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
       <PackageReadmeFile>README.md</PackageReadmeFile>
+      <PackageIcon>tethys_spdx_icon.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -31,6 +32,10 @@ SPDX-License-Identifier: Apache-2.0
     <ProjectReference Include="..\Tethys.Spdx.Model\Tethys.Spdx.Model.csproj" />
     <ProjectReference Include="..\Tethys.Spdx.Support\Tethys.Spdx.Support.csproj" />
     <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\tethys_spdx_icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
