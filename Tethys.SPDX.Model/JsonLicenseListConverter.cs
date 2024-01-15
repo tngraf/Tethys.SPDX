@@ -43,6 +43,8 @@ namespace Tethys.SPDX.Model
 
             foreach (var licenseInfo in list)
             {
+                JsonLicenseConverter.WriteLicenseToJson(writer, licenseInfo);
+#if false
                 if (licenseInfo is ConjunctiveLicenseSet cl)
                 {
                     writer.WriteValue(cl.ToString());
@@ -59,6 +61,7 @@ namespace Tethys.SPDX.Model
                 {
                     writer.WriteValue(ll.Id);
                 } // if
+#endif
             } // foreach
 
             writer.WriteEndArray();

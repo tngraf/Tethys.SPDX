@@ -37,7 +37,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
         /// <summary>
         /// The known SPDX elements.
         /// </summary>
-        private readonly Dictionary<string, SpdxElement> knownSpdxElements;
+        private readonly Dictionary<string, SpdxElementForParsing> knownSpdxElements;
 
         /// <summary>
         /// The known license manager.
@@ -84,7 +84,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
         /// <param name="options">The options.</param>
         public DataManager(KnownLicenseManager licenseManager, SpdxParsingOptions options = null)
         {
-            this.knownSpdxElements = new Dictionary<string, SpdxElement>();
+            this.knownSpdxElements = new Dictionary<string, SpdxElementForParsing>();
             this.knownLicenseManager = licenseManager;
             this.knownDocumentLicenses = new Dictionary<string, AnyLicenseInfo>();
             this.listedLicenses = new Dictionary<string, AnyLicenseInfo>();

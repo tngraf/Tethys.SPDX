@@ -59,8 +59,8 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var reader = new RdfParser(knownLicenseManager);
             var spdxDoc = reader.ReadFromFile(SpdxFile1);
             Assert.IsNotNull(spdxDoc);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
             Assert.AreEqual(2, spdxDoc.ExtractedLicenseInfos.Count);
             Assert.AreEqual("No_license_found", spdxDoc.ExtractedLicenseInfos[0].Name);
             Assert.AreEqual("LicenseRef-No_license_found", spdxDoc.ExtractedLicenseInfos[0].Id);
@@ -106,8 +106,8 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var reader = new RdfParser(knownLicenseManager);
             var spdxDoc = reader.ReadFromFile(SpdxFile3);
             Assert.IsNotNull(spdxDoc);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
             Assert.AreEqual(2, spdxDoc.ExtractedLicenseInfos.Count);
 
             Assert.AreEqual("BSD-3-Clause_MIPS Technologies", spdxDoc.ExtractedLicenseInfos[0].Name);
@@ -130,8 +130,8 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var reader = new RdfParser(knownLicenseManager);
             var spdxDoc = reader.ReadFromFile(SpdxFile4);
             Assert.IsNotNull(spdxDoc);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
             Assert.AreEqual(4, spdxDoc.ExtractedLicenseInfos.Count);
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
             Assert.IsNotNull(spdxDoc.DataLicense);
@@ -193,8 +193,8 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var reader = new RdfParser(knownLicenseManager);
             var spdxDoc = reader.ReadFromFile(SpdxFile5);
             Assert.IsNotNull(spdxDoc);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
             Assert.AreEqual(4, spdxDoc.ExtractedLicenseInfos.Count);
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
             var package = spdxDoc.RelationShips[0].RelatedElement as SpdxPackage;
@@ -230,8 +230,8 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var reader = new RdfParser(knownLicenseManager);
             var spdxDoc = reader.ReadFromFile(SpdxFile6);
             Assert.IsNotNull(spdxDoc);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
             Assert.AreEqual(4, spdxDoc.ExtractedLicenseInfos.Count);
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
             var package = spdxDoc.RelationShips[0].RelatedElement as SpdxPackage;
@@ -285,8 +285,8 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var reader = new RdfParser(knownLicenseManager);
             var spdxDoc = reader.ReadFromFile(SpdxFile7);
             Assert.IsNotNull(spdxDoc);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
             Assert.AreEqual(1, spdxDoc.ExtractedLicenseInfos.Count);
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
 
@@ -338,8 +338,8 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             // results in an exception. becaue of duplicate licenses...
             var spdxDoc = reader.ReadFromFile(SpdxFile8);
             Assert.IsNotNull(spdxDoc);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
             Assert.AreEqual(8, spdxDoc.ExtractedLicenseInfos.Count);
             Assert.AreEqual(1, spdxDoc.RelationShips.Count);
 

@@ -28,6 +28,12 @@ namespace Tethys.SPDX.Model
 
         #region PUBLIC PROPERTIES
         /// <summary>
+        /// Gets or sets the SPDX element id.
+        /// </summary>
+        [JsonProperty("spdxElementId")]
+        public string SpdxElementId { get; set; }
+
+        /// <summary>
         /// Gets or sets the relation ship type.
         /// </summary>
         [JsonProperty("relationshipType")]
@@ -56,16 +62,11 @@ namespace Tethys.SPDX.Model
         //// ---------------------------------------------------------------------
 
         #region PUBLIC METHODS
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"{this.SpdxElementId}, {this.Type}, declared={this.RelatedElement}";
+        } // ToString()
         #endregion // PUBLIC METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PROTECTED METHODS
-        #endregion // PROTECTED METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PRIVATE METHODS
-        #endregion // PRIVATE METHODS
     } // RelationShip
 }

@@ -25,7 +25,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
     /// read-only properties. This simplifies reading the information
     /// from JSON files.
     /// </summary>
-    internal class SpdxPackageForParsing : SpdxItem
+    internal class SpdxPackageForParsing : SpdxItemForParsing
     {
         #region PUBLIC PROPERTIES
         /// <summary>

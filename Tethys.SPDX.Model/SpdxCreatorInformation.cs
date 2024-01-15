@@ -51,7 +51,7 @@ namespace Tethys.SPDX.Model
         /// </summary>
         [JsonProperty("created")]
         [JsonConverter(typeof(JsonDateConverter))]
-        public DateTime CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
 
         /// <summary>
         /// Gets or sets the license list version.
@@ -92,16 +92,12 @@ namespace Tethys.SPDX.Model
         {
             this.creators = new List<string>(creatorList);
         } // SetCreators()
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"{this.CreatedDate?.ToShortDateString()}, #{this.Creators.Count}";
+        } // ToString()
         #endregion // PUBLIC METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PROTECTED METHODS
-        #endregion // PROTECTED METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PRIVATE METHODS
-        #endregion // PRIVATE METHODS
     } // SpdxCreatorInformation
 }

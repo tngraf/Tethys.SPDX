@@ -148,12 +148,13 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
 
             Assert.AreEqual("3.22", spdxDoc.CreationInfo.LicenseListVersion);
 
-            Assert.AreEqual(2024, spdxDoc.CreationInfo.CreatedDate.Year);
-            Assert.AreEqual(01, spdxDoc.CreationInfo.CreatedDate.Month);
-            Assert.AreEqual(05, spdxDoc.CreationInfo.CreatedDate.Day);
-            Assert.AreEqual(09, spdxDoc.CreationInfo.CreatedDate.Hour);
-            Assert.AreEqual(55, spdxDoc.CreationInfo.CreatedDate.Minute);
-            Assert.AreEqual(11, spdxDoc.CreationInfo.CreatedDate.Second);
+            Assert.IsNotNull(spdxDoc.CreationInfo.CreatedDate);
+            Assert.AreEqual(2024, spdxDoc.CreationInfo.CreatedDate?.Year);
+            Assert.AreEqual(01, spdxDoc.CreationInfo.CreatedDate?.Month);
+            Assert.AreEqual(05, spdxDoc.CreationInfo.CreatedDate?.Day);
+            Assert.AreEqual(09, spdxDoc.CreationInfo.CreatedDate?.Hour);
+            Assert.AreEqual(55, spdxDoc.CreationInfo.CreatedDate?.Minute);
+            Assert.AreEqual(11, spdxDoc.CreationInfo.CreatedDate?.Second);
 
             Assert.AreEqual("SPDX-2.3", spdxDoc.SpecVersion);
 
@@ -291,13 +292,10 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
                         ""LGPL-2.0-only""
                       ],
                       ""licenseConcluded"": ""MIT"",
-                      ""licenseInfoFromFiles"": [],
                       ""copyrightText"": ""Copyright 2008-2010 John Smith"",
                       ""licenseComments"": ""The concluded license was taken from package xyz, from which the snippet was copied into the current file. The concluded license information was found in the COPYING.txt file in package xyz."",
-                      ""annotations"": [],
                       ""name"": ""from linux kernel"",
                       ""comment"": ""This snippet was identified as significant and highlighted in this Apache-2.0 file, when a commercial scanner identified it as being derived from file foo.c in package xyz which is licensed under GPL-2.0."",
-                      ""relationShips"": [],
                       ""SPDXID"": ""SPDXRef-Snippet""
                     }
                   ]
@@ -327,11 +325,11 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var l2 = snippet.LicenseConcluded as License;
             Assert.IsNotNull(l2);
             Assert.AreEqual("MIT", l2.Id);
-            Assert.AreEqual(0, snippet.LicenseInfoFromFiles.Count);
+            Assert.IsNull(snippet.LicenseInfoFromFiles);
             Assert.AreEqual("Copyright 2008-2010 John Smith", snippet.CopyrightText);
             Assert.IsTrue(snippet.Comment.StartsWith("This snippet was identified as significant"));
             Assert.IsTrue(snippet.LicenseComments.StartsWith("The concluded license was taken from package xyz"));
-            Assert.AreEqual(0, snippet.Annotations.Count);
+            Assert.IsNull(snippet.Annotations);
             Assert.AreEqual("from linux kernel", snippet.Name);
 
             Assert.AreEqual(2, snippet.Ranges.Count);
@@ -353,8 +351,7 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual(420, boEnd.Offset);
             Assert.AreEqual("SPDXRef-DoapSource", boEnd.Reference.SpdxIdentifier);
 
-            Assert.IsNotNull(spdxDoc.RelationShips);
-            Assert.AreEqual(0, spdxDoc.RelationShips.Count);
+            Assert.IsNull(spdxDoc.RelationShips);
         }
 
         [TestMethod]
@@ -390,9 +387,7 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
                       ""attributionTexts"": [
                         ""File attribution text""
                       ],
-                      ""annotations"": [],
                       ""comment"": ""Some file comment"",
-                      ""relationShips"": [],
                       ""SPDXID"": ""SPDXRef-DoapSource""
                     }
                   ]
@@ -445,11 +440,10 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual("Some file comment", file.Comment);
 
             Assert.AreEqual("File attribution text", file.AttributionText);
-            Assert.AreEqual(0, file.Annotations.Count);
-            Assert.AreEqual(0, file.RelationShips.Count);
+            Assert.IsNull(file.Annotations);
+            Assert.IsNull(file.RelationShips);
 
-            Assert.IsNotNull(spdxDoc.RelationShips);
-            Assert.AreEqual(0, spdxDoc.RelationShips.Count);
+            Assert.IsNull(spdxDoc.RelationShips);
         }
 
         [TestMethod]
@@ -593,7 +587,7 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual("some text", package.AttributionText);
             Assert.AreEqual(0, package.Annotations.Count);
             Assert.AreEqual("AbrarJahin.DiffMatchPatch, 0.1.0", package.Name);
-            Assert.AreEqual(0, package.RelationShips.Count);
+            Assert.IsNull(package.RelationShips);
         }
 
         [TestMethod]
@@ -640,7 +634,7 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
         }
 
         [TestMethod]
-        public void TestReaExternalDocumentRefsSuccess()
+        public void TestReadExternalDocumentRefsSuccess()
         {
             const string Json = @"{
                 ""dataLicense"": ""CC0-1.0"",
@@ -1004,8 +998,9 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual(2263, spdxDoc.Files.Count);
             Assert.AreEqual(1, spdxDoc.Packages.Count);
             Assert.AreEqual(2264, spdxDoc.RelationShips.Count);
-            Assert.AreEqual(0, spdxDoc.Annotations.Count);
-            Assert.AreEqual(0, spdxDoc.ExternalDocumentRefs.Count);
+            Assert.IsNull(spdxDoc.Annotations);
+            Assert.IsNull(spdxDoc.ExternalDocumentRefs);
+            Assert.IsNotNull(spdxDoc.ExtractedLicenseInfos);
             Assert.AreEqual(8, spdxDoc.ExtractedLicenseInfos.Count);
 
             Assert.IsNotNull(spdxDoc.DataLicense);
@@ -1244,7 +1239,7 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.AreEqual(2, spdxDocRead.RelationShips.Count);
             Assert.AreEqual(2, spdxDocRead.Annotations.Count);
             Assert.AreEqual(1, spdxDocRead.ExternalDocumentRefs.Count);
-            Assert.AreEqual(0, spdxDocRead.ExtractedLicenseInfos.Count);
+            Assert.IsNull(spdxDocRead.ExtractedLicenseInfos);
         }
     }
 }

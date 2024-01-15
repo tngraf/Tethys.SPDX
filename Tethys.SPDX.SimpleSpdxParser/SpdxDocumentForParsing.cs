@@ -24,7 +24,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
     /// read-only properties. This simplifies reading the information
     /// from JSON files.
     /// </summary>
-    internal class SpdxDocumentForParsing : SpdxElement
+    internal class SpdxDocumentForParsing : SpdxElementForParsing
     {
         #region PUBLIC PROPERTIES
         /// <summary>
@@ -50,7 +50,7 @@ namespace Tethys.SPDX.SimpleSpdxParser
         /// Gets or sets the extracted license information.
         /// </summary>
         [JsonProperty("hasExtractedLicensingInfos")]
-        public List<ExtractedLicenseInfo> ExtractedLicenseInfos { get; set; }
+        public List<ExtractedLicenseInfoForParsing> ExtractedLicenseInfos { get; set; }
 
         /// <summary>
         /// Gets or sets the spec version.
@@ -117,7 +117,10 @@ namespace Tethys.SPDX.SimpleSpdxParser
 
             if (this.ExtractedLicenseInfos != null)
             {
-                result.SetExtractedLicenseInfos(this.ExtractedLicenseInfos);
+                foreach (var extractedLicenseInfo in this.ExtractedLicenseInfos)
+                {
+                    result.AddExtractedLicenseInfo(extractedLicenseInfo.ToExtractedLicenseInfo());
+                } // foreach
             } // if
 
             if (this.DocumentDescribes != null)

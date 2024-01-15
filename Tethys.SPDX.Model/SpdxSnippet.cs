@@ -71,8 +71,9 @@ namespace Tethys.SPDX.Model
         /// </summary>
         public SpdxSnippet()
         {
-            this.licenseInfoInSnippet = new List<AnyLicenseInfo>();
-            this.ranges = new List<StartEndPointer>();
+            // initialize all lists with null so that they are not JSON serialized
+            this.licenseInfoInSnippet = null;
+            this.ranges = null;
         } // SpdxSnippet()
         #endregion // CONSTRUCTION
 
@@ -85,6 +86,7 @@ namespace Tethys.SPDX.Model
         /// <param name="license">The license.</param>
         public void AddLicenseInfoInSnippet(AnyLicenseInfo license)
         {
+            this.licenseInfoInSnippet ??= new List<AnyLicenseInfo>();
             this.licenseInfoInSnippet.Add(license);
         } // AddLicenseInfoInSnippet()
 
@@ -103,6 +105,7 @@ namespace Tethys.SPDX.Model
         /// <param name="pointer">The pointer.</param>
         public void AddRange(StartEndPointer pointer)
         {
+            this.ranges ??= new List<StartEndPointer>();
             this.ranges.Add(pointer);
         } // AddRange()
 
@@ -114,16 +117,12 @@ namespace Tethys.SPDX.Model
         {
             this.ranges = new List<StartEndPointer>(newRanges);
         } // SetRanges()
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"Fromfile:{this.SnippetFromFile.SpdxIdentifier}, #Ranges={this.Ranges}, #LicenseInfos={this.LicenseInfoInSnippet}";
+        } // ToString()
         #endregion // PUBLIC METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PROTECTED METHODS
-        #endregion // PROTECTED METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PRIVATE METHODS
-        #endregion // PRIVATE METHODS
     } // SpdxSnippet
 }

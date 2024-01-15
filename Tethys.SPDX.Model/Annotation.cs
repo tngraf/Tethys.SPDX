@@ -17,7 +17,6 @@ namespace Tethys.SPDX.Model
     using System;
 
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// An Annotation is a comment on an SpdxItem by an agent.
@@ -51,7 +50,7 @@ namespace Tethys.SPDX.Model
         /// </summary>
         [JsonProperty("annotationDate")]
         [JsonConverter(typeof(JsonDateConverter))]
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
         /// <summary>
         /// Gets or sets the comment.
@@ -75,6 +74,12 @@ namespace Tethys.SPDX.Model
         //// ---------------------------------------------------------------------
 
         #region PUBLIC METHODS
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            var date = this.Date?.ToShortDateString();
+            return $"{date}, {this.Annotator}, Type={this.AnnotationType}: {this.Comment}";
+        } // ToString()
         #endregion // PUBLIC METHODS
     } // Annotation
 }

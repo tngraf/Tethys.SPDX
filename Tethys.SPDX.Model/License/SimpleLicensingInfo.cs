@@ -67,7 +67,8 @@ namespace Tethys.SPDX.Model.License
         /// </summary>
         public SimpleLicensingInfo()
         {
-            this.seeAlso = new List<string>();
+            // initialize all lists with null so that they are not JSON serialized
+            this.seeAlso = null;
         } // SimpleLicensingInfo()
         #endregion // CONSTRUCTION
 
@@ -80,6 +81,7 @@ namespace Tethys.SPDX.Model.License
         /// <param name="element">The element.</param>
         public void AddSeeAlso(string element)
         {
+            this.seeAlso ??= new List<string>();
             this.seeAlso.Add(element);
         } // AddSeeAlso()
 

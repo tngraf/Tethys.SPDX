@@ -43,37 +43,7 @@ namespace Tethys.SPDX.Model
         /// <param name="serializer">The calling serializer.</param>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (value is SpdxNoneLicense)
-            {
-                writer.WriteValue(Constants.None);
-                return;
-            } // if
-
-            if (value is SpdxNoAssertionLicense)
-            {
-                writer.WriteValue(Constants.NoAssertion);
-                return;
-            } // if
-
-            if (value is ConjunctiveLicenseSet cl)
-            {
-                writer.WriteValue(cl.ToString());
-                return;
-            } // if
-
-            if (value is DisjunctiveLicenseSet dl)
-            {
-                writer.WriteValue(dl.ToString());
-                return;
-            } // if
-
-            if (value is ListedLicenseInfo ll)
-            {
-                writer.WriteValue(ll.Id);
-                return;
-            } // if
-
-            throw new NotSupportedException("Unknown SPDX license type!");
+            WriteLicenseToJson(writer, value);
         } // WriteJson()
 
         /// <summary>
@@ -125,6 +95,58 @@ namespace Tethys.SPDX.Model
         {
             return objectType == typeof(AnyLicenseInfo);
         } // CanConvert()
+
+        /// <summary>
+        /// Writes the license to json.
+        /// </summary>
+        /// <param name="writer">The writer.</param>
+        /// <param name="value">The value.</param>
+        public static void WriteLicenseToJson(JsonWriter writer, object value)
+        {
+            if (value is SpdxNoneLicense)
+            {
+                writer.WriteValue(Constants.None);
+                return;
+            } // if
+
+            if (value is SpdxNoAssertionLicense)
+            {
+                writer.WriteValue(Constants.NoAssertion);
+                return;
+            } // if
+
+            if (value is ConjunctiveLicenseSet cl)
+            {
+                writer.WriteValue(cl.ToString());
+                return;
+            } // if
+
+            if (value is DisjunctiveLicenseSet dl)
+            {
+                writer.WriteValue(dl.ToString());
+                return;
+            } // if
+
+            if (value is ListedLicenseInfo ll)
+            {
+                writer.WriteValue(ll.Id);
+                return;
+            } // if
+
+            if (value is ExtractedLicenseInfo el)
+            {
+                writer.WriteValue(el.Id);
+                return;
+            } // if
+
+            if (value is License.License li)
+            {
+                writer.WriteValue(li.Id);
+                return;
+            } // if
+
+            throw new NotSupportedException("Unknown SPDX license type!");
+        } // WriteLicenseToJson()
 
         /// <summary>
         /// Licenses the expression to license object.

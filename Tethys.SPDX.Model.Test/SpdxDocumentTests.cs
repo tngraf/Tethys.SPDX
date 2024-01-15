@@ -23,7 +23,7 @@ namespace Tethys.SPDX.Model.Test
         public void TestPackageMethods()
         {
             var spdxDoc = new SpdxDocument();
-            Assert.AreEqual(0, spdxDoc.Packages.Count);
+            Assert.IsNull(spdxDoc.Packages);
             var package = new SpdxPackage();
             spdxDoc.AddPackage(package);
             Assert.AreEqual(1, spdxDoc.Packages.Count);
@@ -35,7 +35,7 @@ namespace Tethys.SPDX.Model.Test
         public void TestFileMethods()
         {
             var spdxDoc = new SpdxDocument();
-            Assert.AreEqual(0, spdxDoc.Files.Count);
+            Assert.IsNull(spdxDoc.Files);
             var file = new SpdxFile();
             spdxDoc.AddFile(file);
             Assert.AreEqual(1, spdxDoc.Files.Count);
@@ -47,7 +47,7 @@ namespace Tethys.SPDX.Model.Test
         public void TestSnippetMethods()
         {
             var spdxDoc = new SpdxDocument();
-            Assert.AreEqual(0, spdxDoc.Snippets.Count);
+            Assert.IsNull(spdxDoc.Snippets);
             var snippet = new SpdxSnippet();
             spdxDoc.AddSnippet(snippet);
             Assert.AreEqual(1, spdxDoc.Snippets.Count);
@@ -59,7 +59,7 @@ namespace Tethys.SPDX.Model.Test
         public void TestDocumentDescribesMethods()
         {
             var spdxDoc = new SpdxDocument();
-            Assert.AreEqual(0, spdxDoc.DocumentDescribes.Count);
+            Assert.IsNull(spdxDoc.DocumentDescribes);
             spdxDoc.AddDocumentDescribes("something");
             Assert.AreEqual(1, spdxDoc.DocumentDescribes.Count);
             spdxDoc.ClearDocumentDescribes();

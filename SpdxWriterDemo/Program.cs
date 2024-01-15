@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // <copyright file="Program.cs" company="Tethys">
-//   Copyright (C) 2022 T. Graf
+//   Copyright (C) 2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -154,6 +154,7 @@ namespace SpdxWriterDemo
                 spdxDoc.AddPackage(package);
                 spdxDoc.AddRelationShip(new RelationShip
                 {
+                    SpdxElementId = spdxDoc.SpdxIdentifier,
                     Type = RelationshipType.Describes,
                     RelatedElement = package,
                 });
@@ -182,6 +183,7 @@ namespace SpdxWriterDemo
                 spdxDoc.AddFile(file);
                 spdxDoc.AddRelationShip(new RelationShip
                 {
+                    SpdxElementId = spdxDoc.SpdxIdentifier,
                     Type = RelationshipType.Contains,
                     RelatedElement = file,
                 });

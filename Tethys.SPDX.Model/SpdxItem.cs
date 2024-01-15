@@ -15,7 +15,7 @@
 namespace Tethys.SPDX.Model
 {
     using System.Collections.Generic;
-
+    using System.Text;
     using Newtonsoft.Json;
 
     using Tethys.SPDX.Model.License;
@@ -31,6 +31,11 @@ namespace Tethys.SPDX.Model
         /// The license information from files.
         /// </summary>
         private List<AnyLicenseInfo> licenseInfoFromFiles;
+
+        /// <summary>
+        /// The attribution texts.
+        /// </summary>
+        private List<string> attributionTexts;
         #endregion // PRIVATE PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -69,41 +74,32 @@ namespace Tethys.SPDX.Model
         /// SPDX 2.3 JSON example: an array called "attributionTexts".
         /// </summary>
         [JsonIgnore]
-        public string AttributionText { get; set; }
-
-        /// <summary>
-        /// Gets or sets the attribution texts.
-        /// Only for JSON, see comment for AttributionText.
-        /// </summary>
-        [JsonProperty("attributionTexts")]
-        public List<string> AttributionTexts
+        public string AttributionText
         {
             get
             {
-                if (string.IsNullOrEmpty(this.AttributionText))
+                var sb = new StringBuilder();
+                foreach (var attributionText in this.attributionTexts)
                 {
-                    return null;
-                } // if
+                    sb.Append(attributionText);
+                } // foreach
 
-                var result = new List<string>();
-                result.Add(this.AttributionText);
-                return result;
+                return sb.ToString();
             }
 
             set
             {
-                this.AttributionText = string.Empty;
-                if (value == null)
-                {
-                    return;
-                } // if
-
-                foreach (var text in value)
-                {
-                    this.AttributionText += text;
-                } // foreach
+                this.attributionTexts ??= new List<string>();
+                this.AddAttributionText(value);
             }
         }
+
+        /// <summary>
+        /// Gets the attribution texts.
+        /// Only for JSON, see comment for AttributionText.
+        /// </summary>
+        [JsonProperty("attributionTexts")]
+        public List<string> AttributionTexts => this.attributionTexts;
         #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------
@@ -114,7 +110,8 @@ namespace Tethys.SPDX.Model
         /// </summary>
         public SpdxItem()
         {
-            this.licenseInfoFromFiles = new List<AnyLicenseInfo>();
+            // initialize all lists with null so that they are not JSON serialized
+            this.licenseInfoFromFiles = null;
         } // SpdxItem()
         #endregion // CONSTRUCTION
 
@@ -136,8 +133,28 @@ namespace Tethys.SPDX.Model
         /// <param name="fileLicense">The file license.</param>
         public void AddLicenseInfoFromFile(AnyLicenseInfo fileLicense)
         {
+            this.licenseInfoFromFiles ??= new List<AnyLicenseInfo>();
             this.licenseInfoFromFiles.Add(fileLicense);
         } // AddLicenseInfoFromFile()
+
+        /// <summary>
+        /// Sets the attribution texts.
+        /// </summary>
+        /// <param name="texts">The texts.</param>
+        public void SetAttributionTexts(IEnumerable<string> texts)
+        {
+            this.attributionTexts = new List<string>(texts);
+        } // SetAttributionTexts()
+
+        /// <summary>
+        /// Adds the attribution text.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        public void AddAttributionText(string text)
+        {
+            this.attributionTexts ??= new List<string>();
+            this.attributionTexts.Add(text);
+        } // AddAttributionText()
         #endregion // PUBLIC METHODS
     } // SpdxItem
 }

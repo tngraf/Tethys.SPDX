@@ -42,7 +42,7 @@ namespace Tethys.SPDX.Model
         /// The files.
         /// </summary>
         private List<SpdxFile> files;
-#endregion // PRIVATE PROPERTIES
+        #endregion // PRIVATE PROPERTIES
 
         //// ---------------------------------------------------------------------
 
@@ -137,7 +137,7 @@ namespace Tethys.SPDX.Model
         /// </summary>
         [JsonProperty("builtDate")]
         [JsonConverter(typeof(JsonDateConverter))]
-        public DateTime BuiltDate { get; set; }
+        public DateTime? BuiltDate { get; set; }
 
         /// <summary>
         /// Gets or sets the primary package purpose.
@@ -151,13 +151,13 @@ namespace Tethys.SPDX.Model
         /// </summary>
         [JsonProperty("validUntilDate")]
         [JsonConverter(typeof(JsonDateConverter))]
-        public DateTime ValidUntilDate { get; set; }
+        public DateTime? ValidUntilDate { get; set; }
 
         /// <summary>
         /// Gets the files.
         /// </summary>
         public List<SpdxFile> Files => this.files;
-#endregion // PUBLIC PROPERTIES
+        #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------
 
@@ -167,9 +167,10 @@ namespace Tethys.SPDX.Model
         /// </summary>
         public SpdxPackage()
         {
-            this.checksums = new List<Checksum>();
-            this.externalRefs = new List<ExternalRef>();
-            this.files = new List<SpdxFile>();
+            // initialize all lists with null so that they are not JSON serialized
+            this.checksums = null;
+            this.externalRefs = null;
+            this.files = null;
         } // SpdxPackage()
         #endregion // CONSTRUCTION
 
@@ -191,6 +192,7 @@ namespace Tethys.SPDX.Model
         /// <param name="chksum">The checksum.</param>
         public void AddChecksum(Checksum chksum)
         {
+            this.checksums ??= new List<Checksum>();
             this.checksums.Add(chksum);
         } // AddChecksum()
 
@@ -200,6 +202,7 @@ namespace Tethys.SPDX.Model
         /// <param name="reference">The reference.</param>
         public void AddExternalRef(ExternalRef reference)
         {
+            this.externalRefs ??= new List<ExternalRef>();
             this.externalRefs.Add(reference);
         } // AddExternalRef()
 
@@ -218,6 +221,7 @@ namespace Tethys.SPDX.Model
         /// <param name="newFile">The new file.</param>
         public void AddFile(SpdxFile newFile)
         {
+            this.files ??= new List<SpdxFile>();
             this.files.Add(newFile);
         } // AddFile()
 
@@ -229,16 +233,12 @@ namespace Tethys.SPDX.Model
         {
             this.files = new List<SpdxFile>(newFiles);
         } // SetFiles()
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"{this.Name}, {this.VersionInfo}, declared={this.LicenseDeclared}, concluded={this.LicenseConcluded}, #fromFile={this.LicenseInfoFromFiles.Count}";
+        } // ToString()
         #endregion // PUBLIC METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PROTECTED METHODS
-        #endregion // PROTECTED METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PRIVATE METHODS
-        #endregion // PRIVATE METHODS
     } // SpdxPackage
 }

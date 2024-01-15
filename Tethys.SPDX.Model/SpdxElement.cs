@@ -84,8 +84,9 @@ namespace Tethys.SPDX.Model
         /// </summary>
         public SpdxElement()
         {
-            this.annotations = new List<Annotation>();
-            this.relationShips = new List<RelationShip>();
+            // initialize all lists with null so that they are not JSON serialized
+            this.annotations = null;
+            this.relationShips = null;
         } // SpdxElement()
         #endregion // CONSTRUCTION
 
@@ -98,6 +99,7 @@ namespace Tethys.SPDX.Model
         /// <param name="annotation">The annotation.</param>
         public void AddAnnotation(Annotation annotation)
         {
+            this.annotations ??= new List<Annotation>();
             this.annotations.Add(annotation);
         } // AddAnnotation()
 
@@ -116,6 +118,7 @@ namespace Tethys.SPDX.Model
         /// <param name="relation">The relation.</param>
         public void AddRelationShip(RelationShip relation)
         {
+            this.relationShips ??= new List<RelationShip>();
             this.relationShips.Add(relation);
         } // AddRelationShip()
 
@@ -127,16 +130,12 @@ namespace Tethys.SPDX.Model
         {
             this.relationShips = new List<RelationShip>(relations);
         } // SetRelationShips()
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"{this.Name}, {this.SpdxIdentifier}, #{this.RelationShips.Count}";
+        } // ToString()
         #endregion // PUBLIC METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PROTECTED METHODS
-        #endregion // PROTECTED METHODS
-
-        //// ---------------------------------------------------------------------
-
-        #region PRIVATE METHODS
-        #endregion // PRIVATE METHODS
     } // SpdxElement
 }
