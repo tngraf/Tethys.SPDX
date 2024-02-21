@@ -45,7 +45,7 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             Assert.IsTrue(knownLicenseManager.Licenses.Count > 400);
 
             var exceptionsFolder = Path.Combine(ExpectedDataPath, "exceptions");
-            knownLicenseManager.LoadSpdxSourceFiles(exceptionsFolder);
+            knownLicenseManager.LoadSpdxExceptionFiles(exceptionsFolder);
             Assert.IsTrue(knownLicenseManager.Licenses.Count > 430);
 
             return knownLicenseManager;
