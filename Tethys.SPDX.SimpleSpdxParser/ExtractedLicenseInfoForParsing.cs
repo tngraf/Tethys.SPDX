@@ -14,9 +14,10 @@
 
 namespace Tethys.SPDX.SimpleSpdxParser
 {
-    using Newtonsoft.Json;
     using System.Collections.Generic;
-    using Tethys.SPDX.Model;
+
+    using Newtonsoft.Json;
+
     using Tethys.SPDX.Model.License;
 
     /// <summary>
