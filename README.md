@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
 [![Build status](https://ci.appveyor.com/api/projects/status/beu5qpnvi2urf0i0?svg=true)](https://ci.appveyor.com/project/tngraf/tethys-spdx)
-[![Nuget](https://img.shields.io/badge/nuget-1.0.0-brightgreen.svg)](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses/1.0.0)
+[![Nuget](https://img.shields.io/badge/nuget-2.0.0-brightgreen.svg)](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses/2.0.0)
 [![REUSE status](https://api.reuse.software/badge/git.fsfe.org/reuse/api)](https://api.reuse.software/info/git.fsfe.org/reuse/api)
 [![SBOM](https://img.shields.io/badge/SBOM-CycloneDX-brightgreen)](https://github.com/tngraf/Tethys.Dgml/blob/master/SBOM/sbom.cyclonedx.xml)
 
@@ -35,14 +35,17 @@ The following packages are available on NuGet:
 
 * [Tethys.SPDX.Interfaces](https://www.nuget.org/packages/Tethys.SPDX.Interfaces)
 * [Tethys.SPDX.KnownLicenses](https://www.nuget.org/packages/Tethys.SPDX.KnownLicenses)
+* [Tethys.SPDX.ExpressionParser](https://www.nuget.org/packages/Tethys.SPDX.ExpressionParser)
 * [Tethys.SPDX.Model](https://www.nuget.org/packages/Tethys.SPDX.Model)
 * [Tethys.SPDX.SimpleSpdxParser](https://www.nuget.org/packages/Tethys.SPDX.SimpleSpdxParser)
 * [Tethys.SPDX.Support](https://www.nuget.org/packages/Tethys.SPDX.Support)
+* [Tethys.SPDX.Writer](https://www.nuget.org/packages/Tethys.SPDX.Writer)
 
 This library has been influenced by the following GitHub projects:
 
 * https://github.com/jslicense/spdx-expression-parse.js
 * https://github.com/microsoft/spdx-simplify
+* https://github.com/spdx/Spdx-Java-Library
 
 ## SPDX
 
@@ -69,7 +72,7 @@ A minimal code snippet looks like this
 ```code
 var knownLicenseManager = new KnownLicenseManager();
 knownLicenseManager.LoadSpdxSourceFiles(...SPDX license files...);
-knownLicenseManager.LoadSpdxSourceFiles(...SPDX license exception files...);
+knownLicenseManager.LoadSpdxExceptionFiles(...SPDX license exception files...);
 
 var reader = new RdfParser(knownLicenseManager);
 var spdxDoc = reader.ReadFromFile(...SPDX file...);
@@ -79,7 +82,11 @@ var spdxDoc = reader.ReadFromFile(...SPDX file...);
 Just run the demo application
 
 ```code
-dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj <SpdxFile>
+dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj .\TestData\yaml-0.1.0.zip.spdx2.rdf.xml
+
+or
+
+dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj .\TestData\SPDXJSONExample-v2.3.spdx.json
 ```
 
 ## Build
@@ -91,8 +98,8 @@ dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj <SpdxFile>
 
 ### Required NuGet Packages
 
-* Tethys.Logging, version 1.6.0
-* Newtonsoft.Json, version 12.0.3
+* Tethys.Logging, version 1.6.1
+* Newtonsoft.Json, version 13.0.3
 
 ### Build Solution
 
@@ -100,12 +107,6 @@ Just use the basic `dotnet` command:
 
 ```shell
 dotnet build
-```
-
-Run the demo application:
-
-```shell
-dotnet run --project .\Tethys.Dgml.Demo\Tethys.Dgml.Demo.csproj
 ```
 
 ## License

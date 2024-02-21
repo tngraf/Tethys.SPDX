@@ -1,14 +1,14 @@
 <!-- 
-SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
+SPDX-FileCopyrightText: (c) 2019-2024 T. Graf
 SPDX-License-Identifier: Apache-2.0
 -->
 
 # Tethys.SPDX
 
-## 2.0.0
+## 2.0.0 (2024-02-21)
 
 * Incompatible changes:
-	* Namespace change: `Tethys.SimpleSpdxParser` => `Tethys.SPDX.SimpleSpdxParser`
+	* Namespace change: `Tethys.SimpleSpdxParser` moved to `Tethys.SPDX.SimpleSpdxParser`
 	* RelationshipType has now enum values according to C# naming rules.
 	* In the past all packages, files and snippets where related. This has now been changed.
 	  There are separate lists of packages, files and snippets, relations and documentDecribes.
