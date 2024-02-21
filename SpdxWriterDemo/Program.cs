@@ -17,6 +17,7 @@ namespace SpdxWriterDemo
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Reflection;
     using Tethys.SPDX.KnownLicenses;
     using Tethys.SPDX.Model;
     using Tethys.SPDX.Model.License;
@@ -248,17 +249,61 @@ namespace SpdxWriterDemo
             // initialize (known) licenses.
             var knownLicenseManager = new KnownLicenseManager();
 
-            var licensesFile = Path.Combine(ExpectedDataPath, "licenses.json");
+            var dataPath = FindSpdxLicenseDataPath();
+            if (string.IsNullOrEmpty(dataPath))
+            {
+                throw new ApplicationException("SPDX license list not found!");
+            } // if
+
+            var licensesFile = Path.Combine(dataPath, "licenses.json");
             knownLicenseManager.LoadSpdxLicenseList(licensesFile);
 
-            var detailsFolder = Path.Combine(ExpectedDataPath, "details");
+            var detailsFolder = Path.Combine(dataPath, "details");
             knownLicenseManager.LoadSpdxSourceFiles(detailsFolder);
 
-            var exceptionsFolder = Path.Combine(ExpectedDataPath, "exceptions");
+            var exceptionsFolder = Path.Combine(dataPath, "exceptions");
             knownLicenseManager.LoadSpdxExceptionFiles(exceptionsFolder);
 
             return knownLicenseManager;
         } // GetKnownLicenseManager()
+
+        /// <summary>
+        /// Finds the SPDX license data path.
+        /// This is a very basic approach.
+        /// </summary>
+        /// <returns>A valid path or an empty string.</returns>
+        private static string FindSpdxLicenseDataPath()
+        {
+            var di = new DirectoryInfo(ExpectedDataPath);
+            if (di.Exists)
+            {
+                return ExpectedDataPath;
+            } // if
+
+            var fi = new FileInfo(Assembly.GetExecutingAssembly().Location);
+            var path = fi.DirectoryName;
+            while (true)
+            {
+                if (string.IsNullOrEmpty(path))
+                {
+                    return string.Empty;
+                } // if
+
+                var testpath = Path.Combine(path, "license-list-data");
+                if (Directory.Exists(testpath))
+                {
+                    return testpath;
+                } // if
+
+                var parent = Directory.GetParent(path);
+                if (parent == null)
+                {
+                    return string.Empty;
+                } // if
+
+                path = parent.FullName;
+            } // while
+        } // FindSpdxLicenseDataPath()
     }
 }
 
