@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxLicenseListInfo.cs" company="Tethys">
 //   Copyright (C) 2019 T. Graf
 // </copyright>
@@ -16,7 +16,7 @@ namespace Tethys.SPDX.KnownLicenses
 {
     using System.Collections.Generic;
 
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     using Tethys.SPDX.Interfaces;
 
@@ -38,7 +38,7 @@ namespace Tethys.SPDX.KnownLicenses
         /// <summary>
         /// Gets license list.
         /// </summary>
-        [JsonProperty(PropertyName = "licenses")]
+        [JsonPropertyName("licenses")]
         public IReadOnlyList<ISpdxLicenseListEntry> Licenses => this.licenses;
         #endregion // PUBLIC PROPERTIES
 

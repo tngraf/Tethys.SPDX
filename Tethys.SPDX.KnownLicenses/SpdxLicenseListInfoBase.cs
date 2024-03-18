@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxLicenseListInfoBase.cs" company="Tethys">
 //   Copyright (C) 2019 T. Graf
 // </copyright>
@@ -14,7 +14,7 @@
 
 namespace Tethys.SPDX.KnownLicenses
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// Base class for SPDX license/exception lists.
@@ -25,13 +25,13 @@ namespace Tethys.SPDX.KnownLicenses
         /// <summary>
         /// Gets or sets the license list version.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseListVersion")]
+        [JsonPropertyName("licenseListVersion")]
         public string LicenseListVersion { get; set; }
 
         /// <summary>
         /// Gets or sets the release date.
         /// </summary>
-        [JsonProperty(PropertyName = "releaseDate")]
+        [JsonPropertyName("releaseDate")]
         public string ReleaseDate { get; set; }
         #endregion // PUBLIC PROPERTIES
     } // SpdxLicenseListInfoBase

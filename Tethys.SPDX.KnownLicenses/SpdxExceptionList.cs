@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxExceptionList.cs" company="Tethys">
 //   Copyright (C) 2019 T. Graf
 // </copyright>
@@ -16,7 +16,7 @@ namespace Tethys.SPDX.KnownLicenses
 {
     using System.Collections.Generic;
 
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     using Tethys.SPDX.Interfaces;
 
@@ -39,7 +39,7 @@ namespace Tethys.SPDX.KnownLicenses
         /// <summary>
         /// Gets the license list.
         /// </summary>
-        [JsonProperty(PropertyName = "exceptions")]
+        [JsonPropertyName("exceptions")]
         public IReadOnlyList<ISpdxLicenseListEntry> Exceptions => this.exceptions;
         #endregion // PUBLIC PROPERTIES
 

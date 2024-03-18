@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxLicenseListEntry.cs" company="Tethys">
 //   Copyright (C) 2019 T. Graf
 // </copyright>
@@ -16,7 +16,7 @@ namespace Tethys.SPDX.KnownLicenses
 {
     using System.Collections.Generic;
 
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     using Tethys.SPDX.Interfaces;
 
@@ -29,43 +29,43 @@ namespace Tethys.SPDX.KnownLicenses
         /// <summary>
         /// Gets or sets the reference file.
         /// </summary>
-        [JsonProperty(PropertyName = "reference")]
+        [JsonPropertyName("reference")]
         public string ReferenceFile { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this is a deprecated license identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "isDeprecatedLicenseId")]
+        [JsonPropertyName("isDeprecatedLicenseId")]
         public bool IsDeprecatedLicenseId { get; set; }
 
         /// <summary>
         /// Gets or sets the details Url.
         /// </summary>
-        [JsonProperty(PropertyName = "detailsUrl")]
+        [JsonPropertyName("detailsUrl")]
         public string DetailsUrl { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the license identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseId")]
+        [JsonPropertyName("licenseId")]
         public string LicenseId { get; set; }
 
         /// <summary>
         /// Gets or sets the see also data.
         /// </summary>
-        [JsonProperty(PropertyName = "seeAlso")]
+        [JsonPropertyName("seeAlso")]
         public List<string> SeeAlso { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this instance is OSI approved.
         /// </summary>
-        [JsonProperty(PropertyName = "isOsiApproved")]
+        [JsonPropertyName("isOsiApproved")]
         public bool IsOsiApproved { get; set; }
         #endregion // PUBLIC PROPERTIES
 
