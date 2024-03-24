@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
+		.github\workflows\dotnet-desktop.yml = .github\workflows\dotnet-desktop.yml
 		Dotnet.ruleset = Dotnet.ruleset
 	EndProjectSection
 EndProject
@@ -50,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.ExpressionParse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.ExpressionParser.Test", "Tethys.SPDX.ExpressionParser.Test\Tethys.SPDX.ExpressionParser.Test.csproj", "{0083E4BC-FAD0-47D2-8A64-F41DAAB75773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tethys.SPDX.Model.Test", "Tethys.SPDX.Model.Test\Tethys.SPDX.Model.Test.csproj", "{25D50C2B-CCDA-42C2-B0B7-418EFBD60AF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tethys.SPDX.Model.Test", "Tethys.SPDX.Model.Test\Tethys.SPDX.Model.Test.csproj", "{25D50C2B-CCDA-42C2-B0B7-418EFBD60AF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

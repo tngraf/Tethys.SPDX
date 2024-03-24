@@ -5,9 +5,11 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
-## Next
+## 2.1.0 (2024-03-24)
 
 * `Tethys.SPDX.KnownLicenses`: use `System.Text.Json` instead of `Newtonsoft.Json`.
+* All packages use `netstandard2.0`.
+* Have basic GitHub actions.
 
 ## 2.0.0 (2024-02-21)
 

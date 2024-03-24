@@ -47,6 +47,31 @@ This library has been influenced by the following GitHub projects:
 * https://github.com/microsoft/spdx-simplify
 * https://github.com/spdx/Spdx-Java-Library
 
+## `System.Text.Json` instead of `Newtonsoft.Json`
+
+There an ongoing discussion whether to use `System.Text.Json` instead of `Newtonsoft.Json`.  
+Well, moving from `Newtonsoft.Json` to `System.Text.Json` is **not** straightforward and costs
+quite some effort. SPDX JSON reading and writing is based on many Newtonsoft JsonConverters
+and at the moment the is no plan to change this. If someone wants to take the challenge, well,
+go ahead and do a pull request.
+
+Current status:  
+The following packages do not use any JSON support:
+
+* Tethys.SPDX.ExpressionParser
+* Tethys.SPDX.Support
+
+The following packages use `System.Text.Json`:
+
+* Tethys.SPDX.Interfaces
+* Tethys.SPDX.KnownLicenses, netstandard2.0
+
+The following packages use `Newtonsoft.Json`:
+
+* Tethys.SPDX.Model
+* Tethys.SPDX.SimpleSpdxParser
+* Tethys.SPDX.Writer
+
 ## SPDX
 
 See https://spdx.org/licenses/ for more details on SPDX, the software
