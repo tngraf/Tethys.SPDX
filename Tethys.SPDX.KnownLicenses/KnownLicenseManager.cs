@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // <copyright file="KnownLicenseManager.cs" company="Tethys">
-//   Copyright (C) 2019-2022 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -17,9 +17,8 @@ namespace Tethys.SPDX.KnownLicenses
     using System;
     using System.Collections.Generic;
     using System.IO;
-
-    using Newtonsoft.Json;
-
+    using System.Text.Json;
+    using System.Text.Json.Serialization.Metadata;
     using Tethys.Logging;
     using Tethys.SPDX.Interfaces;
 
@@ -95,7 +94,7 @@ namespace Tethys.SPDX.KnownLicenses
         /// </returns>
         public static ISpdxLicenseInfo ReadFromString(string fileContents)
         {
-            var spdxinfo = JsonConvert.DeserializeObject<SpdxLicenseInfo>(fileContents);
+            var spdxinfo = JsonSerializer.Deserialize<SpdxLicenseInfo>(fileContents);
             return spdxinfo;
         } // ReadFromString()
 
@@ -108,7 +107,7 @@ namespace Tethys.SPDX.KnownLicenses
         /// </returns>
         public static ISpdxExceptionInfo ReadFromExceptionString(string fileContents)
         {
-            var spdxinfo = JsonConvert.DeserializeObject<SpdxExceptionInfo>(fileContents);
+            var spdxinfo = JsonSerializer.Deserialize<SpdxExceptionInfo>(fileContents);
             return spdxinfo;
         } // ReadFromExceptionString()
 
@@ -170,7 +169,18 @@ namespace Tethys.SPDX.KnownLicenses
                 using (var sr = new StreamReader(stream))
                 {
                     stream = null;
-                    var spdxinfo = JsonConvert.DeserializeObject<SpdxLicenseListInfo>(sr.ReadToEnd());
+                    var options = new JsonSerializerOptions
+                    {
+                        TypeInfoResolver = new DefaultJsonTypeInfoResolver
+                        {
+                            Modifiers =
+                            {
+                                TypeResolvers.GetSpdxLicenseListEntryTypeResolvers(),
+                            },
+                        },
+                    };
+
+                    var spdxinfo = JsonSerializer.Deserialize<SpdxLicenseListInfo>(sr.ReadToEnd(), options);
                     if (spdxinfo != null)
                     {
                         this.LicenseListVersion = spdxinfo.LicenseListVersion;
@@ -206,7 +216,18 @@ namespace Tethys.SPDX.KnownLicenses
                 using (var sr = new StreamReader(stream))
                 {
                     stream = null;
-                    var spdxinfo = JsonConvert.DeserializeObject<SpdxExceptionList>(sr.ReadToEnd());
+                    var options = new JsonSerializerOptions
+                    {
+                        TypeInfoResolver = new DefaultJsonTypeInfoResolver
+                        {
+                            Modifiers =
+                            {
+                                TypeResolvers.GetSpdxExceptionListEntryTypeResolvers(),
+                            },
+                        },
+                    };
+
+                    var spdxinfo = JsonSerializer.Deserialize<SpdxExceptionList>(sr.ReadToEnd(), options);
                     return spdxinfo;
                 } // using
             }

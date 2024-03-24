@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxLicenseInfo.cs" company="Tethys">
-//   Copyright (C) 2019 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -16,8 +16,7 @@ namespace Tethys.SPDX.KnownLicenses
 {
     using System.Collections.Generic;
 
-    using Newtonsoft.Json;
-
+    using System.Text.Json.Serialization;
     using Tethys.SPDX.Interfaces;
 
     /// <summary>
@@ -29,67 +28,67 @@ namespace Tethys.SPDX.KnownLicenses
         /// <summary>
         /// Gets or sets a value indicating whether this is a deprecated license identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "isDeprecatedLicenseId")]
+        [JsonPropertyName("isDeprecatedLicenseId")]
         public bool IsDeprecatedLicenseId { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this license is <c>FSF libre</c>.
         /// </summary>
-        [JsonProperty(PropertyName = "isFsfLibre")]
+        [JsonPropertyName("isFsfLibre")]
         public bool IsFsfLibre { get; set; }
 
         /// <summary>
         /// Gets or sets the license text.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseText")]
+        [JsonPropertyName("licenseText")]
         public string LicenseText { get; set; }
 
         /// <summary>
         /// Gets or sets the standard license header template.
         /// </summary>
-        [JsonProperty(PropertyName = "standardLicenseHeaderTemplate")]
+        [JsonPropertyName("standardLicenseHeaderTemplate")]
         public string StandardLicenseHeaderTemplate { get; set; }
 
         /// <summary>
         /// Gets or sets the standard license template.
         /// </summary>
-        [JsonProperty(PropertyName = "standardLicenseTemplate")]
+        [JsonPropertyName("standardLicenseTemplate")]
         public string StandardLicenseTemplate { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the license comments.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseComments")]
+        [JsonPropertyName("licenseComments")]
         public string LicenseComments { get; set; }
 
         /// <summary>
         /// Gets or sets the license identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseId")]
+        [JsonPropertyName("licenseId")]
         public string LicenseId { get; set; }
 
         /// <summary>
         /// Gets or sets the standard license header.
         /// </summary>
-        [JsonProperty(PropertyName = "standardLicenseHeader")]
+        [JsonPropertyName("standardLicenseHeader")]
         public string StandardLicenseHeader { get; set; }
 
         /// <summary>
         /// Gets or sets the see also data.
         /// </summary>
-        [JsonProperty(PropertyName = "seeAlso")]
+        [JsonPropertyName("seeAlso")]
         public List<string> SeeAlso { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this instance is OSI approved.
         /// </summary>
-        [JsonProperty(PropertyName = "isOsiApproved")]
+        [JsonPropertyName("isOsiApproved")]
         public bool IsOsiApproved { get; set; }
         #endregion // PUBLIC PROPERTIES
 

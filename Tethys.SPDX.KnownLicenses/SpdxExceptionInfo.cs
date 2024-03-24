@@ -15,9 +15,7 @@
 namespace Tethys.SPDX.KnownLicenses
 {
     using System.Collections.Generic;
-
-    using Newtonsoft.Json;
-
+    using System.Text.Json.Serialization;
     using Tethys.SPDX.Interfaces;
 
     /// <summary>
@@ -29,43 +27,43 @@ namespace Tethys.SPDX.KnownLicenses
         /// <summary>
         /// Gets or sets a value indicating whether this is a deprecated license identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "isDeprecatedLicenseId")]
+        [JsonPropertyName("isDeprecatedLicenseId")]
         public bool IsDeprecatedLicenseId { get; set; }
 
         /// <summary>
         /// Gets or sets the license exception text.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseExceptionText")]
+        [JsonPropertyName("licenseExceptionText")]
         public string LicenseExceptionText { get; set; }
 
         /// <summary>
         /// Gets or sets the license exception template.
         /// </summary>
-        [JsonProperty(PropertyName = "standardLicenseTemplate")]
+        [JsonPropertyName("standardLicenseTemplate")]
         public string LicenseExceptionTemplate { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the license comments.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseComments")]
+        [JsonPropertyName("licenseComments")]
         public string LicenseComments { get; set; }
 
         /// <summary>
         /// Gets or sets the license exception identifier.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseExceptionId")]
+        [JsonPropertyName("licenseExceptionId")]
         public string LicenseExceptionId { get; set; }
 
         /// <summary>
         /// Gets or sets the see also data.
         /// </summary>
-        [JsonProperty(PropertyName = "seeAlso")]
+        [JsonPropertyName("seeAlso")]
         public List<string> SeeAlso { get; set; }
         #endregion // PUBLIC PROPERTIES
 

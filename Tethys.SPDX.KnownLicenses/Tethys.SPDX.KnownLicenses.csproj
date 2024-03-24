@@ -18,11 +18,11 @@ SPDX-License-Identifier: Apache-2.0
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="System.Text.Json" Version="8.0.3" />
 		<PackageReference Include="Tethys.Logging" Version="1.6.1" />
 	</ItemGroup>
 

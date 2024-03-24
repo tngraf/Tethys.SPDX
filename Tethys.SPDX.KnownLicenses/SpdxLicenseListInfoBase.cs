@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="SpdxLicenseListInfoBase.cs" company="Tethys">
-//   Copyright (C) 2019 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -14,24 +14,27 @@
 
 namespace Tethys.SPDX.KnownLicenses
 {
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// Base class for SPDX license/exception lists.
     /// </summary>
+    [JsonDerivedType(typeof(SpdxLicenseListInfoBase), typeDiscriminator: "base")]
+    [JsonDerivedType(typeof(SpdxLicenseListInfo), typeDiscriminator: "ListInfo")]
+    [JsonDerivedType(typeof(SpdxExceptionList), typeDiscriminator: "ExceptionInfo")]
     public class SpdxLicenseListInfoBase
     {
         #region PUBLIC PROPERTIES
         /// <summary>
         /// Gets or sets the license list version.
         /// </summary>
-        [JsonProperty(PropertyName = "licenseListVersion")]
+        [JsonPropertyName("licenseListVersion")]
         public string LicenseListVersion { get; set; }
 
         /// <summary>
         /// Gets or sets the release date.
         /// </summary>
-        [JsonProperty(PropertyName = "releaseDate")]
+        [JsonPropertyName("releaseDate")]
         public string ReleaseDate { get; set; }
         #endregion // PUBLIC PROPERTIES
     } // SpdxLicenseListInfoBase
