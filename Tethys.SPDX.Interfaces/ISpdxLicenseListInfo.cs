@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="ISpdxLicenseListInfo.cs" company="Tethys">
 //   Copyright (C) 2019-2022 T. Graf
 // </copyright>
@@ -15,6 +15,7 @@
 namespace Tethys.SPDX.Interfaces
 {
     using System.Collections.Generic;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The interface for SPDX license lists.

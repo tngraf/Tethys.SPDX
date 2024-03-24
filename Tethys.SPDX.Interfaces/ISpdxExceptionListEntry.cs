@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
-// <copyright file="ISpdxLicenseListEntry.cs" company="Tethys">
-//   Copyright (C) 2019-2024 T. Graf
+// <copyright file="ISpdxExceptionListEntry.cs" company="Tethys">
+//   Copyright (C) 2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -18,9 +18,9 @@ namespace Tethys.SPDX.Interfaces
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// The interface for SPDX license list entries.
+    /// The interface for SPDX exception list entries.
     /// </summary>
-    public interface ISpdxLicenseListEntry
+    public interface ISpdxExceptionListEntry
     {
         /// <summary>
         /// Gets or sets the reference file.
@@ -49,18 +49,13 @@ namespace Tethys.SPDX.Interfaces
         string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the license identifier.
+        /// Gets or sets the license exception identifier.
         /// </summary>
-        string LicenseId { get; set; }
+        string LicenseExceptionId { get; set; }
 
         /// <summary>
         /// Gets or sets the see also data.
         /// </summary>
         List<string> SeeAlso { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether this instance is OSI approved.
-        /// </summary>
-        bool IsOsiApproved { get; set; }
     }
 }

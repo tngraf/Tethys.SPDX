@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
-// <copyright file="SpdxLicenseListEntry.cs" company="Tethys">
-//   Copyright (C) 2019-2024 T. Graf
+// <copyright file="SpdxExceptionListEntry.cs" company="Tethys">
+//   Copyright (C) 2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -20,9 +20,9 @@ namespace Tethys.SPDX.KnownLicenses
     using Tethys.SPDX.Interfaces;
 
     /// <summary>
-    /// Information about a specific license known by SPDX.
+    /// Information about a specific license exception known by SPDX.
     /// </summary>
-    public class SpdxLicenseListEntry : ISpdxLicenseListEntry
+    public class SpdxExceptionListEntry : ISpdxExceptionListEntry
     {
         #region PUBLIC PROPERTIES
         /// <summary>
@@ -56,35 +56,29 @@ namespace Tethys.SPDX.KnownLicenses
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the license identifier.
+        /// Gets or sets the license exception identifier.
         /// </summary>
-        [JsonPropertyName("licenseId")]
-        public string LicenseId { get; set; }
+        [JsonPropertyName("licenseExceptionId")]
+        public string LicenseExceptionId { get; set; }
 
         /// <summary>
         /// Gets or sets the see also data.
         /// </summary>
         [JsonPropertyName("seeAlso")]
         public List<string> SeeAlso { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether this instance is OSI approved.
-        /// </summary>
-        [JsonPropertyName("isOsiApproved")]
-        public bool IsOsiApproved { get; set; }
         #endregion // PUBLIC PROPERTIES
 
         //// ---------------------------------------------------------------------
 
         #region CONSTRUCTION
         /// <summary>
-        /// Initializes a new instance of the <see cref="SpdxLicenseListEntry"/> class.
+        /// Initializes a new instance of the <see cref="SpdxExceptionListEntry"/> class.
         /// </summary>
-        public SpdxLicenseListEntry()
+        public SpdxExceptionListEntry()
         {
             this.IsDeprecatedLicenseId = false;
             this.Name = string.Empty;
-        } // SpdxLicenseListEntry()
+        } // SpdxExceptionListEntry()
         #endregion // CONSTRUCTION
 
         //// ---------------------------------------------------------------------
@@ -98,8 +92,8 @@ namespace Tethys.SPDX.KnownLicenses
         /// </returns>
         public override string ToString()
         {
-            return $"{this.Name}: {this.LicenseId}, OSI approved={this.IsOsiApproved}";
+            return $"{this.Name}: {this.LicenseExceptionId}";
         } // ToString()
         #endregion // PUBLIC METHODS
-    } // SpdxLicenseListEntry
+    } // SpdxExceptionListEntry
 }

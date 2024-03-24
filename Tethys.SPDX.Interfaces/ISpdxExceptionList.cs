@@ -1,6 +1,6 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // <copyright file="ISpdxExceptionList.cs" company="Tethys">
-//   Copyright (C) 2019-2022 T. Graf
+//   Copyright (C) 2019-2024 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -24,7 +24,7 @@ namespace Tethys.SPDX.Interfaces
         /// <summary>
         /// Gets the license list.
         /// </summary>
-        IReadOnlyList<ISpdxLicenseListEntry> Exceptions { get; }
+        IReadOnlyList<ISpdxExceptionListEntry> Exceptions { get; }
 
         /// <summary>
         /// Gets or sets the license list version.
