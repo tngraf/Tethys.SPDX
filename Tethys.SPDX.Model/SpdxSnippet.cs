@@ -86,7 +86,7 @@ namespace Tethys.SPDX.Model
         /// <param name="license">The license.</param>
         public void AddLicenseInfoInSnippet(AnyLicenseInfo license)
         {
-            this.licenseInfoInSnippet ??= new List<AnyLicenseInfo>();
+            this.licenseInfoInSnippet = this.licenseInfoInSnippet ?? new List<AnyLicenseInfo>();
             this.licenseInfoInSnippet.Add(license);
         } // AddLicenseInfoInSnippet()
 
@@ -105,7 +105,7 @@ namespace Tethys.SPDX.Model
         /// <param name="pointer">The pointer.</param>
         public void AddRange(StartEndPointer pointer)
         {
-            this.ranges ??= new List<StartEndPointer>();
+            this.ranges = this.ranges ?? new List<StartEndPointer>();
             this.ranges.Add(pointer);
         } // AddRange()
 

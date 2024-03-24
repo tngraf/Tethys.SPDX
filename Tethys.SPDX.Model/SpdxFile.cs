@@ -110,7 +110,7 @@ namespace Tethys.SPDX.Model
         /// <param name="ftype">The file type.</param>
         public void AddFileType(FileType ftype)
         {
-            this.filetypes ??= new List<FileType>();
+            this.filetypes = this.filetypes ?? new List<FileType>();
             this.filetypes.Add(ftype);
         } // AddFileType()
 
@@ -129,7 +129,7 @@ namespace Tethys.SPDX.Model
         /// <param name="chksum">The checksum.</param>
         public void AddChecksum(Checksum chksum)
         {
-            this.checksums ??= new List<Checksum>();
+            this.checksums = this.checksums ?? new List<Checksum>();
             this.checksums.Add(chksum);
         } // AddChecksum()
 
@@ -139,7 +139,7 @@ namespace Tethys.SPDX.Model
         /// <param name="contributor">The contributor.</param>
         public void AddFileContributor(string contributor)
         {
-            this.fileContributors ??= new List<string>();
+            this.fileContributors = this.fileContributors ?? new List<string>();
             this.fileContributors.Add(contributor);
         } // AddFileContributor()
 

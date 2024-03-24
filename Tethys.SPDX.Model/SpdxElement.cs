@@ -99,7 +99,7 @@ namespace Tethys.SPDX.Model
         /// <param name="annotation">The annotation.</param>
         public void AddAnnotation(Annotation annotation)
         {
-            this.annotations ??= new List<Annotation>();
+            this.annotations = this.annotations ?? new List<Annotation>();
             this.annotations.Add(annotation);
         } // AddAnnotation()
 
@@ -118,7 +118,7 @@ namespace Tethys.SPDX.Model
         /// <param name="relation">The relation.</param>
         public void AddRelationShip(RelationShip relation)
         {
-            this.relationShips ??= new List<RelationShip>();
+            this.relationShips = this.relationShips ?? new List<RelationShip>();
             this.relationShips.Add(relation);
         } // AddRelationShip()
 

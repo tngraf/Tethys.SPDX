@@ -81,7 +81,7 @@ namespace Tethys.SPDX.Model.License
         /// <param name="element">The element.</param>
         public void AddSeeAlso(string element)
         {
-            this.seeAlso ??= new List<string>();
+            this.seeAlso = this.seeAlso ?? new List<string>();
             this.seeAlso.Add(element);
         } // AddSeeAlso()
 

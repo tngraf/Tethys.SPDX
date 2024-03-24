@@ -88,8 +88,10 @@ namespace Tethys.SPDX.SimpleSpdxParser
                     encoding = Encoding.UTF8;
                 } // if
 
-                using var stream = File.OpenRead(filename);
-                return this.ReadFromFile(stream, encoding);
+                using (var stream = File.OpenRead(filename))
+                {
+                    return this.ReadFromFile(stream, encoding);
+                } // using
             }
             catch (Exception ex)
             {
@@ -110,8 +112,10 @@ namespace Tethys.SPDX.SimpleSpdxParser
         {
             try
             {
-                using var sr = new StreamReader(stream, encoding);
-                return this.ReadFromString(sr.ReadToEnd());
+                using (var sr = new StreamReader(stream, encoding))
+                {
+                    return this.ReadFromString(sr.ReadToEnd());
+                } // using
             }
             catch (Exception ex)
             {

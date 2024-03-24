@@ -89,7 +89,7 @@ namespace Tethys.SPDX.Model
 
             set
             {
-                this.attributionTexts ??= new List<string>();
+                this.attributionTexts = this.attributionTexts ?? new List<string>();
                 this.AddAttributionText(value);
             }
         }
@@ -133,7 +133,7 @@ namespace Tethys.SPDX.Model
         /// <param name="fileLicense">The file license.</param>
         public void AddLicenseInfoFromFile(AnyLicenseInfo fileLicense)
         {
-            this.licenseInfoFromFiles ??= new List<AnyLicenseInfo>();
+            this.licenseInfoFromFiles = this.licenseInfoFromFiles ?? new List<AnyLicenseInfo>();
             this.licenseInfoFromFiles.Add(fileLicense);
         } // AddLicenseInfoFromFile()
 
@@ -152,7 +152,7 @@ namespace Tethys.SPDX.Model
         /// <param name="text">The text.</param>
         public void AddAttributionText(string text)
         {
-            this.attributionTexts ??= new List<string>();
+            this.attributionTexts = this.attributionTexts ?? new List<string>();
             this.attributionTexts.Add(text);
         } // AddAttributionText()
         #endregion // PUBLIC METHODS

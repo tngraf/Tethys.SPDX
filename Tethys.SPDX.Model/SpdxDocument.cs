@@ -151,7 +151,7 @@ namespace Tethys.SPDX.Model
         /// <param name="reference">The reference.</param>
         public void AddExternalDocumentRef(ExternalDocumentRef reference)
         {
-            this.externalDocumentRefs ??= new List<ExternalDocumentRef>();
+            this.externalDocumentRefs = this.externalDocumentRefs ?? new List<ExternalDocumentRef>();
 
             this.externalDocumentRefs.Add(reference);
         } // AddExternalDocumentRef()
@@ -171,7 +171,7 @@ namespace Tethys.SPDX.Model
         /// <param name="info">The information.</param>
         public void AddExtractedLicenseInfo(ExtractedLicenseInfo info)
         {
-            this.extractedLicenseInfos ??= new List<ExtractedLicenseInfo>();
+            this.extractedLicenseInfos = this.extractedLicenseInfos ?? new List<ExtractedLicenseInfo>();
             this.extractedLicenseInfos.Add(info);
         } // AddExtractedLicenseInfo()
 
@@ -190,7 +190,7 @@ namespace Tethys.SPDX.Model
         /// <param name="item">The item.</param>
         public void AddDocumentDescribes(string item)
         {
-            this.documentDescribes ??= new List<string>();
+            this.documentDescribes = this.documentDescribes ?? new List<string>();
             this.documentDescribes.Add(item);
         } // AddDocumentDescribes()
 
@@ -217,7 +217,7 @@ namespace Tethys.SPDX.Model
         /// <param name="package">The package.</param>
         public void AddPackage(SpdxPackage package)
         {
-            this.packages ??= new List<SpdxPackage>();
+            this.packages = this.packages ?? new List<SpdxPackage>();
             this.packages.Add(package);
         } // AddPackage()
 
@@ -244,7 +244,7 @@ namespace Tethys.SPDX.Model
         /// <param name="file">The file.</param>
         public void AddFile(SpdxFile file)
         {
-            this.files ??= new List<SpdxFile>();
+            this.files = this.files ?? new List<SpdxFile>();
             this.files.Add(file);
         } // AddFiles()
 
@@ -271,7 +271,7 @@ namespace Tethys.SPDX.Model
         /// <param name="snippet">The snippet.</param>
         public void AddSnippet(SpdxSnippet snippet)
         {
-            this.snippets ??= new List<SpdxSnippet>();
+            this.snippets = this.snippets ?? new List<SpdxSnippet>();
             this.snippets.Add(snippet);
         } // AddSnippet()
 

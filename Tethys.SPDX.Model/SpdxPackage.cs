@@ -192,7 +192,7 @@ namespace Tethys.SPDX.Model
         /// <param name="chksum">The checksum.</param>
         public void AddChecksum(Checksum chksum)
         {
-            this.checksums ??= new List<Checksum>();
+            this.checksums = this.checksums ?? new List<Checksum>();
             this.checksums.Add(chksum);
         } // AddChecksum()
 
@@ -202,7 +202,7 @@ namespace Tethys.SPDX.Model
         /// <param name="reference">The reference.</param>
         public void AddExternalRef(ExternalRef reference)
         {
-            this.externalRefs ??= new List<ExternalRef>();
+            this.externalRefs = this.externalRefs ?? new List<ExternalRef>();
             this.externalRefs.Add(reference);
         } // AddExternalRef()
 
@@ -221,7 +221,7 @@ namespace Tethys.SPDX.Model
         /// <param name="newFile">The new file.</param>
         public void AddFile(SpdxFile newFile)
         {
-            this.files ??= new List<SpdxFile>();
+            this.files = this.files ?? new List<SpdxFile>();
             this.files.Add(newFile);
         } // AddFile()
 
