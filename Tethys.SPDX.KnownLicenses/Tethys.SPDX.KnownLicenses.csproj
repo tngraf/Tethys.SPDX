@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
 		<CodeAnalysisRuleSet>..\Dotnet.ruleset</CodeAnalysisRuleSet>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -22,16 +22,19 @@ SPDX-License-Identifier: Apache-2.0
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="System.Text.Json" Version="8.0.3" />
 		<PackageReference Include="Tethys.Logging" Version="1.6.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+		<PackageReference Include="System.Text.Json" Version="8.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Tethys.SPDX.Interfaces\Tethys.SPDX.Interfaces.csproj" />
 		<None Include="..\README.md" Pack="true" PackagePath="\" />
 		<None Include="..\tethys_spdx_icon.png">
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
 
