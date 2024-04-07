@@ -124,7 +124,9 @@ dotnet run --project .\SpdxParserDemo\SpdxParserDemo.csproj .\TestData\SPDXJSONE
 ### Required NuGet Packages
 
 * Tethys.Logging, version 1.6.1
-* Newtonsoft.Json, version 13.0.3
+* Tethys.Xml, version 1.1.0
+* (Newtonsoft.Json, version 13.0.3)
+* (System.Text,Json, version 8.0.3)
 
 ### Build Solution
 

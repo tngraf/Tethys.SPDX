@@ -5,6 +5,10 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
+## 2.1.1 (2024-04-08)
+
+* Multitarget in order to avoid System.Text.Json dependency when it is not needed.
+
 ## 2.1.0 (2024-03-24)
 
 * `Tethys.SPDX.KnownLicenses`: use `System.Text.Json` instead of `Newtonsoft.Json`.
