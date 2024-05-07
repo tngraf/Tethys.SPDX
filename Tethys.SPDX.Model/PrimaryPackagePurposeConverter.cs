@@ -150,7 +150,7 @@ namespace Tethys.SPDX.Model
                 { "FRAMEWORK", PrimaryPackagePurpose.Framework },
                 { "LIBRARY", PrimaryPackagePurpose.Library },
                 { "CONTAINER", PrimaryPackagePurpose.Container },
-                { "OPERATING-SYSTEM", PrimaryPackagePurpose.OperatingSystem },
+                { "OPERATING_SYSTEM", PrimaryPackagePurpose.OperatingSystem },
                 { "DEVICE", PrimaryPackagePurpose.Device },
                 { "FIRMWARE", PrimaryPackagePurpose.Firmware },
                 { "SOURCE", PrimaryPackagePurpose.Source },

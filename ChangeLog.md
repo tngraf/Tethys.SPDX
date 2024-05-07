@@ -5,6 +5,11 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
+## NEXT
+
+* Fixing SPDX validation issues
+  * It must be `OPERATING_SYSTEM` even though the SPDX documentation (HTML) says `OPERATING-SYSTEM`.
+
 ## 2.1.1 (2024-04-08)
 
 * Multitarget in order to avoid System.Text.Json dependency when it is not needed.
