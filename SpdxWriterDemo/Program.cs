@@ -176,7 +176,12 @@ namespace SpdxWriterDemo
                 file.AddFileType(FileType.Archive);
                 file.LicenseComments = "File license comment";
                 file.LicenseConcluded = license;
-                file.AddLicenseInfoFromFile(l1);
+
+                // LicenseInfoFromFile is not allowed for a file
+                // It seems that we need to build an SPDX expression for that...
+                // But there is no clear documentation and no example for that.
+                // file.AddLicenseInfoFromFile(l1);
+
                 file.NoticeText = "A notice for this file.";
                 file.Comment = "Some file comment";
                 file.AttributionText = "File attribution text";
@@ -188,6 +193,8 @@ namespace SpdxWriterDemo
                     Type = RelationshipType.Contains,
                     RelatedElement = file,
                 });
+
+                package.AddFile(file);
 
                 var snippet = new SpdxSnippet();
                 snippet.SpdxIdentifier = "SPDXRef-Snippet";
