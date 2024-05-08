@@ -1,5 +1,5 @@
 # -------------------------------------------------------
-# Create Code Covergae Report - Powershell based approach
+# Create Code Coverage Report - Powershell based approach
 
 # SPDX-FileCopyrightText: (c) 2019-2023 T. Graf
 # SPDX-License-Identifier: Apache-2.0
