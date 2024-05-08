@@ -9,6 +9,8 @@ SPDX-License-Identifier: Apache-2.0
 
 * Fixing SPDX validation issues
   * It must be `OPERATING_SYSTEM` even though the SPDX documentation (HTML) says `OPERATING-SYSTEM`.
+  * It must be `hasExtractedLicensingInfos` and not `hasExtractedLicenseInfos`.
+  * File information of an `SpdxPackage` is nor correctly exported as a `hasFiles` array.
 
 ## 2.1.1 (2024-04-08)
 

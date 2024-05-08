@@ -154,8 +154,16 @@ namespace Tethys.SPDX.Model
         public DateTime? ValidUntilDate { get; set; }
 
         /// <summary>
+        /// Gets the files that this package has.
+        /// This is a list of the SPDX identifiers of these files.
+        /// </summary>
+        [JsonProperty("hasFiles")]
+        public List<string> HasFiles => this.GetFileIdentifiers();
+
+        /// <summary>
         /// Gets the files.
         /// </summary>
+        [JsonIgnore]
         public List<SpdxFile> Files => this.files;
         #endregion // PUBLIC PROPERTIES
 
@@ -177,6 +185,25 @@ namespace Tethys.SPDX.Model
         //// ---------------------------------------------------------------------
 
         #region PUBLIC METHODS
+        /// <summary>
+        /// Gets the file identifiers.
+        /// </summary>
+        /// <returns>List&lt;System.String&gt;.</returns>
+        public List<string> GetFileIdentifiers()
+        {
+            var result = new List<string>();
+
+            if (this.files != null)
+            {
+                foreach (var file in this.files)
+                {
+                    result.Add(file.SpdxIdentifier);
+                } // foreach
+            } // if
+
+            return result;
+        } // GetFileIdentifiers()
+
         /// <summary>
         /// Sets the checksums.
         /// </summary>

@@ -84,7 +84,7 @@ namespace Tethys.SPDX.Model
         /// <summary>
         /// Gets the extracted license information.
         /// </summary>
-        [JsonProperty("hasExtractedLicenseInfos")]
+        [JsonProperty("hasExtractedLicensingInfos")]
         public IReadOnlyList<ExtractedLicenseInfo> ExtractedLicenseInfos => this.extractedLicenseInfos;
 
         /// <summary>
