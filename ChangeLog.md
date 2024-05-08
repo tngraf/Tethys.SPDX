@@ -5,7 +5,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
-## NEXT
+## 2.1.2 (2024-05-08)
 
 * Fixing SPDX validation issues
   * It must be `OPERATING_SYSTEM` even though the SPDX documentation (HTML) says `OPERATING-SYSTEM`.
