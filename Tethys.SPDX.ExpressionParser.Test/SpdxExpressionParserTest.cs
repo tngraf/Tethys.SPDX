@@ -289,7 +289,7 @@ namespace Tethys.SPDX.ExpressionParser.Test
             Assert.IsNotNull(expr);
             Assert.AreEqual("GPL-2.0-or-later", expr.Id);
 
-            // YES, the flag is false. Rationale is that "GPL-2.0-or-later" is the offical SPDX identifier
+            // YES, the flag is false. Rationale is that "GPL-2.0-or-later" is the official SPDX identifier
             Assert.IsFalse(expr.OrLater);
             Assert.AreEqual("GPL-2.0-or-later", actual.ToString());
         }

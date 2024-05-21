@@ -335,7 +335,7 @@ namespace Tethys.SPDX.SimpleSpdxParser.Test
             var reader = new RdfParser(knownLicenseManager);
 
             // parsing file SPDX2_tools-refs_tags_v0.10.0.tar.gz_1689687523.spdx.rdf
-            // results in an exception. becaue of duplicate licenses...
+            // results in an exception because of duplicate licenses...
             var spdxDoc = reader.ReadFromFile(SpdxFile8);
             Assert.IsNotNull(spdxDoc);
             Assert.IsNull(spdxDoc.Annotations);
