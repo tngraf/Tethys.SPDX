@@ -1,5 +1,5 @@
 <!-- 
-SPDX-FileCopyrightText: (c) 2019-2024 T. Graf
+SPDX-FileCopyrightText: (c) 2019-2025 T. Graf
 SPDX-License-Identifier: Apache-2.0
 -->
 
@@ -12,7 +12,7 @@ SPDX-License-Identifier: Apache-2.0
 [![SBOM](https://img.shields.io/badge/SBOM-CycloneDX-brightgreen)](https://github.com/tngraf/Tethys.Dgml/blob/master/SBOM/sbom.cyclonedx.xml)
 
 The [Software Package Data Exchange (SPDX)](https://spdx.dev/) is an open standard for describing a software bill of material.
-SPDX focuses especially on licensing and copyright imformation.
+SPDX focuses especially on licensing and copyright information.
 
 License and copyright scanners like [FOSSology](https://www.fossology.org/) for example use this standard
 to provide their scan results.
@@ -43,16 +43,16 @@ The following packages are available on NuGet:
 
 This library has been influenced by the following GitHub projects:
 
-* https://github.com/jslicense/spdx-expression-parse.js
-* https://github.com/microsoft/spdx-simplify
-* https://github.com/spdx/Spdx-Java-Library
+* <https://github.com/jslicense/spdx-expression-parse.js>
+* <https://github.com/microsoft/spdx-simplify>
+* <https://github.com/spdx/Spdx-Java-Library>
 
 ## `System.Text.Json` instead of `Newtonsoft.Json`
 
 There an ongoing discussion whether to use `System.Text.Json` instead of `Newtonsoft.Json`.  
 Well, moving from `Newtonsoft.Json` to `System.Text.Json` is **not** straightforward and costs
 quite some effort. SPDX JSON reading and writing is based on many Newtonsoft JsonConverters
-and at the moment the is no plan to change this. If someone wants to take the challenge, well,
+and at the moment there is no plan to change this. If someone wants to take the challenge, well,
 go ahead and do a pull request.
 
 Current status:  
@@ -74,20 +74,20 @@ The following packages use `Newtonsoft.Json`:
 
 ## SPDX
 
-See https://spdx.org/licenses/ for more details on SPDX, the software
+See <https://spdx.org/licenses/> for more details on SPDX, the software
 package data exchange format, the SPDX license identifiers
 and matching guidelines.
 
 The Software Package Data Exchange (SPDX) Specification
-https://spdx.github.io/spdx-spec/
+<https://spdx.github.io/spdx-spec/>
 
 XML data of all SPDX licenses:  
-https://github.com/spdx/license-list-XML
+<https://github.com/spdx/license-list-XML>
 
 ## How to use Tethys.SPDX
 
 The SPDX license information is not part of the libraries, you have to
-download it from [SPDX License List](https://github.com/spdx/license-list-XML) 
+download it from [SPDX License List](https://github.com/spdx/license-list-XML)
 and place it in a local folder.
 
 ### Very simple demo
@@ -138,4 +138,5 @@ dotnet build
 
 ## License
 
+Copyright (c) 2019-2025 T. Graf.
 Tethys.SPDX is licensed under the Apache License, Version 2.0.

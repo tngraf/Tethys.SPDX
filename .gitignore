@@ -130,3 +130,7 @@ Thumbs.db
 
 # exclude test data
 _internal_/
+
+# exclude test coverage
+.tests/
+*.cobertura.xml

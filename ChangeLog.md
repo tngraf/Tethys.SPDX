@@ -1,11 +1,11 @@
 <!-- 
-SPDX-FileCopyrightText: (c) 2019-2024 T. Graf
+SPDX-FileCopyrightText: (c) 2019-2025 T. Graf
 SPDX-License-Identifier: Apache-2.0
 -->
 
 # Tethys.SPDX
 
-## NEXT
+## 2.1.3 (2025-05-29)
 
 * Have correct operator precedence: `AND` has higher precedence than `OR`.
 

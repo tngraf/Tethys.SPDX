@@ -1,14 +1,14 @@
 <!-- 
-SPDX-FileCopyrightText: (c) 2019-2024 T. Graf
+SPDX-FileCopyrightText: (c) 2019-2025 T. Graf
 SPDX-License-Identifier: Apache-2.0
 -->
 
 <Project>
 	<PropertyGroup>
-		<Version>2.1.2</Version>
-		<FileVersion>2.1.2</FileVersion>
+		<Version>2.1.3</Version>
+		<FileVersion>2.1.3</FileVersion>
 		<Company>Tethys</Company>
-		<Copyright>Copyright © 2019-2024 T. Graf</Copyright>
+		<Copyright>Copyright © 2019-2025 T. Graf</Copyright>
 		<Authors>T. Graf</Authors>
 		<Description>SPDX support for .Net applications</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

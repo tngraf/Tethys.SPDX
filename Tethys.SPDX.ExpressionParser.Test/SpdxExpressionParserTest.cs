@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // <copyright file="SpdxExpressionParserTest.cs" company="Tethys">
-//   Copyright (C) 2023-2024 T. Graf
+//   Copyright (C) 2023-2025 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
