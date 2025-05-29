@@ -60,7 +60,10 @@ namespace Tethys.SPDX.ExpressionParser.Test
                 "GPL-2.0",
                 "GPL-2.0-or-later",
                 "ISC",
-                "MPL-1.0"
+                "MPL-1.0",
+                "0BSD",
+                "EPL-1.0",
+                "CC-BY-NC-1.0"
             };
 
             this.spdxExceptions = new List<string>
@@ -184,21 +187,21 @@ namespace Tethys.SPDX.ExpressionParser.Test
             Assert.IsInstanceOfType(actual, typeof(SpdxAndExpression));
             var expr = actual as SpdxAndExpression;
             Assert.IsNotNull(expr);
-            Assert.IsInstanceOfType(expr.Left, typeof(SpdxAndExpression));
-            var right1 = expr.Right as SpdxLicenseExpression;
-            Assert.IsNotNull(right1);
+            var left1 = expr.Left as SpdxLicenseExpression;
+            Assert.IsNotNull(left1);
+            Assert.IsInstanceOfType(expr.Right, typeof(SpdxAndExpression));
 
-            var expr2 = expr.Left as SpdxAndExpression;
+            var expr2 = expr.Right as SpdxAndExpression;
             Assert.IsNotNull(expr2);
             var left2 = expr2.Left as SpdxLicenseExpression;
             Assert.IsNotNull(left2);
             var right2 = expr2.Right as SpdxLicenseExpression;
             Assert.IsNotNull(right2);
 
-            Assert.AreEqual("MIT", left2.Id);
-            Assert.AreEqual("ISC", right2.Id);
+            Assert.AreEqual("MIT", left1.Id);
 
-            Assert.AreEqual("Apache-2.0", right1.Id);
+            Assert.AreEqual("ISC", left2.Id);
+            Assert.AreEqual("Apache-2.0", right2.Id);
 
             Assert.AreEqual("MIT AND ISC AND Apache-2.0", actual.ToString());
         }
@@ -231,20 +234,21 @@ namespace Tethys.SPDX.ExpressionParser.Test
             Assert.IsInstanceOfType(actual, typeof(SpdxOrExpression));
             var expr = actual as SpdxOrExpression;
             Assert.IsNotNull(expr);
-            var left1 = expr.Left as SpdxLicenseExpression;
-            Assert.IsNotNull(left1);
-            Assert.AreEqual("MIT", left1.Id);
-            Assert.IsInstanceOfType(expr.Right, typeof(SpdxOrExpression));
+            Assert.IsInstanceOfType(expr.Left, typeof(SpdxOrExpression));
+            var right1 = expr.Right as SpdxLicenseExpression;
+            Assert.IsNotNull(right1);
+            Assert.AreEqual("GPL-2.0", right1.Id);
 
-            var expr2 = expr.Right as SpdxOrExpression;
+
+            var expr2 = expr.Left as SpdxOrExpression;
             Assert.IsNotNull(expr2);
             var left2 = expr2.Left as SpdxLicenseExpression;
             Assert.IsNotNull(left2);
             var right2 = expr2.Right as SpdxLicenseExpression;
             Assert.IsNotNull(right2);
 
-            Assert.AreEqual("Apache-2.0", left2.Id);
-            Assert.AreEqual("GPL-2.0", right2.Id);
+            Assert.AreEqual("MIT", left2.Id);
+            Assert.AreEqual("Apache-2.0", right2.Id);
 
             Assert.AreEqual("MIT OR Apache-2.0 OR GPL-2.0", actual.ToString());
         }
@@ -315,23 +319,24 @@ namespace Tethys.SPDX.ExpressionParser.Test
                 "GPL-2.0 with Autoconf-exception-2.0 and LicenseRef-siemens-DOM4J or Apache-2.0",
                 this.IsSpdxIdentifier,
                 this.IsSpdxException);
-            Assert.IsInstanceOfType(actual, typeof(SpdxAndExpression));
-            var expr = actual as SpdxAndExpression;
+            Assert.IsInstanceOfType(actual, typeof(SpdxOrExpression));
+            var expr = actual as SpdxOrExpression;
             Assert.IsNotNull(expr);
-            Assert.IsInstanceOfType(expr.Left, typeof(SpdxWithExpression));
-            var expr2 = expr.Left as SpdxWithExpression;
-            Assert.IsNotNull(expr2);
-            Assert.AreEqual("Autoconf-exception-2.0", expr2.Exception);
-            Assert.IsInstanceOfType(expr2.Expression, typeof(SpdxLicenseExpression));
-            Assert.AreEqual("GPL-2.0", ((SpdxLicenseExpression)expr2.Expression).Id);
+            Assert.IsInstanceOfType(expr.Left, typeof(SpdxAndExpression));
 
-            Assert.IsInstanceOfType(expr.Right, typeof(SpdxOrExpression));
-            var expr3 = expr.Right as SpdxOrExpression;
-            Assert.IsNotNull(expr3);
-            Assert.IsInstanceOfType(expr3.Left, typeof(SpdxLicenseReference));
-            Assert.IsInstanceOfType(expr3.Right, typeof(SpdxLicenseExpression));
-            Assert.AreEqual("LicenseRef-siemens-DOM4J", ((SpdxLicenseReference)expr3.Left).LicenseRef);
-            Assert.AreEqual("Apache-2.0", ((SpdxLicenseExpression)expr3.Right).Id);
+            Assert.IsInstanceOfType(expr.Right, typeof(SpdxLicenseExpression));
+            Assert.AreEqual("Apache-2.0", ((SpdxLicenseExpression)expr.Right).Id);
+
+            var expr2 = expr.Left as SpdxAndExpression;
+            Assert.IsNotNull(expr2);
+            var left2 = expr2.Left as SpdxWithExpression;
+            Assert.IsNotNull(left2);
+            Assert.AreEqual("Autoconf-exception-2.0", left2.Exception);
+            Assert.IsInstanceOfType(left2.Expression, typeof(SpdxLicenseExpression));
+            Assert.AreEqual("GPL-2.0", ((SpdxLicenseExpression)left2.Expression).Id);
+
+            Assert.IsInstanceOfType(expr2.Right, typeof(SpdxExpression));
+            Assert.AreEqual("LicenseRef-siemens-DOM4J", ((SpdxLicenseReference)expr2.Right).LicenseRef);
 
             Assert.AreEqual("GPL-2.0 WITH Autoconf-exception-2.0 AND LicenseRef-siemens-DOM4J OR Apache-2.0", actual.ToString());
         }
@@ -523,6 +528,66 @@ namespace Tethys.SPDX.ExpressionParser.Test
             {
                 Assert.AreEqual("Invalid characters found", spex.Message);
             }
+        }
+
+        [TestMethod]
+        public void TestOperatorPrecedence()
+        {
+            var actual = SpdxExpressionParser.Parse(
+                "MIT OR Apache-2.0 AND GPL-2.0", this.IsSpdxIdentifier, this.IsSpdxException);
+            Assert.IsInstanceOfType(actual, typeof(SpdxOrExpression));
+            var expr = actual as SpdxOrExpression;
+            Assert.IsNotNull(expr);
+
+            Assert.IsInstanceOfType(expr.Left, typeof(SpdxLicenseExpression));
+            Assert.IsInstanceOfType(expr.Right, typeof(SpdxAndExpression));
+
+            var left = expr.Left as SpdxLicenseExpression;
+            Assert.IsNotNull(left);
+            Assert.AreEqual("MIT", left.Id);
+
+            var right = expr.Right as SpdxAndExpression;
+            Assert.IsNotNull(right);
+            Assert.IsInstanceOfType(right.Left, typeof(SpdxLicenseExpression));
+            Assert.IsInstanceOfType(right.Right, typeof(SpdxLicenseExpression));
+
+            var rightLeft = right.Left as SpdxLicenseExpression;
+            Assert.IsNotNull(rightLeft);
+            Assert.AreEqual("Apache-2.0", rightLeft.Id);
+
+            var rightRight = right.Right as SpdxLicenseExpression;
+            Assert.IsNotNull(rightRight);
+            Assert.AreEqual("GPL-2.0", rightRight.Id);
+
+            Assert.AreEqual("MIT OR Apache-2.0 AND GPL-2.0", actual.ToString());
+
+        }
+
+        [TestMethod]
+        public void TestOperatorPrecedence_Issue7()
+        {
+            // special test for issue #7 as given by fredjeronimo
+            var actual = SpdxExpressionParser.Parse(
+                "0BSD OR EPL-1.0 AND CC-BY-NC-1.0", this.IsSpdxIdentifier, this.IsSpdxException);
+            Assert.IsInstanceOfType(actual, typeof(SpdxOrExpression));
+            var expr = actual as SpdxOrExpression;
+            Assert.IsNotNull(expr);
+            Assert.IsInstanceOfType(expr.Left, typeof(SpdxLicenseExpression));
+            Assert.IsInstanceOfType(expr.Right, typeof(SpdxAndExpression));
+            var left = expr.Left as SpdxLicenseExpression;
+            Assert.IsNotNull(left);
+            Assert.AreEqual("0BSD", left.Id);
+            var right = expr.Right as SpdxAndExpression;
+            Assert.IsNotNull(right);
+            Assert.IsInstanceOfType(right.Left, typeof(SpdxLicenseExpression));
+            Assert.IsInstanceOfType(right.Right, typeof(SpdxLicenseExpression));
+            var rightLeft = right.Left as SpdxLicenseExpression;
+            Assert.IsNotNull(rightLeft);
+            Assert.AreEqual("EPL-1.0", rightLeft.Id);
+            var rightRight = right.Right as SpdxLicenseExpression;
+            Assert.IsNotNull(rightRight);
+            Assert.AreEqual("CC-BY-NC-1.0", rightRight.Id);
+            Assert.AreEqual("0BSD OR EPL-1.0 AND CC-BY-NC-1.0", actual.ToString());
         }
     }
 }
