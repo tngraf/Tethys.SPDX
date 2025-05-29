@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // <copyright file="SpdxExpressionParser.cs" company="Tethys">
-//   Copyright (C) 2023-2024 T. Graf
+//   Copyright (C) 2023-2025 T. Graf
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -97,7 +97,7 @@ namespace Tethys.SPDX.ExpressionParser
                 throw new SpdxExpressionException(string.Empty);
             } // if
 
-            var expr = ParseAnd();
+            var expr = ParseOr();
 
             return expr;
         } // Parse()
@@ -107,24 +107,6 @@ namespace Tethys.SPDX.ExpressionParser
         /// </summary>
         /// <returns>A <see cref="SpdxExpression"/>.</returns>
         private static SpdxExpression ParseAnd()
-        {
-            var expression = ParseOr();
-            var currentToken = GetCurrentToken();
-            while (currentToken?.Type == TokenType.And)
-            {
-                GetNextToken();
-                expression = new SpdxAndExpression(expression, ParseOr());
-                currentToken = GetCurrentToken();
-            } // while
-
-            return expression;
-        } // ParseAnd()
-
-        /// <summary>
-        /// Parses an "or" expression.
-        /// </summary>
-        /// <returns>A <see cref="SpdxExpression"/>.</returns>
-        private static SpdxExpression ParseOr()
         {
             SpdxExpression expression;
             var currentToken = GetCurrentToken();
@@ -138,10 +120,28 @@ namespace Tethys.SPDX.ExpressionParser
             } // if
 
             currentToken = GetCurrentToken();
-            while (currentToken.Type == TokenType.Or)
+            while (currentToken.Type == TokenType.And)
             {
                 GetNextToken();
-                expression = new SpdxOrExpression(expression, ParseOr());
+                expression = new SpdxAndExpression(expression, ParseAnd());
+                currentToken = GetCurrentToken();
+            } // while
+
+            return expression;
+        } // ParseAnd()
+
+        /// <summary>
+        /// Parses an "or" expression.
+        /// </summary>
+        /// <returns>A <see cref="SpdxExpression"/>.</returns>
+        private static SpdxExpression ParseOr()
+        {
+            var expression = ParseAnd();
+            var currentToken = GetCurrentToken();
+            while (currentToken?.Type == TokenType.Or)
+            {
+                GetNextToken();
+                expression = new SpdxOrExpression(expression, ParseAnd());
                 currentToken = GetCurrentToken();
             } // while
 
@@ -155,7 +155,7 @@ namespace Tethys.SPDX.ExpressionParser
         private static SpdxExpression ParseScopedExpression()
         {
             GetNextToken();
-            var expression = ParseAnd();
+            var expression = ParseOr();
             if (GetCurrentToken().Type != TokenType.Right)
             {
                 throw new SpdxExpressionException("Unexpected end of expression.");

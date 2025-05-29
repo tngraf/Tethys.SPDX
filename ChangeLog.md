@@ -5,6 +5,10 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
+## NEXT
+
+* Have correct operator precedence: `AND` has higher precedence than `OR`.
+
 ## 2.1.2 (2024-05-08)
 
 * Fixing SPDX validation issues
