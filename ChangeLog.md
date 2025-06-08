@@ -5,7 +5,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tethys.SPDX
 
-## 2.1.3 (2025-05-29)
+## 2.1.3 (2025-06-08)
 
 * Have correct operator precedence: `AND` has higher precedence than `OR`.
 
