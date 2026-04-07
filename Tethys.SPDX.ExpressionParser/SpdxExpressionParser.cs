@@ -44,13 +44,32 @@ namespace Tethys.SPDX.ExpressionParser
     /// </summary>
     public static class SpdxExpressionParser
     {
-        #region PRIVATE PROPERTIES
-        private static string[] tokens = new string[1];
-        private static int position;
-        private static Func<string, bool> isSpdxIdentifier;
-        private static Func<string, bool> isSpdxException;
-        private static SpdxParsingOptions options;
-        #endregion // PRIVATE PROPERTIES
+        #region PRIVATE TYPES
+        private sealed class ParserContext
+        {
+            public ParserContext(
+                string[] tokens,
+                Func<string, bool> isIdentifier,
+                Func<string, bool> isException,
+                SpdxParsingOptions parsingOptions = SpdxParsingOptions.Default)
+            {
+                this.Tokens = tokens;
+                this.IsSpdxIdentifier = isIdentifier;
+                this.IsSpdxException = isException;
+                this.Options = parsingOptions;
+            }
+
+            public string[] Tokens { get; }
+
+            public int Position { get; set; } = -1;
+
+            public Func<string, bool> IsSpdxIdentifier { get; }
+
+            public Func<string, bool> IsSpdxException { get; }
+
+            public SpdxParsingOptions Options { get; }
+        } // ParserContext
+        #endregion // PRIVATE TYPES
 
         //// ---------------------------------------------------------------------
 
@@ -78,26 +97,31 @@ namespace Tethys.SPDX.ExpressionParser
                 throw new ArgumentNullException(nameof(expression));
             } // if
 
-            isSpdxIdentifier = isIdentifier ?? throw new ArgumentNullException(nameof(isIdentifier));
-            isSpdxException = isException ?? throw new ArgumentNullException(nameof(isException));
+            if (isIdentifier is null)
+            {
+                throw new ArgumentNullException(nameof(isIdentifier));
+            } // if
 
-            options = parsingOptions;
+            if (isException is null)
+            {
+                throw new ArgumentNullException(nameof(isException));
+            } // if
 
             // ensure that we detect all parenthesis
             expression = expression.Replace("(", " ( ");
             expression = expression.Replace(")", " ) ");
 
             // very much simplified ...
-            tokens = expression.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            position = -1;
+            string[] tokens = expression.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            ParserContext context = new ParserContext(tokens, isIdentifier, isException, parsingOptions);
 
-            var current = GetNextToken();
+            var current = GetNextToken(context);
             if (current == null)
             {
                 throw new SpdxExpressionException(string.Empty);
             } // if
 
-            var expr = ParseOr();
+            var expr = ParseOr(context);
 
             return expr;
         } // Parse()
@@ -106,25 +130,25 @@ namespace Tethys.SPDX.ExpressionParser
         /// Parses an "and" expression.
         /// </summary>
         /// <returns>A <see cref="SpdxExpression"/>.</returns>
-        private static SpdxExpression ParseAnd()
+        private static SpdxExpression ParseAnd(ParserContext context)
         {
             SpdxExpression expression;
-            var currentToken = GetCurrentToken();
+            var currentToken = GetCurrentToken(context);
             if (currentToken.Type == TokenType.Left)
             {
-                expression = ParseScopedExpression();
+                expression = ParseScopedExpression(context);
             }
             else
             {
-                expression = ParseLicense();
+                expression = ParseLicense(context);
             } // if
 
-            currentToken = GetCurrentToken();
+            currentToken = GetCurrentToken(context);
             while (currentToken.Type == TokenType.And)
             {
-                GetNextToken();
-                expression = new SpdxAndExpression(expression, ParseAnd());
-                currentToken = GetCurrentToken();
+                GetNextToken(context);
+                expression = new SpdxAndExpression(expression, ParseAnd(context));
+                currentToken = GetCurrentToken(context);
             } // while
 
             return expression;
@@ -134,15 +158,15 @@ namespace Tethys.SPDX.ExpressionParser
         /// Parses an "or" expression.
         /// </summary>
         /// <returns>A <see cref="SpdxExpression"/>.</returns>
-        private static SpdxExpression ParseOr()
+        private static SpdxExpression ParseOr(ParserContext context)
         {
-            var expression = ParseAnd();
-            var currentToken = GetCurrentToken();
+            var expression = ParseAnd(context);
+            var currentToken = GetCurrentToken(context);
             while (currentToken?.Type == TokenType.Or)
             {
-                GetNextToken();
-                expression = new SpdxOrExpression(expression, ParseAnd());
-                currentToken = GetCurrentToken();
+                GetNextToken(context);
+                expression = new SpdxOrExpression(expression, ParseAnd(context));
+                currentToken = GetCurrentToken(context);
             } // while
 
             return expression;
@@ -152,16 +176,16 @@ namespace Tethys.SPDX.ExpressionParser
         /// Parses a scoped expression.
         /// </summary>
         /// <returns>A <see cref="SpdxExpression"/>.</returns>
-        private static SpdxExpression ParseScopedExpression()
+        private static SpdxExpression ParseScopedExpression(ParserContext context)
         {
-            GetNextToken();
-            var expression = ParseOr();
-            if (GetCurrentToken().Type != TokenType.Right)
+            GetNextToken(context);
+            var expression = ParseOr(context);
+            if (GetCurrentToken(context).Type != TokenType.Right)
             {
                 throw new SpdxExpressionException("Unexpected end of expression.");
             } // if
 
-            GetNextToken();
+            GetNextToken(context);
 
             return new SpdxScopedExpression(expression);
         } // ParseScopedExpression()
@@ -191,26 +215,26 @@ namespace Tethys.SPDX.ExpressionParser
         /// Parses a license.
         /// </summary>
         /// <returns>A <see cref="SpdxExpression"/>.</returns>
-        private static SpdxExpression ParseLicense()
+        private static SpdxExpression ParseLicense(ParserContext context)
         {
-            var token = GetCurrentToken();
+            var token = GetCurrentToken(context);
             if (token.Type == TokenType.LicenseId)
             {
-                if ((options & SpdxParsingOptions.AllowUnknownLicenses) == 0
-                    && !isSpdxIdentifier(token.Value.TrimEnd('+')))
+                if ((context.Options & SpdxParsingOptions.AllowUnknownLicenses) == 0
+                    && !context.IsSpdxIdentifier(token.Value.TrimEnd('+')))
                 {
                     throw new SpdxExpressionException("Invalid/unknown SPDX license id");
                 } // if
 
-                var tokenNext = PeekNextToken();
+                var tokenNext = PeekNextToken(context);
                 if (tokenNext?.Type == TokenType.With)
                 {
-                    var t2 = PeekNextNextToken();
+                    var t2 = PeekNextNextToken(context);
                     if (t2?.Type == TokenType.Exception)
                     {
-                        GetNextToken();
-                        GetNextToken();
-                        GetNextToken();
+                        GetNextToken(context);
+                        GetNextToken(context);
+                        GetNextToken(context);
 
                         return new SpdxWithExpression(
                             GetLicenseExpression(token.Value),
@@ -218,14 +242,14 @@ namespace Tethys.SPDX.ExpressionParser
                     } // if
                 } // if
 
-                GetNextToken();
+                GetNextToken(context);
 
                 return GetLicenseExpression(token.Value);
             } // if
 
             if (token.Type == TokenType.LicenseRef)
             {
-                GetNextToken();
+                GetNextToken(context);
                 return new SpdxLicenseReference(token.Value);
             } // if
 
@@ -252,7 +276,7 @@ namespace Tethys.SPDX.ExpressionParser
         /// </summary>
         /// <param name="text">The text.</param>
         /// <returns>A <see cref="Token"/>.</returns>
-        private static Token GetToken(string text)
+        private static Token GetToken(string text, ParserContext context)
         {
             var textCompare = text.Trim().ToLower();
             if (textCompare == "(")
@@ -290,12 +314,12 @@ namespace Tethys.SPDX.ExpressionParser
                 return new Token(TokenType.LicenseId, text);
             } // if
 
-            if (isSpdxIdentifier(textCompare))
+            if (context.IsSpdxIdentifier(textCompare))
             {
                 return new Token(TokenType.LicenseId, text);
             } // if
 
-            if (isSpdxException(textCompare))
+            if (context.IsSpdxException(textCompare))
             {
                 return new Token(TokenType.Exception, text);
             } // if
@@ -305,7 +329,7 @@ namespace Tethys.SPDX.ExpressionParser
                 throw new SpdxExpressionException("Invalid characters found");
             } // if
 
-            if ((options & SpdxParsingOptions.AllowUnknownExceptions) != 0)
+            if ((context.Options & SpdxParsingOptions.AllowUnknownExceptions) != 0)
             {
                 return new Token(TokenType.Exception, text);
             } // if
@@ -317,11 +341,11 @@ namespace Tethys.SPDX.ExpressionParser
         /// Gets the current token.
         /// </summary>
         /// <returns>A <see cref="Token"/>.</returns>
-        private static Token GetCurrentToken()
+        private static Token GetCurrentToken(ParserContext context)
         {
-            if (position < tokens.Length)
+            if (context.Position < context.Tokens.Length)
             {
-                return GetToken(tokens[position]);
+                return GetToken(context.Tokens[context.Position], context);
             } // if
 
             return null;
@@ -331,11 +355,11 @@ namespace Tethys.SPDX.ExpressionParser
         /// Gets the next token.
         /// </summary>
         /// <returns>A <see cref="Token"/> or null.</returns>
-        private static Token GetNextToken()
+        private static Token GetNextToken(ParserContext context)
         {
-            if (position < tokens.Length - 1)
+            if (context.Position < context.Tokens.Length - 1)
             {
-                return GetToken(tokens[++position]);
+                return GetToken(context.Tokens[++context.Position], context);
             } // if
 
             return null;
@@ -345,11 +369,11 @@ namespace Tethys.SPDX.ExpressionParser
         /// Peeks the next token.
         /// </summary>
         /// <returns>A <see cref="Token"/> or null.</returns>
-        private static Token PeekNextToken()
+        private static Token PeekNextToken(ParserContext context)
         {
-            if (position < tokens.Length - 1)
+            if (context.Position < context.Tokens.Length - 1)
             {
-                return GetToken(tokens[position + 1]);
+                return GetToken(context.Tokens[context.Position + 1], context);
             } // if
 
             return null;
@@ -361,11 +385,11 @@ namespace Tethys.SPDX.ExpressionParser
         /// <returns>
         /// A <see cref="Token" /> or null.
         /// </returns>
-        private static Token PeekNextNextToken()
+        private static Token PeekNextNextToken(ParserContext context)
         {
-            if (position < tokens.Length - 2)
+            if (context.Position < context.Tokens.Length - 2)
             {
-                return GetToken(tokens[position + 2]);
+                return GetToken(context.Tokens[context.Position + 2], context);
             } // if
 
             return null;
