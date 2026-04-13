@@ -15,6 +15,8 @@
 
 namespace Tethys.SPDX.ExpressionParser.Test
 {
+    using System.Threading;
+    using System.Threading.Tasks;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
@@ -588,6 +590,67 @@ namespace Tethys.SPDX.ExpressionParser.Test
             Assert.IsNotNull(rightRight);
             Assert.AreEqual("CC-BY-NC-1.0", rightRight.Id);
             Assert.AreEqual("0BSD OR EPL-1.0 AND CC-BY-NC-1.0", actual.ToString());
+        }
+
+        [TestMethod]
+        public void TestParseIsReentrantWithConcurrentCalls()
+        {
+            using (var parseAEntered = new AutoResetEvent(false))
+            using (var parseBEntered = new AutoResetEvent(false))
+            using (var releaseA = new AutoResetEvent(false))
+            using (var releaseB = new AutoResetEvent(false))
+            {
+                var gateA = 0;
+                var gateB = 0;
+
+                Func<string, bool> idA = s =>
+                {
+                    if (Interlocked.Exchange(ref gateA, 1) == 0)
+                    {
+                        parseAEntered.Set();
+                        Assert.IsTrue(releaseA.WaitOne(3000), "Timeout waiting to release parse A callback.");
+                    }
+
+                    return s.Equals("mit", StringComparison.InvariantCultureIgnoreCase)
+                           || s.Equals("apache-2.0", StringComparison.InvariantCultureIgnoreCase);
+                };
+
+                Func<string, bool> idB = s =>
+                {
+                    if (Interlocked.Exchange(ref gateB, 1) == 0)
+                    {
+                        parseBEntered.Set();
+                        Assert.IsTrue(releaseB.WaitOne(3000), "Timeout waiting to release parse B callback.");
+                    }
+
+                    return s.Equals("gpl-2.0", StringComparison.InvariantCultureIgnoreCase)
+                           || s.Equals("isc", StringComparison.InvariantCultureIgnoreCase);
+                };
+
+                var taskA = Task.Run(() => SpdxExpressionParser.Parse(
+                    "MIT AND Apache-2.0",
+                    idA,
+                    _ => false));
+
+                Assert.IsTrue(parseAEntered.WaitOne(3000), "Parse A did not reach the callback gate.");
+
+                var taskB = Task.Run(() => SpdxExpressionParser.Parse(
+                    "GPL-2.0 AND ISC",
+                    idB,
+                    _ => false));
+
+                Assert.IsTrue(parseBEntered.WaitOne(3000), "Parse B did not reach the callback gate.");
+
+                releaseB.Set();
+                releaseA.Set();
+
+                Assert.IsTrue(Task.WaitAll(new Task[] { taskA, taskB }, 3000), "Timed out waiting for concurrent parse tasks.");
+                Assert.IsFalse(taskA.IsFaulted, taskA.Exception?.ToString());
+                Assert.IsFalse(taskB.IsFaulted, taskB.Exception?.ToString());
+
+                Assert.AreEqual("MIT AND Apache-2.0", taskA.Result.ToString());
+                Assert.AreEqual("GPL-2.0 AND ISC", taskB.Result.ToString());
+            }
         }
     }
 }
