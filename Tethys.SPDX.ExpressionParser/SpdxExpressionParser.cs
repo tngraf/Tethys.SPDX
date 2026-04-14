@@ -1,6 +1,7 @@
 // ---------------------------------------------------------------------------
 // <copyright file="SpdxExpressionParser.cs" company="Tethys">
-//   Copyright (C) 2023-2025 T. Graf
+//   Copyright (C) 2023-2026 T. Graf
+//   Copyright(C) 2026 Simon Ensslen
 // </copyright>
 //
 // Licensed under the Apache License, Version 2.0.
@@ -45,8 +46,45 @@ namespace Tethys.SPDX.ExpressionParser
     public static class SpdxExpressionParser
     {
         #region PRIVATE TYPES
+        /// <summary>
+        /// Parser context - to have a re-entrant SPDX expression parser.
+        /// </summary>
         private sealed class ParserContext
         {
+            #region PUBLIC PROPERTIES
+            /// <summary>
+            /// Gets the tokens.
+            /// </summary>
+            public string[] Tokens { get; }
+
+            /// <summary>
+            /// Gets or sets the position.
+            /// </summary>
+            public int Position { get; set; } = -1;
+
+            /// <summary>
+            /// Gets the method to tell whether this is a SPDX identifier.
+            /// </summary>
+            public Func<string, bool> IsSpdxIdentifier { get; }
+
+            /// <summary>
+            /// Gets the method to tell whether this is a SPDX exception.
+            /// </summary>
+            public Func<string, bool> IsSpdxException { get; }
+
+            /// <summary>
+            /// Gets the options.
+            /// </summary>
+            public SpdxParsingOptions Options { get; }
+            #endregion // PUBLIC PROPERTIES
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="ParserContext"/> class.
+            /// </summary>
+            /// <param name="tokens">The tokens.</param>
+            /// <param name="isIdentifier">The is identifier.</param>
+            /// <param name="isException">The is exception.</param>
+            /// <param name="parsingOptions">The parsing options.</param>
             public ParserContext(
                 string[] tokens,
                 Func<string, bool> isIdentifier,
@@ -57,17 +95,7 @@ namespace Tethys.SPDX.ExpressionParser
                 this.IsSpdxIdentifier = isIdentifier;
                 this.IsSpdxException = isException;
                 this.Options = parsingOptions;
-            }
-
-            public string[] Tokens { get; }
-
-            public int Position { get; set; } = -1;
-
-            public Func<string, bool> IsSpdxIdentifier { get; }
-
-            public Func<string, bool> IsSpdxException { get; }
-
-            public SpdxParsingOptions Options { get; }
+            } // ParserContext
         } // ParserContext
         #endregion // PRIVATE TYPES
 
@@ -275,6 +303,7 @@ namespace Tethys.SPDX.ExpressionParser
         /// Gets a token from the given text.
         /// </summary>
         /// <param name="text">The text.</param>
+        /// <param name="context">The parser context.</param>
         /// <returns>A <see cref="Token"/>.</returns>
         private static Token GetToken(string text, ParserContext context)
         {
@@ -340,6 +369,7 @@ namespace Tethys.SPDX.ExpressionParser
         /// <summary>
         /// Gets the current token.
         /// </summary>
+        /// <param name="context">The parser context.</param>
         /// <returns>A <see cref="Token"/>.</returns>
         private static Token GetCurrentToken(ParserContext context)
         {
@@ -354,6 +384,7 @@ namespace Tethys.SPDX.ExpressionParser
         /// <summary>
         /// Gets the next token.
         /// </summary>
+        /// <param name="context">The parser context.</param>
         /// <returns>A <see cref="Token"/> or null.</returns>
         private static Token GetNextToken(ParserContext context)
         {
@@ -368,6 +399,7 @@ namespace Tethys.SPDX.ExpressionParser
         /// <summary>
         /// Peeks the next token.
         /// </summary>
+        /// <param name="context">The parser context.</param>
         /// <returns>A <see cref="Token"/> or null.</returns>
         private static Token PeekNextToken(ParserContext context)
         {
@@ -382,6 +414,7 @@ namespace Tethys.SPDX.ExpressionParser
         /// <summary>
         /// Peeks the next token.
         /// </summary>
+        /// <param name="context">The parser context.</param>
         /// <returns>
         /// A <see cref="Token" /> or null.
         /// </returns>
