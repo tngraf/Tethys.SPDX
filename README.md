@@ -1,5 +1,5 @@
 <!-- 
-SPDX-FileCopyrightText: (c) 2019-2025 T. Graf
+SPDX-FileCopyrightText: (c) 2019-2026 T. Graf
 SPDX-License-Identifier: Apache-2.0
 -->
 
@@ -138,5 +138,5 @@ dotnet build
 
 ## License
 
-Copyright (c) 2019-2025 T. Graf.
+Copyright (c) 2019-2026 T. Graf.
 Tethys.SPDX is licensed under the Apache License, Version 2.0.

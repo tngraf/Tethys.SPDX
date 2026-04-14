@@ -1,9 +1,13 @@
 <!-- 
-SPDX-FileCopyrightText: (c) 2019-2025 T. Graf
+SPDX-FileCopyrightText: (c) 2019-2026 T. Graf
 SPDX-License-Identifier: Apache-2.0
 -->
 
 # Tethys.SPDX
+
+## 2.2.0 (2026-04-14)
+
+* SpdxExpressionParser.Parse is now thread safe.
 
 ## 2.1.3 (2025-06-08)
 
